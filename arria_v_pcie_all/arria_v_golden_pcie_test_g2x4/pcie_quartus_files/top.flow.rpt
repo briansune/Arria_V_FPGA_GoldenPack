@@ -1,0 +1,147 @@
+Flow report for top
+Sun Jul 05 03:25:14 2020
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Flow Summary                                                                      ;
++---------------------------------+-------------------------------------------------+
+; Flow Status                     ; Successful - Sun Jul 05 03:25:14 2020           ;
+; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Standard Edition ;
+; Revision Name                   ; top                                             ;
+; Top-level Entity Name           ; top_hw                                          ;
+; Family                          ; Arria V                                         ;
+; Device                          ; 5AGTFC7H3F35I3                                  ;
+; Timing Models                   ; Final                                           ;
+; Logic utilization (in ALMs)     ; 3,067 / 91,680 ( 3 % )                          ;
+; Total registers                 ; 5893                                            ;
+; Total pins                      ; 31 / 656 ( 5 % )                                ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 602,918 / 13,987,840 ( 4 % )                    ;
+; Total DSP Blocks                ; 0 / 800 ( 0 % )                                 ;
+; Total HSSI RX PCSs              ; 4 / 24 ( 17 % )                                 ;
+; Total HSSI PMA RX Deserializers ; 4 / 24 ( 17 % )                                 ;
+; Total HSSI TX PCSs              ; 4 / 24 ( 17 % )                                 ;
+; Total HSSI PMA TX Serializers   ; 4 / 24 ( 17 % )                                 ;
+; Total PLLs                      ; 5 / 36 ( 14 % )                                 ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                                   ;
++---------------------------------+-------------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 07/05/2020 03:20:47 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; top                 ;
++-------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                        ;
++---------------------------------------------------+-------------------------------------------------------+---------------+--------------------------------+------------+
+; Assignment Name                                   ; Value                                                 ; Default Value ; Entity Name                    ; Section Id ;
++---------------------------------------------------+-------------------------------------------------------+---------------+--------------------------------+------------+
+; COMPILER_SIGNATURE_ID                             ; 49410866263611.159389044603220                        ; --            ; --                             ; --         ;
+; ENABLE_DRC_SETTINGS                               ; On                                                    ; Off           ; --                             ; --         ;
+; ENABLE_SIGNALTAP                                  ; Off                                                   ; --            ; --                             ; --         ;
+; FITTER_EFFORT                                     ; Standard Fit                                          ; Auto Fit      ; --                             ; --         ;
+; MAX_CORE_JUNCTION_TEMP                            ; 100                                                   ; --            ; --                             ; --         ;
+; MESSAGE_DISABLE                                   ; 12110                                                 ; --            ; altpcierd_example_app_chaining ; --         ;
+; MESSAGE_DISABLE                                   ; 12241                                                 ; --            ; altpcierd_example_app_chaining ; --         ;
+; MESSAGE_DISABLE                                   ; 14320                                                 ; --            ; altpcierd_example_app_chaining ; --         ;
+; MESSAGE_DISABLE                                   ; 10858                                                 ; --            ; altpcierd_example_app_chaining ; --         ;
+; MESSAGE_DISABLE                                   ; 287001                                                ; --            ; altpcierd_example_app_chaining ; --         ;
+; MIN_CORE_JUNCTION_TEMP                            ; -40                                                   ; --            ; --                             ; --         ;
+; MISC_FILE                                         ; top.qsys                                              ; --            ; --                             ; --         ;
+; NUM_PARALLEL_PROCESSORS                           ; All                                                   ; --            ; --                             ; --         ;
+; OCP_HW_EVAL                                       ; Disable                                               ; Enable        ; --                             ; --         ;
+; OPTIMIZATION_TECHNIQUE                            ; Speed                                                 ; Balanced      ; --                             ; --         ;
+; PARTITION_COLOR                                   ; -- (Not supported for targeted family)                ; --            ; top_hw                         ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL               ; -- (Not supported for targeted family)                ; --            ; top_hw                         ; Top        ;
+; PARTITION_NETLIST_TYPE                            ; -- (Not supported for targeted family)                ; --            ; top_hw                         ; Top        ;
+; PHYSICAL_SYNTHESIS_ASYNCHRONOUS_SIGNAL_PIPELINING ; On                                                    ; Off           ; --                             ; --         ;
+; PHYSICAL_SYNTHESIS_COMBO_LOGIC                    ; On                                                    ; Off           ; --                             ; --         ;
+; PHYSICAL_SYNTHESIS_EFFORT                         ; Extra                                                 ; Normal        ; --                             ; --         ;
+; PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION           ; On                                                    ; Off           ; --                             ; --         ;
+; PHYSICAL_SYNTHESIS_REGISTER_RETIMING              ; On                                                    ; Off           ; --                             ; --         ;
+; POWER_BOARD_THERMAL_MODEL                         ; None (CONSERVATIVE)                                   ; --            ; --                             ; --         ;
+; POWER_PRESET_COOLING_SOLUTION                     ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                 ; --            ; --                             ; --         ;
+; PROJECT_OUTPUT_DIRECTORY                          ; pcie_quartus_files                                    ; --            ; --                             ; --         ;
+; SEED                                              ; 72                                                    ; 1             ; --                             ; --         ;
+; SLD_INFO                                          ; QSYS_NAME top HAS_SOPCINFO 1 GENERATION_ID 1433780285 ; --            ; --                             ; --         ;
+; SMART_RECOMPILE                                   ; On                                                    ; Off           ; --                             ; --         ;
+; SOPCINFO_FILE                                     ; top.sopcinfo                                          ; --            ; --                             ; --         ;
+; SYNTHESIS_ONLY_QIP                                ; On                                                    ; --            ; --                             ; --         ;
+; TOP_LEVEL_ENTITY                                  ; top_hw                                                ; top           ; --                             ; --         ;
++---------------------------------------------------+-------------------------------------------------------+---------------+--------------------------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:01:07     ; 1.0                     ; 5298 MB             ; 00:01:14                           ;
+; Fitter               ; 00:02:58     ; 1.2                     ; 7982 MB             ; 00:08:34                           ;
+; Assembler            ; 00:00:14     ; 1.0                     ; 4963 MB             ; 00:00:14                           ;
+; Total                ; 00:04:19     ; --                      ; --                  ; 00:10:02                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; DESKTOP-4UKJC18  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-4UKJC18  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-4UKJC18  ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off top -c top
+quartus_fit --read_settings_files=off --write_settings_files=off top -c top
+quartus_asm --read_settings_files=off --write_settings_files=off top -c top
+
+
+

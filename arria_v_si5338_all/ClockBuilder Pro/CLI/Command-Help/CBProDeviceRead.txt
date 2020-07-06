@@ -1,0 +1,269 @@
+
+NAME
+
+    CBProDeviceRead
+
+SYNOPSIS
+
+    CBProDeviceRead [ options ] --settings setting-id1 [ setting-id2 ... ]
+    CBProDeviceRead [ options ] --registers register1 [ register2 ... ]
+    CBProDeviceRead [ options ] --all
+    CBProDeviceRead --list-devices
+
+    CBProDeviceRead --help
+
+DESCRIPTION
+
+    Reads device registers and associated named settings (aka bitfields) from
+    a supported Silicon Labs Timing evaluation Board (EVB) or ClockBuilder Pro
+    Field Programmer (FP). Has three general modes of operation:
+
+    + Read one or more named settings you specify either on the command line
+    (--settings option). Reads are done at the register level, but output is
+    per-setting.
+
+    + Read one or more registers you specify either on the command line
+    (--registers option). In this mode, no mapping to setting names is done:
+    you get back a simple register address, value list.
+
+    + Read all read-only and read-write settings on the device (--all option).
+    Reads are done at the register level, but output is per-setting.
+
+    By default a text table is created. Comma separated value (CSV), tab
+    separated value, and HTML are also supported via the --format option.
+
+    See EXAMPLES for an example of command line usage and output for each
+    mode.
+
+    If more than one EVB or FP is connected to your PC, you must use the
+    --device option to specify which you are targeting. You pass an identifier
+    for the device, which can be listed using the --list-devices option. For
+    example, CBProDeviceRead --list-devices might return:
+
+         00-00-16-B1-20-A2 (Si5345 EVB)
+         00-00-15-E2-E2-60 (Si5380 EVB)
+
+    You can then pass either 00-00-16-B1-20-A2 or 00-00-15-E2-E2-60 to the
+    --device argument. For example:
+
+         CBProDeviceRead --device 00-00-15-E2-E2-60 --all
+
+    The program will exit with status code 0 on success, and 1 on error.
+
+FIELD PROGRAMMER
+
+    You must configure communication settings when using a ClockBuilder Pro
+    Field Programmer. The following options are available:
+
+         --family family-id
+              Device family. Required if field programmer wired to PCB using
+              serial cable. Optional with socket.
+
+         --mode i2c|spi3wire|spi4wire
+              Communication mode. See below for when required.
+
+         --io-voltage 1.8|2.5|3.3
+              I/O supply voltage. See below for when required.
+
+         --speed 100k|400k|1M|2M|...|12M
+              Bus speed. Optional. The fastest speed is selected by default.
+
+         --i2c-address
+              I2C address. Required in I2C mode.
+
+    Family ID    Description                           Mode Reqd?  I/O Voltage
+    Reqd?
+    -----------  ------------------------------------  ---------- 
+    -----------------
+    si538x4x     Si534x/7x/8x/9x (not firmware based)  Always      Always     
+         
+    si538x4xfw   Si5383/84 (firmware based)            Never       Never      
+         
+    si538x4xfw2  Si5388/89 (firmware based)            Never       Never      
+         
+    si5332       Si5332/57                             Never       Always     
+         
+    si533x       Si5338/56                             Never       Always     
+         
+    si55xx       Si55xx                                Always      Never      
+         
+
+
+EXAMPLE - READ ALL DEVICE SETTINGS, SAVE TEXT REPORT
+
+    C:\> CBProDeviceRead --all --outfile settings.txt
+
+    Searching for EVBs/FPs ...
+    Reading from device ...
+    Saving to settings.txt ...
+
+    C:\> more settings.txt
+
+    Location      Type  Setting Name           Decimal Value  Hex Value
+    ------------  ----  ---------------------  -------------  ----------------
+    0x0000[3:0]   R/O   DIE_REV                5              0x5
+    0x0002[15:0]  R/O   PN_BASE                21317          0x5345
+    0x0004[7:0]   R/O   GRADE                  0              0x00
+    0x0005[7:0]   R/O   DEVICE_REV             3              0x03
+    ...
+    0x0B4A[4:0]   R/W   N_CLK_DIS              0              0x00
+    0x0B57[11:0]  R/W   VCO_RESET_CALCODE      270            0x10E
+
+    Reads all read-only and read-write settings from the device. Device
+    readings are saved to settings.txt. Uses the default file format, a
+    formatted text table.
+
+EXAMPLE - READ ALL DEVICE SETTINGS, OUTPUT CSV
+
+    C:\> CBProDeviceRead --all --quiet --format csv
+
+    Location,Type,SettingName,DecimalValue,HexValue
+    0x0000[3:0],R/O,DIE_REV,5,0x5
+    0x0002[15:0],R/O,PN_BASE,21317,0x5345
+    0x0004[7:0],R/O,GRADE,0,0x00
+    0x0005[7:0],R/O,DEVICE_REV,3,0x03
+    ...
+    0x0B4A[4:0],R/W,N_CLK_DIS,0,0x00
+    0x0B57[11:0],R/W,VCO_RESET_CALCODE,270,0x10E
+
+    Reads all read-only and read-write settings from the device. Device
+    readings are output to the console in CSV format. Enables quiet mode, so
+    that status messages are not displayed on the console.
+
+EXAMPLE - READ SELECT DEVICE SETTINGS, OUTPUT TEXT REPORT
+
+    C:\> CBProDeviceRead.exe --quiet --settings PN_BASE DEVICE_REV
+
+    Location      Type  Setting Name  Decimal Value  Hex Value
+    ------------  ----  ------------  -------------  ---------
+    0x0002[15:0]  R/O   PN_BASE       21317          0x5345
+    0x0005[7:0]   R/O   DEVICE_REV    3              0x03
+
+    Reads two device settings and outputs the results in a text report. Uses
+    quiet mode to skip status messages.
+
+EXAMPLE - READ SELECT DEVICE REGISTERS, OUTPUT TEXT REPORT
+
+    C:\> CBProDeviceRead.exe --quiet --registers 0x0002 0x0003 0x0005
+
+    Address  Decimal Value  Hex Value
+    -------  -------------  ---------
+    0x0002   69             0x45
+    0x0003   83             0x53
+    0x0005   3              0x03
+
+    Reads three registers from the device. The registers read are the
+    underlying registers for PN_BASE and DEVICE_REV in the previous example.
+    Uses quiet mode to skip status messages.
+
+EXAMPLE - READ ALL DEVICE SETTINGS FROM Si5345 DEVICE ON PCB USING FIELD
+PROGRAMMER
+
+    C:\> CBProDeviceRead --family si538x4x --mode i2c --i2c-address 0x6c
+    --io-voltage 3.3 --speed 400k --all --outfile state.txt
+
+    Searching for EVBs/FPs ...
+    Reading from device ...
+    Saving to state.txt ...
+
+    Reads all settings from device connected to the field programmer using an
+    I2C serial connection. The device is at 7-bit address 0x6c. A 3.3V I/O
+    supply voltage is used, and the I2C bus is driven at 400 kpbs. The
+    settings are saved to a text file, state.txt.
+
+EXAMPLE - READ ALL DEVICE SETTINGS FROM SI5332 DEVICE ON PCB USING FIELD
+PROGRAMMER
+
+    C:\> CBProDeviceRead --family si5332 --i2c-address 0x6a --speed 400k --all
+    --outfile state.txt
+
+    Searching for EVBs/FPs ...
+    Reading from device ...
+    Saving to state.txt ...
+
+    Reads all settings from Si5332 device connected to the field programmer
+    using an I2C serial connection. The device is at 7-bit address 0x6a. I/O
+    supply voltage is auto set to 3.3V for this device. The I2C bus is driven
+    at 400 kpbs. The settings are saved to a text file, state.txt.
+
+OPTIONS
+
+    --all 
+
+        Read all read-only and read-write registers from the device. The
+        output is setting oriented.
+
+    --device id
+
+        Select the Evaluation Board or Field Programmer to target. Required if
+        there are 2 or more EVBs/FPs attached to the PC.
+
+    --family family-id
+
+        A device family that is being targeted. See FIELD PROGRAMMER section.
+
+    --format text|csv|tab|html
+
+        Output format. The default is a text table.
+
+    --help 
+
+        Print detailed usage to the console and exit.
+
+    --i2c-address addr
+
+        7-bit I2C address when using the ClockBuilder Pro field programmer in
+        I2C mode. There is no default. You can specify the address in 0xNN hex
+        format or NN decimal.
+
+    --io-voltage 1.8|2.5|3.3
+
+        I/O voltage when using the ClockBuilder Pro field programmer. See
+        FIELD PROGRAMMER section.
+
+    --list-devices 
+
+        List Silicon Labs Timing devices -- Evaluation Boards and Field
+        Programmers -- connected to the PC and exit.
+
+    --mode i2c|spi3wire|spi4wire
+
+        Communication mode when using the ClockBuilder Pro field programmer.
+        See FIELD PROGRAMMER section.
+
+    --noscan-in-fp-registers-mode 
+
+        Communication with the device using the field programmer is normally
+        verified before an operation by reading fixed identification
+        register(s) such as PN_BASE on Si538x/4x. Specifying this option will
+        disable this behavior when --registers mode is used.
+
+    --outfile pathname
+
+        File to save results to. If not specified, device read results are
+        displayed on standard output.
+
+    --quiet 
+
+        Enable quiet mode. Normally status messages are printed to standard
+        error. You can disable these using this option.
+
+    --registers 
+
+        Read one or more registers from the device. Registers to dump are must
+        be specified on the command line. Use 0x hex format, such as 0x000C.
+
+    --settings 
+
+        Read one or more named settings (aka bitfields) from the device.
+        Settings to dump are must be specified on the command line.
+
+    --speed 100k|400k|1M|2M|...|12M
+
+        I2C or SPI bus speed when using the ClockBuilder Pro field programmer.
+        The default is 400 kHz in I2C mode and 12 MHz in SPI mode.
+
+    --version 
+
+        Print this program's version number and exit.
+

@@ -1,0 +1,354 @@
+
+NAME
+
+    CBProMultiEditAndExport
+
+SYNOPSIS
+
+    CBProMultiEditAndExport [ opts ] --project base.slabtimeproj 
+                            edits1.txt [ edits2.txt ... ]
+
+    CBProMultiEditAndExport --help
+
+DESCRIPTION
+
+    Combines the features of CBProProjectEdit and CBProMultiProjectExport into
+    a single tool:
+
+       - You define a base project file
+       - You define alternate clock configurations in the form of simple
+         text file(s)
+       - You run this tool to create new (edited) project files and export
+         files for both the base project file and created project files
+
+    Clock frequencies and state can be defined in the edit files. On supported
+    devices, DSPLL bandwidth and assignment can also be defined. Editing is
+    done via a simple text configuration file you specify on the command line.
+
+    See IN-SYSTEM PROGRAMMING WORKFLOW section for recommended ways for a host
+    microprocessor to use these exports to switch between configurations
+    in-system.
+
+EXAMPLE
+
+    CBProMultiEditAndExport --out-folder Output --create-out-folder
+                             --project Si5345-Base-Project.slabtimeproj
+                             Si5345-Edits1.txt Si5345-Edits2.txt
+
+
+        Output files are placed in the folder named Output, creating it if
+        necessary. Two edit files are applied to the base project file,
+        resulting in three sets of projects/exports labeled P1
+        (Si5345-Base-Project.slabtimeproj), P2 (base+Si5345-Edits1.txt), and
+        P3 (base+Si5345-Edits2.txt).
+
+        The base project gets resaved as P1-Project.slabtimeproj, with
+        frequency plan recalculated with latest algorithms.
+        P2-Project.slabtimeproj and P3-Project.slabtimeproj with the edits are
+        created.
+
+        Design reports (P*-Report.txt), register write scripts
+        (P*-Registers-Script.txt), and setting/bitfield dumps
+        (P*-Settings.txt) are created for each project.
+
+        Multi-project export files are created for P1-P3. Registers.csv
+        contains register values for all projects and Settings.csv contains
+        all setting/bitfield values.
+
+        This example is available in
+        Multi-Edit-And-Export-For-Single-PLL-Device within the C:\Program
+        Files (x86)\Silicon Laboratories\ClockBuilder Pro\CLI\Samples folder.
+        A second example for a multi-PLL Si5347 is in the
+        Multi-Edit-And-Export-For-Multi-PLL-Device Samples folder.
+
+EDIT FILE
+
+    You must specify at least one edit file on the command line. This file
+    will define what changes you want to make to one or more clock inputs
+    and/outputs, as well as bandwidth on supported devices. The format of the
+    file varies depending on whether the device in your project file has a
+    single or multiple DSPLLs.
+
+    If a single DSPLL device:
+
+    Clock,State,Frequency
+    IN0,Enabled,19.44 MHz
+    IN1,Unused
+    OUT0,Enabled,25*(825/128)M
+    OUT1,Disabled,625M
+    OUT5,Unused
+
+    The header (Clock,State,Frequency) is required. Comments via lines
+    starting with # are allowed, as are blank lines. Inputs can have one of
+    two states: Enabled or Unused. Outputs have three possible states:
+    Enabled, Disabled, or Unused. You **do not** have to list every input or
+    output clock: any not listed will retain the setting in the project file.
+
+    If a multiple DSPLL device:
+
+    Clock,State,DSPLL,Frequency
+    IN0,Enabled,ABCD,19.44 MHz
+    IN1,Unused
+    OUT0,Enabled,A,25*(825/128)M
+    OUT1,Enabled,B,625M
+    OUT5,Unused
+
+    This adds a column for DSPLL assignment to the format. Note that in the
+    case of an input, you list all DSPLLs that the input will feed.
+
+    On select devices, DSPLL bandwidth can also be changed by specifying OLBW
+    (nominal), FLBW (fastlock), or HOBW (holdover exit) as a clock name.
+    Example for single DSPLL device:
+
+    OLBW,,100 Hz
+    FLBW,,1k
+
+    Example for multi-DSPLL device:
+
+    OLBW,,A,100
+    FLBW,,A,1k
+    OLBW,,B,200
+    FLBW,,B,2k
+
+    You can also specify bandwidth for multiple DSPLLs at once:
+
+    OLBW,,AB,100 Hz
+    FLBW,,AB,1 kHz
+
+EXPORT FILES
+
+    Registers.csv
+    -------------
+
+    Configurtion register values for each project file. Example:
+
+    Address,Varies,P1,P2,P3
+    ...
+    0x043D,Yes,0x12,0x12,0x0A
+    0x043E,No,0x06,0x06,0x06
+    0x0442,No,0x00,0x00,
+    0x0443,No,0x00,0x00,
+    0x0444,No,0x00,0x00,
+    ...
+
+    The first column, labeled Address, is the two byte hex encoded register
+    address. The second column, labeled Varies, indicates whether the current
+    register has the same value for all projects included in the export (No)
+    or at least two projects differ in value (Yes). Columns three onward
+    contain the single byte register value for each project. Projects get
+    labeled P1 onward using the order that projects were specified in the
+    command line.
+
+    If a register is not written (not defined and a don't care) by one project
+    but is defined by another, the value cell will be empty for the project(s)
+    that do not define the register. These empty cells will not count towards
+    the Varies computation. For example, in the 0x0442-0x0444 example above
+    project 3 does not define the register so the value is empty. Project 1
+    and 2 have the same value. So Varies is No and this register need not be
+    written when switching from one configuration to another.
+
+    Settings.csv
+    ------------
+
+    This breaks out registers by setting (aka bitfield). Example:
+             
+    Location,Setting,Varies,P1,P2,P3
+    ...
+    0x043D[4:0],HSW_COARSE_PM_LEN_PLLA,Yes,0x12,0x12,0xA
+    0x043E[4:0],HSW_COARSE_PM_DLY_PLLA,No,0x6,0x6,0x6
+    0x0442[17:0],SLAB_OLA_FINE_ADJ_OVR,No,0x0,0x0,
+    ...
+
+    The first column, labeled Location, is the register(s) location of the
+    setting. The next column, Setting, identifies the setting by name. Similar
+    to Registers.csv, there is a Varies column that indicates whether the
+    current setting has the same value for all projects included in the export
+    (No) or at least two projects differ in value (Yes). Successive columns
+    contain the hexadecimal setting values for each project. Settings may be
+    1-bit to 64-bits wide. The named settings are converted to individual
+    single byte register values by this tool, to greatly simplify and speed up
+    programming.
+
+    If a setting is not written (not defined and a don't care) by one project
+    but is defined by another, the value cell will be empty for the project(s)
+    that do not define the setting. These empty cells will not count towards
+    the Varies computation. For example, in the example above project 3 does
+    not define a value for SLAB_OLA_FINE_ADJ_OVR above, so the value is empty.
+    Project 1 and 2 have the same value. So Varies is No and this setting need
+    not be written when switching from one configuration to another.
+
+    Note any control register writes necessary to fully load new frequency
+    plan are **NOT** included in the Registers.csv and Settings.csv exports.
+
+    P*-Report.txt
+    -------------
+
+    A design report is also created for each project file, and is named
+    Pn-Report.txt where n is the project number. For example, P1-Report.txt,
+    P2-Report.txt, and P3-Report.txt.
+
+    P*-Registers-Script.txt
+    -----------------------
+
+    A full config register write script is created for each project file. This
+    is the same output that CBProProjectRegistersExport when passed --format
+    csv --include-load-writes. This script contains any required control
+    register pre- and post-write sequence required to ready the device for
+    programming and fully load the configuration when complete.
+
+    For example:
+
+    # Part: Si5345
+    # Project File: Si5345-Edited-Project.slabtimeproj
+    # Design ID: <none>
+    # Includes Pre/Post Download Control Register Writes: Yes
+    # Die Revision: B1
+    # Creator: CBProMultiProjectExport v2.10.3 [2016-09-13]
+    # Created On: 2016-09-13 09:43:18 GMT-05:00
+    Address,Data
+    0x0B24,0xC0
+    0x0B25,0x00
+    ...
+
+    P*-Registers-Script.h
+    ---------------------
+
+    You can optionally create the same programming script as a C header file.
+    Add --c-register-scripts to the command line to generate these.
+
+    P*-Registers-Script-Delta-Only.txt         
+    ----------------------------------
+
+    Smaller, delta reconfigure register write script are also created for each
+    project file. These scripts contain only the register updates required to
+    switch to one of the configurations. USE OF THESE UPDATE SCRIPTS REQUIRES
+    THAT ONE OF THE FULL CONFIGURATION WRITE SCRIPTS HAVE BEEN PREVIOUSLY
+    WRITTEN. For example:
+
+       - Device reset
+       - Host writes P2-Registers-Script.txt (P2 config loaded)
+       - Host writes P3-Registers-Script-Delta-Only.txt (P3 config loaded)
+       - Host writes P1-Registers-Script-Delta-Only.txt (P1 config loaded)
+       - Host writes P2-Registers-Script-Delta-Only.txt (P2 config loaded)
+
+    The delta update scripts contain any required programming preamble and
+    postamble.
+
+    IMPORTANT: if your device contains a configuration pre-programmed by
+    Silicon Labs via an Orderable Part Number (OPN) such as Si5345B-B07024-GM
+    and you have the project file that was used to create this OPN, you MUST
+    STILL WRITE ONE OF THE FULL CONFIGURATION SCRIPTS THIS TOOL GENERATES
+    BEFORE USING ONE OF THE UPDATE DELTA SCRIPTS. The version of CBPro you are
+    using may generate different registers for the same project file, and
+    therefore different delta would be computed.
+
+    P*-Settings.txt
+    ---------------
+
+    Per-project named setting (bitfield) export files are also created. This
+    is the same information included in Settings.csv, but broken out on a
+    per-project basis. This is the same output that CBProProjectSettingsExport
+    generates.
+
+    For example:
+
+    # Si538x/4x Settings Export
+    # 
+    # Part: Si5345
+    # Project File: Si5345-Edited-Project.slabtimeproj
+    # Design ID: <none>
+    # Export Mode: AllNonSpecialUserRegisters
+    # Setting Names: Customer
+    # Die Revision: B1
+    # Creator: CBProMultiProjectExport v2.10.3 [2016-09-13]
+    # Created On: 2016-09-13 09:43:18 GMT-05:00
+    Location,SettingName,DecimalValue,HexValue
+    0x0004[7:0],GRADE,0,0x00
+    0x0006[23:0],TOOL_VERSION,0,0x000000
+    0x000B[6:0],I2C_ADDR,104,0x68
+    0x0016[1],LOL_ON_HOLD,1,0x1
+    0x0017[0],SYSINCAL_INTR_MSK,0,0x0
+    ...
+
+IN-SYSTEM PROGRAMMING WORKFLOW
+
+    There are many possible workflows given the different types of exports
+    produced by this tool. Some of the schemes are described below.
+
+    Use Register Scripts
+    --------------------
+
+    Your host software would have a copy of a single full configuration script
+    for a base configuration. For example, P2-Registers-Script.txt. It would
+    also have a copy of the update register script for each project the host
+    may want to switch to, such as P1-Registers-Script-Delta-Only.txt through
+    P3-Registers-Script-Delta-Only.txt. On device reset, the host will write
+    the P2 full configuration script, P2-Registers-Script.txt. It can then
+    write one of the smaller update delta scripts at any time to reconfigure
+    the device to P1-P3.
+
+    For example:
+
+       - Device reset
+       - Host writes P2-Registers-Script.txt (P2 config loaded)
+       - Host writes P3-Registers-Script-Delta-Only.txt (P3 config loaded)
+       - Host writes P1-Registers-Script-Delta-Only.txt (P1 config loaded)
+       - Host writes P2-Registers-Script-Delta-Only.txt (P2 config loaded)
+
+    Both full and update scripts contain any required control register
+    preamble needed to ready the device for programming and postamble required
+    to complete programming and load new configuration.
+
+    NOTE: your host must write a full configuration script before using one of
+    the update scripts: the update scripts assume that one of
+    P1-Registers-Script.txt - P3-Registers-Script.txt was programmed. The host
+    does not need to select P1 as the full config base config to program: any
+    of the full register script files can be written on device reset.
+
+    Use Registers.csv Only
+    ----------------------
+
+    Your host software would have a copy of the Registers.csv data. On device
+    boot and reset, the host would:
+
+       - Write any required pre-configuration control register sequence
+         to the device
+       - Write all registers from one of the configuration columns
+       - Write any required post-configuration control register sequence
+         to the device
+
+    To switch to a new configuration, the host only need write those registers
+    that have Varies=Yes in the change column. The host would be responsible
+    for determining whether any additional pre- and post-writes are required
+    when switching to a new configuration.
+
+OPTIONS
+
+    --c-register-scripts 
+
+        Create a register script in the form of a C header file for the base
+        project and each edit. Text/CSV style register write scripts for each
+        project are always created.
+
+    --create-out-folder 
+
+        Create the output folder does not exist already.
+
+    --help 
+
+        Print detailed usage to the console and exit.
+
+    --out-folder folder
+
+        The output folder. If this is not specified, the folder where the tool
+        is run is used.
+
+    --project pathname
+
+        The base configuration project file. You are modifying this design.
+        The underlying file will never be changed. You must specify this.
+
+    --version 
+
+        Print this program's version number and exit.
+

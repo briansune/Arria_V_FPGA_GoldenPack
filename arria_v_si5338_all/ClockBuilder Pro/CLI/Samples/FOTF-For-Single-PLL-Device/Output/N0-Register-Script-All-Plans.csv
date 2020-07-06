@@ -1,0 +1,17 @@
+# N0 Register Script - All Plans
+#
+# Base Project: Si5345-RevD-Project.slabtimeproj
+# Part: Si5345
+# Design ID: <none>
+# Inputs Vary Between Plans: No
+# Created By: CBProFOTF1 v2.23.5 [2018-05-02]
+# Timestamp: 2018-05-02 10:37:13 GMT-05:00
+Address,Base,Plan1
+# Write Configuration
+0x0303,0x00,0xB8
+0x0304,0x00,0xB0
+0x0305,0x75,0xCF
+0x0306,0x10,0x0D
+0x030B,0xC8,0xA2
+# Configuration Postamble
+0x030C,0x01,0x01

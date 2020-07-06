@@ -1,0 +1,16 @@
+Quartus Prime Archive log --	C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_led/led_test.qarlog
+
+Archive:	C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_led/led_test.qar
+Date:		Sat Jun 27 21:14:36 2020
+Quartus Prime		17.1.0 Build 590 10/25/2017 SJ Standard Edition
+
+	=========== Files Selected: ===========
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_led/led_test.qpf
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_led/led_test.qsf
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_led/src/led_test.sdc
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_led/src/led_test.v
+c:/intelfpga/17.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 5 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

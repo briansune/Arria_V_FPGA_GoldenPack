@@ -1,0 +1,36 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst top.LED -pg 1 -lvl 3 -y 990
+preplace inst top.DP_switch -pg 1 -lvl 3 -y 1090
+preplace inst top.pcie_256_hip_avmm_0 -pg 1 -lvl 2 -y 260
+preplace inst top.clk_0 -pg 1 -lvl 1 -y 730
+preplace inst top -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst top.alt_xcvr_reconfig_0 -pg 1 -lvl 3 -y 210
+preplace inst top.onchip_memory2_0 -pg 1 -lvl 3 -y 640
+preplace inst top.ddr_sfp_side_status -pg 1 -lvl 3 -y 540
+preplace inst top.pcie_reconfig_driver_0 -pg 1 -lvl 2 -y 100
+preplace netloc POINT_TO_POINT<net_container>top</net_container>(MASTER)pcie_256_hip_avmm_0.dma_wr_master,(SLAVE)onchip_memory2_0.s2) 1 2 1 900
+preplace netloc EXPORT<net_container>top</net_container>(SLAVE)pcie_256_hip_avmm_0.hip_ctrl,(SLAVE)top.hip_ctrl) 1 0 2 NJ 390 NJ
+preplace netloc INTERCONNECT<net_container>top</net_container>(SLAVE)LED.s1,(SLAVE)pcie_256_hip_avmm_0.wr_dts_slave,(MASTER)pcie_256_hip_avmm_0.Rxm_BAR4,(SLAVE)DP_switch.s1,(MASTER)pcie_256_hip_avmm_0.dma_rd_master,(SLAVE)onchip_memory2_0.s1,(SLAVE)pcie_256_hip_avmm_0.rd_dts_slave,(SLAVE)ddr_sfp_side_status.s1) 1 1 2 460 730 880
+preplace netloc EXPORT<net_container>top</net_container>(SLAVE)top.pcie_refclk,(SLAVE)pcie_256_hip_avmm_0.refclk) 1 0 2 NJ 590 NJ
+preplace netloc FAN_OUT<net_container>top</net_container>(SLAVE)alt_xcvr_reconfig_0.mgmt_rst_reset,(MASTER)clk_0.clk_reset,(SLAVE)pcie_reconfig_driver_0.reconfig_xcvr_rst) 1 1 2 360 70 NJ
+preplace netloc EXPORT<net_container>top</net_container>(SLAVE)top.led_wire,(SLAVE)LED.external_connection) 1 0 3 NJ 1020 NJ 1020 NJ
+preplace netloc POINT_TO_POINT<net_container>top</net_container>(SLAVE)alt_xcvr_reconfig_0.reconfig_to_xcvr,(SLAVE)pcie_256_hip_avmm_0.reconfig_to_xcvr) 1 1 2 420 50 NJ
+preplace netloc POINT_TO_POINT<net_container>top</net_container>(SLAVE)pcie_reconfig_driver_0.reconfig_busy,(SLAVE)alt_xcvr_reconfig_0.reconfig_busy) 1 1 2 480 90 1000
+preplace netloc EXPORT<net_container>top</net_container>(SLAVE)top.ddr_sfp_side_signal,(SLAVE)ddr_sfp_side_status.external_connection) 1 0 3 NJ 710 NJ 710 NJ
+preplace netloc POINT_TO_POINT<net_container>top</net_container>(SLAVE)alt_xcvr_reconfig_0.reconfig_from_xcvr,(SLAVE)pcie_256_hip_avmm_0.reconfig_from_xcvr) 1 1 2 480 650 940
+preplace netloc FAN_OUT<net_container>top</net_container>(MASTER)pcie_256_hip_avmm_0.nreset_status,(SLAVE)LED.reset,(SLAVE)ddr_sfp_side_status.reset,(SLAVE)onchip_memory2_0.reset2,(SLAVE)onchip_memory2_0.reset1,(SLAVE)DP_switch.reset) 1 2 1 860
+preplace netloc POINT_TO_POINT<net_container>top</net_container>(SLAVE)pcie_256_hip_avmm_0.hip_currentspeed,(SLAVE)pcie_reconfig_driver_0.hip_currentspeed) 1 1 1 460
+preplace netloc EXPORT<net_container>top</net_container>(SLAVE)pcie_256_hip_avmm_0.hip_serial,(SLAVE)top.hip_serial) 1 0 2 NJ 430 NJ
+preplace netloc FAN_OUT<net_container>top</net_container>(SLAVE)onchip_memory2_0.clk2,(SLAVE)DP_switch.clk,(SLAVE)LED.clk,(MASTER)pcie_256_hip_avmm_0.coreclkout,(SLAVE)onchip_memory2_0.clk1,(SLAVE)pcie_reconfig_driver_0.pld_clk) 1 1 2 440 30 980
+preplace netloc EXPORT<net_container>top</net_container>(SLAVE)top.pcie_256_hip_lock,(SLAVE)pcie_256_hip_avmm_0.reconfig_clk_locked) 1 0 2 NJ 530 NJ
+preplace netloc FAN_OUT<net_container>top</net_container>(SLAVE)pcie_reconfig_driver_0.reconfig_xcvr_clk,(SLAVE)alt_xcvr_reconfig_0.mgmt_clk_clk,(SLAVE)ddr_sfp_side_status.clk,(MASTER)clk_0.clk) 1 1 2 380 670 920
+preplace netloc FAN_IN<net_container>top</net_container>(SLAVE)pcie_256_hip_avmm_0.Txs,(MASTER)pcie_256_hip_avmm_0.wr_dcm_master,(MASTER)pcie_256_hip_avmm_0.rd_dcm_master) 1 1 2 480 250 840
+preplace netloc EXPORT<net_container>top</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)top.reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>top</net_container>(SLAVE)top.dp_switch,(SLAVE)DP_switch.external_connection) 1 0 3 NJ 1120 NJ 1120 NJ
+preplace netloc POINT_TO_POINT<net_container>top</net_container>(SLAVE)alt_xcvr_reconfig_0.reconfig_mgmt,(MASTER)pcie_reconfig_driver_0.reconfig_mgmt) 1 2 1 960
+preplace netloc EXPORT<net_container>top</net_container>(SLAVE)top.pcie_nrst,(SLAVE)pcie_256_hip_avmm_0.npor) 1 0 2 NJ 490 NJ
+preplace netloc EXPORT<net_container>top</net_container>(SLAVE)pcie_256_hip_avmm_0.hip_pipe,(SLAVE)top.hip_pipe) 1 0 2 NJ 410 NJ
+preplace netloc EXPORT<net_container>top</net_container>(SLAVE)clk_0.clk_in,(SLAVE)top.clk) 1 0 1 NJ
+levelinfo -pg 1 0 130 1280
+levelinfo -hier top 140 170 620 1110 1270

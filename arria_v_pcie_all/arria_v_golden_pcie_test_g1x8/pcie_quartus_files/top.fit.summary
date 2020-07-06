@@ -1,0 +1,20 @@
+Fitter Status : Successful - Sun Jul 05 00:06:52 2020
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+Revision Name : top
+Top-level Entity Name : top_hw
+Family : Arria V
+Device : 5AGTFC7H3F35I3
+Timing Models : Final
+Logic utilization (in ALMs) : 5,025 / 91,680 ( 5 % )
+Total registers : 12491
+Total pins : 47 / 656 ( 7 % )
+Total virtual pins : 0
+Total block memory bits : 736,038 / 13,987,840 ( 5 % )
+Total RAM Blocks : 110 / 1,366 ( 8 % )
+Total DSP Blocks : 0 / 800 ( 0 % )
+Total HSSI RX PCSs : 9 / 24 ( 38 % )
+Total HSSI PMA RX Deserializers : 8 / 24 ( 33 % )
+Total HSSI TX PCSs : 9 / 24 ( 38 % )
+Total HSSI PMA TX Serializers : 9 / 24 ( 38 % )
+Total PLLs : 9 / 36 ( 25 % )
+Total DLLs : 0 / 4 ( 0 % )

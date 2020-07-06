@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/altera_xcvr_functions.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_xcvr_functions.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/alt_reset_ctrl_lego.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/alt_reset_ctrl_tgx_cdrauto.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/alt_xcvr_resync.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/alt_reset_ctrl_lego.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/alt_reset_ctrl_tgx_cdrauto.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/alt_xcvr_resync.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/alt_xcvr_csr_common_h.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/alt_xcvr_csr_common.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/alt_xcvr_csr_pcs8g_h.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/alt_xcvr_csr_pcs8g.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/alt_xcvr_csr_selector.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/alt_xcvr_mgmt2dec.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/altera_wait_generate.v"
+   type="VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/alt_xcvr_csr_common_h.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/alt_xcvr_csr_common.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/alt_xcvr_csr_pcs8g_h.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/alt_xcvr_csr_pcs8g.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/alt_xcvr_csr_selector.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/alt_xcvr_mgmt2dec.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_wait_generate.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/altera_10gbaser_phy_clock_crosser.v"
+   type="VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_clock_crosser.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/altera_10gbaser_phy_pipeline_stage.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_pipeline_stage.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/altera_10gbaser_phy_pipeline_base.v"
+   type="VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_pipeline_base.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/altera_std_synchronizer_nocut.v"
+   type="VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/alt_10gbaser_pcs.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_params.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_async_fifo_fpga.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_bitsync.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_bitsync2.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_clockcomp.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_clk_ctrl.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_gearbox_exp.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_gearbox_red.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_pcs_10g.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_pcs_10g_top.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_reg_map_av.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_rx_fifo.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_rx_fifo_wrap.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_rx_top.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_tx_top.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/alt_10gbaser_pcs.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_params.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_async_fifo_fpga.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_bitsync.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_bitsync2.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_clockcomp.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_clk_ctrl.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_gearbox_exp.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_gearbox_red.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_pcs_10g.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_pcs_10g_top.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_reg_map_av.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_rx_fifo.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_rx_fifo_wrap.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_rx_top.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_tx_top.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_1588_latency.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_ber.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_ber_cnt_ns.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_ber_sm.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_blksync.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_blksync_datapath.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_decode.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_decode_type.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_descramble.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_encode.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_encode_type.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_lock_sm.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_nto1mux.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_prbs_gen_xg.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_prbs_ver_xg.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_random_err_cnt_ns.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_random_gen.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_random_ver.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_random_ver_10g.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_register_with_byte_enable.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_rx_sm_datapath.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_rx_sm_ns.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_scramble.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_square_wave_gen.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_tx_sm_datapath.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_tx_sm_ns.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_word_align.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_1588_latency.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_ber.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_ber_cnt_ns.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_ber_sm.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_blksync.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_blksync_datapath.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_decode.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_decode_type.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_descramble.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_encode.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_encode_type.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_lock_sm.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_nto1mux.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_prbs_gen_xg.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_prbs_ver_xg.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_random_err_cnt_ns.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_random_gen.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_random_ver.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_random_ver_10g.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_register_with_byte_enable.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_rx_sm_datapath.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_rx_sm_ns.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_scramble.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_square_wave_gen.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_tx_sm_datapath.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_tx_sm_ns.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_word_align.v"
+   type="VERILOG_ENCRYPT"
+   library="phy"
+   simulator="riviera" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/csr_pcs10gbaser_h.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/csr_pcs10gbaser.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/csr_pcs10gbaser_h.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/csr_pcs10gbaser.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/sv_reconfig_bundle_to_xcvr.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/sv_reconfig_bundle_to_ip.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/sv_reconfig_bundle_merger.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/sv_reconfig_bundle_to_xcvr.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/sv_reconfig_bundle_to_ip.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/sv_reconfig_bundle_merger.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/av_xcvr_h.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/av_xcvr_avmm_csr.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/av_tx_pma_ch.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/av_tx_pma.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/av_rx_pma.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/av_pma.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/av_pcs_ch.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/av_pcs.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/av_xcvr_avmm.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/av_xcvr_native.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/av_xcvr_plls.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/av_xcvr_data_adapter.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/av_reconfig_bundle_to_basic.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/av_reconfig_bundle_to_xcvr.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/av_xcvr_h.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/av_xcvr_avmm_csr.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/av_tx_pma_ch.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/av_tx_pma.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/av_rx_pma.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/av_pma.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/av_pcs_ch.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/av_pcs.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/av_xcvr_avmm.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/av_xcvr_native.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/av_xcvr_plls.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/av_xcvr_data_adapter.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/av_reconfig_bundle_to_basic.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/av_reconfig_bundle_to_xcvr.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/av_hssi_8g_rx_pcs_rbc.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/av_hssi_8g_tx_pcs_rbc.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/av_hssi_common_pcs_pma_interface_rbc.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/av_hssi_common_pld_pcs_interface_rbc.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/av_hssi_pipe_gen1_2_rbc.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/av_hssi_rx_pcs_pma_interface_rbc.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/av_hssi_rx_pld_pcs_interface_rbc.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/av_hssi_tx_pcs_pma_interface_rbc.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/av_hssi_tx_pld_pcs_interface_rbc.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/av_hssi_8g_rx_pcs_rbc.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/av_hssi_8g_tx_pcs_rbc.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/av_hssi_common_pcs_pma_interface_rbc.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/av_hssi_common_pld_pcs_interface_rbc.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/av_hssi_pipe_gen1_2_rbc.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/av_hssi_rx_pcs_pma_interface_rbc.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/av_hssi_rx_pld_pcs_interface_rbc.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/av_hssi_tx_pcs_pma_interface_rbc.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/av_hssi_tx_pld_pcs_interface_rbc.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/av_xcvr_10gbaser_nr.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/av_xcvr_10gbaser_native.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/av_xcvr_10gbaser_nr.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/av_xcvr_10gbaser_native.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/altera_xcvr_native_av_functions_h.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/altera_xcvr_native_av.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_xcvr_native_av_functions_h.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_xcvr_native_av.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/altera_xcvr_10gbaser.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_xcvr_10gbaser.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/altera_xcvr_reset_control.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/alt_xcvr_reset_counter.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/altera_xcvr_reset_control.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/alt_xcvr_reset_counter.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/alt_xcvr_arbiter.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/alt_xcvr_m2s.sv"
+   type="SYSTEM_VERILOG"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/alt_xcvr_arbiter.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor/alt_xcvr_m2s.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="phy"
+   simulator="modelsim" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/plain_files.txt"
+   type="OTHER"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/mentor_files.txt"
+   type="OTHER"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/cadence_files.txt"
+   type="OTHER"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/synopsys_files.txt"
+   type="OTHER"
+   library="phy" />
+ <file
+   path="phy_sim/altera_xcvr_10gbaser/aldec_files.txt"
+   type="OTHER"
+   library="phy" />
+ <file path="phy_sim/phy.v" type="VERILOG" />
+ <topLevel name="phy" />
+ <deviceFamily name="arriav" />
+</simPackage>

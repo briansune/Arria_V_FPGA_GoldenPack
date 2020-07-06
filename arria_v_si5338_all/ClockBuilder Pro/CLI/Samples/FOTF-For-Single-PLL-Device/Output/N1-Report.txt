@@ -1,0 +1,29 @@
+N1 Frequency-On-The-Fly Report
+
+Base Project: Si5345-RevD-Project.slabtimeproj
+Part: Si5345
+Design ID: <none>
+Inputs Vary Between Plans: No
+Created By: CBProFOTF1 v2.23.5 [2018-05-02]
+Timestamp: 2018-05-02 10:37:14 GMT-05:00
+
+Base Plan
+=========
+OUT2: 155.52 MHz
+OUT3: 311.04 MHz
+
+Fms1 = 622.08 MHz [ 622 + 2/25 MHz ]
+N1 = 21.8252488124517746... [ 21 + 1095191/1327104 ]
+R2 = 4
+R3 = 2
+
+Plan #1
+=======
+OUT2: 161.1328125 MHz
+OUT3: 322.265625 MHz
+
+Fms1 = 644.53125 MHz [ 644 + 17/32 MHz ]
+N1 = 21.065 [ 21 + 13/200 ]
+R2 = 4
+R3 = 2
+

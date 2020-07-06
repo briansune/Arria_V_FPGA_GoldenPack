@@ -1,0 +1,244 @@
+Archive Project report for top
+Mon Jul 29 09:07:06 2019
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Mon Jul 29 09:07:06 2019 ;
+; Revision Name          ; top                                   ;
+; Top-level Entity Name  ; top_hw                                ;
+; Family                 ; Arria V                               ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Info: File Set 'Source control' contains:
+    Info: Project source and settings files
+    Info: Automatically detected source files
+Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
+Info: Archive will store files relative to the closest common parent directory
+Info (13213): Using common directory I:/Altera_A5_board/arria_v_all_pcie/arria_v_golden_pcie_test_g2x4/
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive 'I:/Altera_A5_board/arria_v_all_pcie/arria_v_golden_pcie_test_g2x4_test.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'top.archive.rpt'
+Info (23030): Evaluation of Tcl script c:/intelfpga/17.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 653 megabytes
+    Info: Processing ended: Mon Jul 29 09:07:06 2019
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++---------------------------------------------------------------------------------------+
+; Files Archived                                                                        ;
++---------------------------------------------------------------------------------------+
+; File Name                                                                             ;
++---------------------------------------------------------------------------------------+
+; assignment_defaults.qdf                                                               ;
+; hip_status_av_hw.tcl                                                                  ;
+; pcie_lib/alt_arbiter_acq.sv                                                           ;
+; pcie_lib/alt_reset_ctrl_lego.sv                                                       ;
+; pcie_lib/alt_reset_ctrl_tgx_cdrauto.sv                                                ;
+; pcie_lib/alt_xcvr_arbiter.sv                                                          ;
+; pcie_lib/alt_xcvr_csr_common.sv                                                       ;
+; pcie_lib/alt_xcvr_csr_common_h.sv                                                     ;
+; pcie_lib/alt_xcvr_csr_pcs8g.sv                                                        ;
+; pcie_lib/alt_xcvr_csr_pcs8g_h.sv                                                      ;
+; pcie_lib/alt_xcvr_csr_selector.sv                                                     ;
+; pcie_lib/alt_xcvr_m2s.sv                                                              ;
+; pcie_lib/alt_xcvr_mgmt2dec.sv                                                         ;
+; pcie_lib/alt_xcvr_reconfig.sv                                                         ;
+; pcie_lib/alt_xcvr_reconfig_adce.sv                                                    ;
+; pcie_lib/alt_xcvr_reconfig_analog.sv                                                  ;
+; pcie_lib/alt_xcvr_reconfig_analog_av.sv                                               ;
+; pcie_lib/alt_xcvr_reconfig_basic.sv                                                   ;
+; pcie_lib/alt_xcvr_reconfig_cal_seq.sv                                                 ;
+; pcie_lib/alt_xcvr_reconfig_cpu.v                                                      ;
+; pcie_lib/alt_xcvr_reconfig_cpu_irq_mapper.sv                                          ;
+; pcie_lib/alt_xcvr_reconfig_cpu_mm_interconnect_0.v                                    ;
+; pcie_lib/alt_xcvr_reconfig_cpu_mm_interconnect_0_avalon_st_adapter.v                  ;
+; pcie_lib/alt_xcvr_reconfig_cpu_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv ;
+; pcie_lib/alt_xcvr_reconfig_cpu_mm_interconnect_0_cmd_demux.sv                         ;
+; pcie_lib/alt_xcvr_reconfig_cpu_mm_interconnect_0_cmd_demux_001.sv                     ;
+; pcie_lib/alt_xcvr_reconfig_cpu_mm_interconnect_0_cmd_mux.sv                           ;
+; pcie_lib/alt_xcvr_reconfig_cpu_mm_interconnect_0_cmd_mux_001.sv                       ;
+; pcie_lib/alt_xcvr_reconfig_cpu_mm_interconnect_0_router.sv                            ;
+; pcie_lib/alt_xcvr_reconfig_cpu_mm_interconnect_0_router_001.sv                        ;
+; pcie_lib/alt_xcvr_reconfig_cpu_mm_interconnect_0_router_002.sv                        ;
+; pcie_lib/alt_xcvr_reconfig_cpu_mm_interconnect_0_router_003.sv                        ;
+; pcie_lib/alt_xcvr_reconfig_cpu_mm_interconnect_0_rsp_mux.sv                           ;
+; pcie_lib/alt_xcvr_reconfig_cpu_mm_interconnect_0_rsp_mux_001.sv                       ;
+; pcie_lib/alt_xcvr_reconfig_cpu_ram.hex                                                ;
+; pcie_lib/alt_xcvr_reconfig_cpu_ram.sv                                                 ;
+; pcie_lib/alt_xcvr_reconfig_cpu_reconfig_cpu.v                                         ;
+; pcie_lib/alt_xcvr_reconfig_cpu_reconfig_cpu_rf_ram_a.mif                              ;
+; pcie_lib/alt_xcvr_reconfig_cpu_reconfig_cpu_rf_ram_b.mif                              ;
+; pcie_lib/alt_xcvr_reconfig_cpu_reconfig_cpu_test_bench.v                              ;
+; pcie_lib/alt_xcvr_reconfig_dcd.sv                                                     ;
+; pcie_lib/alt_xcvr_reconfig_dcd_av.sv                                                  ;
+; pcie_lib/alt_xcvr_reconfig_dcd_cal_av.sv                                              ;
+; pcie_lib/alt_xcvr_reconfig_dcd_control_av.sv                                          ;
+; pcie_lib/alt_xcvr_reconfig_dfe.sv                                                     ;
+; pcie_lib/alt_xcvr_reconfig_direct.sv                                                  ;
+; pcie_lib/alt_xcvr_reconfig_eyemon.sv                                                  ;
+; pcie_lib/alt_xcvr_reconfig_h.sv                                                       ;
+; pcie_lib/alt_xcvr_reconfig_mif.sv                                                     ;
+; pcie_lib/alt_xcvr_reconfig_offset_cancellation.sv                                     ;
+; pcie_lib/alt_xcvr_reconfig_offset_cancellation_av.sv                                  ;
+; pcie_lib/alt_xcvr_reconfig_pll.sv                                                     ;
+; pcie_lib/alt_xcvr_reconfig_soc.sv                                                     ;
+; pcie_lib/alt_xcvr_resync.sv                                                           ;
+; pcie_lib/alt_xreconf_analog_ctrlsm.sv                                                 ;
+; pcie_lib/alt_xreconf_analog_datactrl_av.sv                                            ;
+; pcie_lib/alt_xreconf_analog_rmw_av.sv                                                 ;
+; pcie_lib/alt_xreconf_basic_acq.sv                                                     ;
+; pcie_lib/alt_xreconf_cif.sv                                                           ;
+; pcie_lib/alt_xreconf_uif.sv                                                           ;
+; pcie_lib/altera_avalon_sc_fifo.v                                                      ;
+; pcie_lib/altera_merlin_arbitrator.sv                                                  ;
+; pcie_lib/altera_merlin_burst_uncompressor.sv                                          ;
+; pcie_lib/altera_merlin_master_agent.sv                                                ;
+; pcie_lib/altera_merlin_master_translator.sv                                           ;
+; pcie_lib/altera_merlin_slave_agent.sv                                                 ;
+; pcie_lib/altera_merlin_slave_translator.sv                                            ;
+; pcie_lib/altera_reset_controller.sdc                                                  ;
+; pcie_lib/altera_reset_controller.v                                                    ;
+; pcie_lib/altera_reset_synchronizer.v                                                  ;
+; pcie_lib/altera_wait_generate.v                                                       ;
+; pcie_lib/altera_xcvr_functions.sv                                                     ;
+; pcie_lib/altpcie_av_hip_128bit_atom.v                                                 ;
+; pcie_lib/altpcie_av_hip_ast_hip_status_bridge.v                                       ;
+; pcie_lib/altpcie_av_hip_ast_hwtcl.v                                                   ;
+; pcie_lib/altpcie_reconfig_driver.sv                                                   ;
+; pcie_lib/altpcie_rs_hip.v                                                             ;
+; pcie_lib/altpcie_rs_serdes.v                                                          ;
+; pcie_lib/altpcied_sv.sdc                                                              ;
+; pcie_lib/altpcied_sv_hwtcl.sv                                                         ;
+; pcie_lib/altpcierd_ast256_downstream.v                                                ;
+; pcie_lib/altpcierd_cdma_app_icm.v                                                     ;
+; pcie_lib/altpcierd_cdma_ast_msi.v                                                     ;
+; pcie_lib/altpcierd_cdma_ast_rx.v                                                      ;
+; pcie_lib/altpcierd_cdma_ast_rx_64.v                                                   ;
+; pcie_lib/altpcierd_cdma_ast_rx_128.v                                                  ;
+; pcie_lib/altpcierd_cdma_ast_tx.v                                                      ;
+; pcie_lib/altpcierd_cdma_ast_tx_64.v                                                   ;
+; pcie_lib/altpcierd_cdma_ast_tx_128.v                                                  ;
+; pcie_lib/altpcierd_compliance_test.v                                                  ;
+; pcie_lib/altpcierd_cpld_rx_buffer.v                                                   ;
+; pcie_lib/altpcierd_cplerr_lmi.v                                                       ;
+; pcie_lib/altpcierd_dma_descriptor.v                                                   ;
+; pcie_lib/altpcierd_dma_dt.v                                                           ;
+; pcie_lib/altpcierd_dma_prg_reg.v                                                      ;
+; pcie_lib/altpcierd_example_app_chaining.v                                             ;
+; pcie_lib/altpcierd_hip_rs.v                                                           ;
+; pcie_lib/altpcierd_npcred_monitor.v                                                   ;
+; pcie_lib/altpcierd_pcie_reconfig_initiator.v                                          ;
+; pcie_lib/altpcierd_rc_slave.v                                                         ;
+; pcie_lib/altpcierd_read_dma_requester.v                                               ;
+; pcie_lib/altpcierd_read_dma_requester_128.v                                           ;
+; pcie_lib/altpcierd_reconfig_clk_pll.v                                                 ;
+; pcie_lib/altpcierd_reg_access.v                                                       ;
+; pcie_lib/altpcierd_rxtx_downstream_intf.v                                             ;
+; pcie_lib/altpcierd_tl_cfg_sample.v                                                    ;
+; pcie_lib/altpcierd_write_dma_requester.v                                              ;
+; pcie_lib/altpcierd_write_dma_requester_128.v                                          ;
+; pcie_lib/av_hssi_8g_rx_pcs_rbc.sv                                                     ;
+; pcie_lib/av_hssi_8g_tx_pcs_rbc.sv                                                     ;
+; pcie_lib/av_hssi_common_pcs_pma_interface_rbc.sv                                      ;
+; pcie_lib/av_hssi_common_pld_pcs_interface_rbc.sv                                      ;
+; pcie_lib/av_hssi_pipe_gen1_2_rbc.sv                                                   ;
+; pcie_lib/av_hssi_rx_pcs_pma_interface_rbc.sv                                          ;
+; pcie_lib/av_hssi_rx_pld_pcs_interface_rbc.sv                                          ;
+; pcie_lib/av_hssi_tx_pcs_pma_interface_rbc.sv                                          ;
+; pcie_lib/av_hssi_tx_pld_pcs_interface_rbc.sv                                          ;
+; pcie_lib/av_pcs.sv                                                                    ;
+; pcie_lib/av_pcs_ch.sv                                                                 ;
+; pcie_lib/av_pma.sv                                                                    ;
+; pcie_lib/av_reconfig_bundle_to_basic.sv                                               ;
+; pcie_lib/av_reconfig_bundle_to_xcvr.sv                                                ;
+; pcie_lib/av_rx_pma.sv                                                                 ;
+; pcie_lib/av_tx_pma.sv                                                                 ;
+; pcie_lib/av_tx_pma_ch.sv                                                              ;
+; pcie_lib/av_xcvr_avmm.sv                                                              ;
+; pcie_lib/av_xcvr_avmm_csr.sv                                                          ;
+; pcie_lib/av_xcvr_data_adapter.sv                                                      ;
+; pcie_lib/av_xcvr_emsip_adapter.sv                                                     ;
+; pcie_lib/av_xcvr_h.sv                                                                 ;
+; pcie_lib/av_xcvr_native.sv                                                            ;
+; pcie_lib/av_xcvr_pipe_native_hip.sv                                                   ;
+; pcie_lib/av_xcvr_plls.sv                                                              ;
+; pcie_lib/av_xcvr_reconfig.sdc                                                         ;
+; pcie_lib/av_xcvr_reconfig_basic.sv                                                    ;
+; pcie_lib/av_xcvr_reconfig_mif.sv                                                      ;
+; pcie_lib/av_xcvr_reconfig_mif_avmm.sv                                                 ;
+; pcie_lib/av_xcvr_reconfig_mif_ctrl.sv                                                 ;
+; pcie_lib/av_xcvr_reconfig_pll.sv                                                      ;
+; pcie_lib/av_xcvr_reconfig_pll_ctrl.sv                                                 ;
+; pcie_lib/av_xrbasic_l2p_addr.sv                                                       ;
+; pcie_lib/av_xrbasic_l2p_ch.sv                                                         ;
+; pcie_lib/av_xrbasic_l2p_rom.sv                                                        ;
+; pcie_lib/av_xrbasic_lif.sv                                                            ;
+; pcie_lib/av_xrbasic_lif_csr.sv                                                        ;
+; pcie_lib/plain_files.txt                                                              ;
+; pcie_lib/qencrypt_files.txt                                                           ;
+; pcie_lib/sv_reconfig_bundle_merger.sv                                                 ;
+; pcie_lib/sv_reconfig_bundle_to_basic.sv                                               ;
+; pcie_lib/sv_reconfig_bundle_to_ip.sv                                                  ;
+; pcie_lib/sv_reconfig_bundle_to_xcvr.sv                                                ;
+; pcie_lib/top.v                                                                        ;
+; qii_av_cvp.tcl                                                                        ;
+; qii_pinout.tcl                                                                        ;
+; qii_pinout_5AGTFD7K3F40I3.tcl                                                         ;
+; qii_pinout_revb_board.tcl                                                             ;
+; qii_pinout_stkit.tcl                                                                  ;
+; qii_seed_sweep.tcl                                                                    ;
+; qsys_script.tcl                                                                       ;
+; sv_qsys_upd.tcl                                                                       ;
+; top.cof                                                                               ;
+; top.qip                                                                               ;
+; top.qpf                                                                               ;
+; top.qsf                                                                               ;
+; top.qsys                                                                              ;
+; top.sopcinfo                                                                          ;
+; top_assignment_defaults.qdf                                                           ;
+; top_hw.sdc                                                                            ;
+; top_hw.v                                                                              ;
++---------------------------------------------------------------------------------------+
+
+

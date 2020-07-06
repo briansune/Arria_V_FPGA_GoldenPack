@@ -1,0 +1,77 @@
+
+NAME
+
+    CBProProjectRegistersExport
+
+SYNOPSIS
+
+    CBProProjectRegistersExport [ opts ] --format csv|cheader 
+                               --project myproj.slabtimeproj 
+                               --outfile export.txt
+
+    CBProProjectRegistersExport --help
+
+DESCRIPTION
+
+    Exports the sequence of registers that must be written to achieve the
+    design/configuration present in the specified project file. Two formats
+    are supported:
+
+    + CSV: each line in the file is an address,data pair in hexadecimal
+    format. A comma separates the address and data fields. By default, a
+    #-style header is included at the top of the file.
+    + "C" Code Header: the register write sequence is expressed in C code via
+    an array of address,data pairs. This can be used directly in firmware
+    code.
+
+    You specify which format to export using the --format options. There is no
+    default: you must select a format.
+
+    Please refer to your device's Family Reference Manual for information on
+    register addressing and how to write the data contained within this
+    export.
+
+OPTIONS
+
+    --format csv|cheader
+
+        The export format. You must specify this.
+
+    --help 
+
+        Print detailed usage to the console and exit.
+
+    --include-load-writes 
+
+        Certain control registers must be written before and after writing the
+        volatile configuration registers. This ensures the device is stable
+        during configuration download and resumes normal operation after the
+        download is complete. If you want to include these special pre- and
+        post-write register writes in the export, specify this option.
+
+        Not supported by all devices. If your target device does not use this
+        option, a warning message will be printed if --include-load-writes is
+        supplied on the command line. In this case, the output will be the
+        same regardless.
+
+    --no-header 
+
+        Normally, a summary header will be included in the export. Each line
+        in the header will be prefixed by the # character. The header will
+        contain some basic information about the design, tool, and a
+        timestamp. Specify this argument to exclude the header. Not applicable
+        in CBProProjectRegistersExport "C" code mode.
+
+    --outfile pathname
+
+        The file to save the export data to. If this file already exists, it
+        will be overwritten. You must specify this.
+
+    --project pathname
+
+        The project file to export. You must specify this.
+
+    --version 
+
+        Print this program's version number and exit.
+

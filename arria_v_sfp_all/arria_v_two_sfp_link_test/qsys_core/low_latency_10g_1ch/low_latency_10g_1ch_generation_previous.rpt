@@ -1,0 +1,353 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate I:\Altera_A5_board\arria_v_all_sfp\arria_v_four_sfp_link_test\qsys_core\low_latency_10g_1ch.qsys --block-symbol-file --output-directory=I:\Altera_A5_board\arria_v_all_sfp\arria_v_four_sfp_link_test\qsys_core\low_latency_10g_1ch --family="Arria V" --part=5AGTFC7H3F35I3
+Progress: Loading qsys_core/low_latency_10g_1ch.qsys
+Progress: Reading input file
+Progress: Adding alt_xcvr_reconfig_0 [alt_xcvr_reconfig 17.1]
+Progress: Parameterizing module alt_xcvr_reconfig_0
+Progress: Adding clk_100 [clock_source 17.1]
+Progress: Parameterizing module clk_100
+Progress: Adding data_pattern_check_SFP_A [altera_avalon_data_pattern_checker 17.1]
+Progress: Parameterizing module data_pattern_check_SFP_A
+Progress: Adding data_pattern_check_SFP_B [altera_avalon_data_pattern_checker 17.1]
+Progress: Parameterizing module data_pattern_check_SFP_B
+Progress: Adding data_pattern_check_SFP_C [altera_avalon_data_pattern_checker 17.1]
+Progress: Parameterizing module data_pattern_check_SFP_C
+Progress: Adding data_pattern_check_SFP_D [altera_avalon_data_pattern_checker 17.1]
+Progress: Parameterizing module data_pattern_check_SFP_D
+Progress: Adding data_pattern_gen_SFP_A [altera_avalon_data_pattern_generator 17.1]
+Progress: Parameterizing module data_pattern_gen_SFP_A
+Progress: Adding data_pattern_gen_SFP_B [altera_avalon_data_pattern_generator 17.1]
+Progress: Parameterizing module data_pattern_gen_SFP_B
+Progress: Adding data_pattern_gen_SFP_C [altera_avalon_data_pattern_generator 17.1]
+Progress: Parameterizing module data_pattern_gen_SFP_C
+Progress: Adding data_pattern_gen_SFP_D [altera_avalon_data_pattern_generator 17.1]
+Progress: Parameterizing module data_pattern_gen_SFP_D
+Progress: Adding master_0 [altera_jtag_avalon_master 17.1]
+Progress: Parameterizing module master_0
+Progress: Adding pll_0 [altera_pll 17.1]
+Progress: Parameterizing module pll_0
+Progress: Adding ref_clk [clock_source 17.1]
+Progress: Parameterizing module ref_clk
+Progress: Adding timing_adapter_SFP_A_rx [timing_adapter 17.1]
+Progress: Parameterizing module timing_adapter_SFP_A_rx
+Progress: Adding timing_adapter_SFP_A_tx [timing_adapter 17.1]
+Progress: Parameterizing module timing_adapter_SFP_A_tx
+Progress: Adding timing_adapter_SFP_B_rx [timing_adapter 17.1]
+Progress: Parameterizing module timing_adapter_SFP_B_rx
+Progress: Adding timing_adapter_SFP_B_tx [timing_adapter 17.1]
+Progress: Parameterizing module timing_adapter_SFP_B_tx
+Progress: Adding timing_adapter_SFP_C_rx [timing_adapter 17.1]
+Progress: Parameterizing module timing_adapter_SFP_C_rx
+Progress: Adding timing_adapter_SFP_C_tx [timing_adapter 17.1]
+Progress: Parameterizing module timing_adapter_SFP_C_tx
+Progress: Adding timing_adapter_SFP_D_rx [timing_adapter 17.1]
+Progress: Parameterizing module timing_adapter_SFP_D_rx
+Progress: Adding timing_adapter_SFP_D_tx [timing_adapter 17.1]
+Progress: Parameterizing module timing_adapter_SFP_D_tx
+Progress: Adding xcvr_custom_phy_0 [altera_xcvr_custom_phy 17.1]
+Info: altera_xcvr_custom_phy: set_parameter_property device_family ALLOWED_RANGES {Stratix IV} {Arria II GZ} {Arria II GX} {HardCopy IV} {Stratix V} {Arria V GZ} {Arria V} {Cyclone V}
+Progress: Parameterizing module xcvr_custom_phy_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: low_latency_10g_1ch.alt_xcvr_reconfig_0: reconfig_from_xcvr port width is 8*46 bits
+Info: low_latency_10g_1ch.alt_xcvr_reconfig_0: reconfig_to_xcvr port width is 8*70 bits
+Info: low_latency_10g_1ch.pll_0: The legal reference clock frequency is 5.0 MHz..800.0 MHz
+Info: low_latency_10g_1ch.pll_0: Able to implement PLL with user settings
+Info: low_latency_10g_1ch.xcvr_custom_phy_0: The chosen PMA Bonding mode only allows the TX PLL to be placed within six-pack
+Info: low_latency_10g_1ch.xcvr_custom_phy_0: PHY IP will require 8 reconfiguration interfaces for connection to the external reconfiguration controller.
+Info: low_latency_10g_1ch.xcvr_custom_phy_0: Reconfiguration interface offsets 0-3 are connected to the transceiver channels.
+Info: low_latency_10g_1ch.xcvr_custom_phy_0: Reconfiguration interface offsets 4-7 are connected to the transmit PLLs.
+Warning: low_latency_10g_1ch.xcvr_custom_phy_0.tx_parallel_data0: Interface must have an associated reset
+Warning: low_latency_10g_1ch.xcvr_custom_phy_0.tx_parallel_data1: Interface must have an associated reset
+Warning: low_latency_10g_1ch.xcvr_custom_phy_0.tx_parallel_data2: Interface must have an associated reset
+Warning: low_latency_10g_1ch.xcvr_custom_phy_0.tx_parallel_data3: Interface must have an associated reset
+Warning: low_latency_10g_1ch.xcvr_custom_phy_0.rx_parallel_data0: Interface must have an associated reset
+Warning: low_latency_10g_1ch.xcvr_custom_phy_0.rx_parallel_data1: Interface must have an associated reset
+Warning: low_latency_10g_1ch.xcvr_custom_phy_0.rx_parallel_data2: Interface must have an associated reset
+Warning: low_latency_10g_1ch.xcvr_custom_phy_0.rx_parallel_data3: Interface must have an associated reset
+Warning: low_latency_10g_1ch.alt_xcvr_reconfig_0: alt_xcvr_reconfig_0.cal_busy_in must be exported, or connected to a matching conduit.
+Warning: low_latency_10g_1ch.xcvr_custom_phy_0.tx_parallel_data0: xcvr_custom_phy_0.tx_parallel_data0 does not have an associated reset
+Warning: low_latency_10g_1ch.xcvr_custom_phy_0.tx_parallel_data1: xcvr_custom_phy_0.tx_parallel_data1 does not have an associated reset
+Warning: low_latency_10g_1ch.xcvr_custom_phy_0.tx_parallel_data2: xcvr_custom_phy_0.tx_parallel_data2 does not have an associated reset
+Warning: low_latency_10g_1ch.xcvr_custom_phy_0.tx_parallel_data3: xcvr_custom_phy_0.tx_parallel_data3 does not have an associated reset
+Warning: low_latency_10g_1ch.xcvr_custom_phy_0.rx_parallel_data0: xcvr_custom_phy_0.rx_parallel_data0 does not have an associated reset
+Warning: low_latency_10g_1ch.xcvr_custom_phy_0.rx_parallel_data1: xcvr_custom_phy_0.rx_parallel_data1 does not have an associated reset
+Warning: low_latency_10g_1ch.xcvr_custom_phy_0.rx_parallel_data2: xcvr_custom_phy_0.rx_parallel_data2 does not have an associated reset
+Warning: low_latency_10g_1ch.xcvr_custom_phy_0.rx_parallel_data3: xcvr_custom_phy_0.rx_parallel_data3 does not have an associated reset
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate I:\Altera_A5_board\arria_v_all_sfp\arria_v_four_sfp_link_test\qsys_core\low_latency_10g_1ch.qsys --synthesis=VERILOG --output-directory=I:\Altera_A5_board\arria_v_all_sfp\arria_v_four_sfp_link_test\qsys_core\low_latency_10g_1ch\synthesis --family="Arria V" --part=5AGTFC7H3F35I3
+Progress: Loading qsys_core/low_latency_10g_1ch.qsys
+Progress: Reading input file
+Progress: Adding alt_xcvr_reconfig_0 [alt_xcvr_reconfig 17.1]
+Progress: Parameterizing module alt_xcvr_reconfig_0
+Progress: Adding clk_100 [clock_source 17.1]
+Progress: Parameterizing module clk_100
+Progress: Adding data_pattern_check_SFP_A [altera_avalon_data_pattern_checker 17.1]
+Progress: Parameterizing module data_pattern_check_SFP_A
+Progress: Adding data_pattern_check_SFP_B [altera_avalon_data_pattern_checker 17.1]
+Progress: Parameterizing module data_pattern_check_SFP_B
+Progress: Adding data_pattern_check_SFP_C [altera_avalon_data_pattern_checker 17.1]
+Progress: Parameterizing module data_pattern_check_SFP_C
+Progress: Adding data_pattern_check_SFP_D [altera_avalon_data_pattern_checker 17.1]
+Progress: Parameterizing module data_pattern_check_SFP_D
+Progress: Adding data_pattern_gen_SFP_A [altera_avalon_data_pattern_generator 17.1]
+Progress: Parameterizing module data_pattern_gen_SFP_A
+Progress: Adding data_pattern_gen_SFP_B [altera_avalon_data_pattern_generator 17.1]
+Progress: Parameterizing module data_pattern_gen_SFP_B
+Progress: Adding data_pattern_gen_SFP_C [altera_avalon_data_pattern_generator 17.1]
+Progress: Parameterizing module data_pattern_gen_SFP_C
+Progress: Adding data_pattern_gen_SFP_D [altera_avalon_data_pattern_generator 17.1]
+Progress: Parameterizing module data_pattern_gen_SFP_D
+Progress: Adding master_0 [altera_jtag_avalon_master 17.1]
+Progress: Parameterizing module master_0
+Progress: Adding pll_0 [altera_pll 17.1]
+Progress: Parameterizing module pll_0
+Progress: Adding ref_clk [clock_source 17.1]
+Progress: Parameterizing module ref_clk
+Progress: Adding timing_adapter_SFP_A_rx [timing_adapter 17.1]
+Progress: Parameterizing module timing_adapter_SFP_A_rx
+Progress: Adding timing_adapter_SFP_A_tx [timing_adapter 17.1]
+Progress: Parameterizing module timing_adapter_SFP_A_tx
+Progress: Adding timing_adapter_SFP_B_rx [timing_adapter 17.1]
+Progress: Parameterizing module timing_adapter_SFP_B_rx
+Progress: Adding timing_adapter_SFP_B_tx [timing_adapter 17.1]
+Progress: Parameterizing module timing_adapter_SFP_B_tx
+Progress: Adding timing_adapter_SFP_C_rx [timing_adapter 17.1]
+Progress: Parameterizing module timing_adapter_SFP_C_rx
+Progress: Adding timing_adapter_SFP_C_tx [timing_adapter 17.1]
+Progress: Parameterizing module timing_adapter_SFP_C_tx
+Progress: Adding timing_adapter_SFP_D_rx [timing_adapter 17.1]
+Progress: Parameterizing module timing_adapter_SFP_D_rx
+Progress: Adding timing_adapter_SFP_D_tx [timing_adapter 17.1]
+Progress: Parameterizing module timing_adapter_SFP_D_tx
+Progress: Adding xcvr_custom_phy_0 [altera_xcvr_custom_phy 17.1]
+Progress: Parameterizing module xcvr_custom_phy_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: low_latency_10g_1ch.alt_xcvr_reconfig_0: reconfig_from_xcvr port width is 8*46 bits
+Info: low_latency_10g_1ch.alt_xcvr_reconfig_0: reconfig_to_xcvr port width is 8*70 bits
+Info: low_latency_10g_1ch.pll_0: The legal reference clock frequency is 5.0 MHz..800.0 MHz
+Info: low_latency_10g_1ch.pll_0: Able to implement PLL with user settings
+Info: low_latency_10g_1ch.xcvr_custom_phy_0: The chosen PMA Bonding mode only allows the TX PLL to be placed within six-pack
+Info: low_latency_10g_1ch.xcvr_custom_phy_0: PHY IP will require 8 reconfiguration interfaces for connection to the external reconfiguration controller.
+Info: low_latency_10g_1ch.xcvr_custom_phy_0: Reconfiguration interface offsets 0-3 are connected to the transceiver channels.
+Info: low_latency_10g_1ch.xcvr_custom_phy_0: Reconfiguration interface offsets 4-7 are connected to the transmit PLLs.
+Warning: low_latency_10g_1ch.xcvr_custom_phy_0.tx_parallel_data0: Interface must have an associated reset
+Warning: low_latency_10g_1ch.xcvr_custom_phy_0.tx_parallel_data1: Interface must have an associated reset
+Warning: low_latency_10g_1ch.xcvr_custom_phy_0.tx_parallel_data2: Interface must have an associated reset
+Warning: low_latency_10g_1ch.xcvr_custom_phy_0.tx_parallel_data3: Interface must have an associated reset
+Warning: low_latency_10g_1ch.xcvr_custom_phy_0.rx_parallel_data0: Interface must have an associated reset
+Warning: low_latency_10g_1ch.xcvr_custom_phy_0.rx_parallel_data1: Interface must have an associated reset
+Warning: low_latency_10g_1ch.xcvr_custom_phy_0.rx_parallel_data2: Interface must have an associated reset
+Warning: low_latency_10g_1ch.xcvr_custom_phy_0.rx_parallel_data3: Interface must have an associated reset
+Warning: low_latency_10g_1ch.alt_xcvr_reconfig_0: alt_xcvr_reconfig_0.cal_busy_in must be exported, or connected to a matching conduit.
+Warning: low_latency_10g_1ch.xcvr_custom_phy_0.tx_parallel_data0: xcvr_custom_phy_0.tx_parallel_data0 does not have an associated reset
+Warning: low_latency_10g_1ch.xcvr_custom_phy_0.tx_parallel_data1: xcvr_custom_phy_0.tx_parallel_data1 does not have an associated reset
+Warning: low_latency_10g_1ch.xcvr_custom_phy_0.tx_parallel_data2: xcvr_custom_phy_0.tx_parallel_data2 does not have an associated reset
+Warning: low_latency_10g_1ch.xcvr_custom_phy_0.tx_parallel_data3: xcvr_custom_phy_0.tx_parallel_data3 does not have an associated reset
+Warning: low_latency_10g_1ch.xcvr_custom_phy_0.rx_parallel_data0: xcvr_custom_phy_0.rx_parallel_data0 does not have an associated reset
+Warning: low_latency_10g_1ch.xcvr_custom_phy_0.rx_parallel_data1: xcvr_custom_phy_0.rx_parallel_data1 does not have an associated reset
+Warning: low_latency_10g_1ch.xcvr_custom_phy_0.rx_parallel_data2: xcvr_custom_phy_0.rx_parallel_data2 does not have an associated reset
+Warning: low_latency_10g_1ch.xcvr_custom_phy_0.rx_parallel_data3: xcvr_custom_phy_0.rx_parallel_data3 does not have an associated reset
+Info: low_latency_10g_1ch: Generating low_latency_10g_1ch "low_latency_10g_1ch" for QUARTUS_SYNTH
+Info: alt_xcvr_reconfig_0: add_fileset_file ./altera_xcvr_functions.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/altera_xcvr_functions.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./av_xcvr_h.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_xcvr_h.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_resync.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_resync.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_h.sv SYSTEM_VERILOG PATH .//alt_xcvr_reconfig_h.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig.sv SYSTEM_VERILOG PATH .//alt_xcvr_reconfig.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cal_seq.sv SYSTEM_VERILOG PATH .//alt_xcvr_reconfig_cal_seq.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xreconf_cif.sv SYSTEM_VERILOG PATH .//alt_xreconf_cif.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xreconf_uif.sv SYSTEM_VERILOG PATH .//alt_xreconf_uif.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xreconf_basic_acq.sv SYSTEM_VERILOG PATH .//alt_xreconf_basic_acq.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_analog.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_analog/alt_xcvr_reconfig_analog.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_analog_av.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_analog/alt_xcvr_reconfig_analog_av.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xreconf_analog_datactrl_av.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_analog/alt_xreconf_analog_datactrl_av.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xreconf_analog_rmw_av.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_analog/alt_xreconf_analog_rmw_av.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xreconf_analog_ctrlsm.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_analog/alt_xreconf_analog_ctrlsm.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_offset_cancellation.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_offset_cancellation/alt_xcvr_reconfig_offset_cancellation.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_offset_cancellation_av.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_offset_cancellation/alt_xcvr_reconfig_offset_cancellation_av.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_eyemon.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_eyemon/alt_xcvr_reconfig_eyemon.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_dfe.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_dfe/alt_xcvr_reconfig_dfe.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_adce.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_adce/alt_xcvr_reconfig_adce.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_dcd.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_dcd/alt_xcvr_reconfig_dcd.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_dcd_av.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_dcd/alt_xcvr_reconfig_dcd_av.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_dcd_cal_av.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_dcd/alt_xcvr_reconfig_dcd_cal_av.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_dcd_control_av.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_dcd/alt_xcvr_reconfig_dcd_control_av.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_mif.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_mif/alt_xcvr_reconfig_mif.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./av_xcvr_reconfig_mif.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_mif/av_xcvr_reconfig_mif.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./av_xcvr_reconfig_mif_ctrl.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_mif/av_xcvr_reconfig_mif_ctrl.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./av_xcvr_reconfig_mif_avmm.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_mif/av_xcvr_reconfig_mif_avmm.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_pll.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_pll/alt_xcvr_reconfig_pll.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./av_xcvr_reconfig_pll.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_pll/av_xcvr_reconfig_pll.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./av_xcvr_reconfig_pll_ctrl.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_pll/av_xcvr_reconfig_pll_ctrl.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_soc.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_soc/alt_xcvr_reconfig_soc.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_ram.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_soc/alt_xcvr_reconfig_cpu_ram.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_ram.hex OTHER PATH ../alt_xcvr_reconfig_soc/software/alt_xcvr_reconfig_av/mem_init/alt_xcvr_reconfig_cpu_ram.hex
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_direct.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_direct/alt_xcvr_reconfig_direct.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_arbiter_acq.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_basic/alt_arbiter_acq.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_basic.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_basic/alt_xcvr_reconfig_basic.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./av_xrbasic_l2p_addr.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_basic/av_xrbasic_l2p_addr.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./av_xrbasic_l2p_ch.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_basic/av_xrbasic_l2p_ch.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./av_xrbasic_l2p_rom.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_basic/av_xrbasic_l2p_rom.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./av_xrbasic_lif_csr.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_basic/av_xrbasic_lif_csr.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./av_xrbasic_lif.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_basic/av_xrbasic_lif.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./av_xcvr_reconfig_basic.sv SYSTEM_VERILOG PATH ../alt_xcvr_reconfig_basic/av_xcvr_reconfig_basic.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./av_xcvr_reconfig.sdc OTHER PATH .//av_xcvr_reconfig.sdc
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_arbiter.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_arbiter.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_m2s.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_m2s.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./altera_wait_generate.v VERILOG PATH ../../altera_xcvr_generic/ctrl/altera_wait_generate.v
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_csr_selector.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_csr_selector.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./sv_reconfig_bundle_to_basic.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/sv_reconfig_bundle_to_basic.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./av_reconfig_bundle_to_basic.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_reconfig_bundle_to_basic.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./av_reconfig_bundle_to_xcvr.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_reconfig_bundle_to_xcvr.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu.v VERILOG PATH ../../../../../../Users/BRIANS~1/AppData/Local/Temp/alt8111_8092788433843884890.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/alt_xcvr_reconfig_cpu.v
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_reconfig_cpu.v VERILOG PATH ../../../../../../Users/BRIANS~1/AppData/Local/Temp/alt8111_8092788433843884890.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_reconfig_cpu.v
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_reconfig_cpu_rf_ram_a.mif OTHER PATH ../../../../../../Users/BRIANS~1/AppData/Local/Temp/alt8111_8092788433843884890.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_reconfig_cpu_rf_ram_a.mif
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_reconfig_cpu_rf_ram_b.mif OTHER PATH ../../../../../../Users/BRIANS~1/AppData/Local/Temp/alt8111_8092788433843884890.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_reconfig_cpu_rf_ram_b.mif
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_reconfig_cpu_test_bench.v VERILOG PATH ../../../../../../Users/BRIANS~1/AppData/Local/Temp/alt8111_8092788433843884890.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_reconfig_cpu_test_bench.v
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_mm_interconnect_0.v VERILOG PATH ../../../../../../Users/BRIANS~1/AppData/Local/Temp/alt8111_8092788433843884890.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_mm_interconnect_0.v
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_irq_mapper.sv SYSTEM_VERILOG PATH ../../../../../../Users/BRIANS~1/AppData/Local/Temp/alt8111_8092788433843884890.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_irq_mapper.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./altera_reset_controller.v VERILOG PATH ../../../../../../Users/BRIANS~1/AppData/Local/Temp/alt8111_8092788433843884890.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/altera_reset_controller.v
+Info: alt_xcvr_reconfig_0: add_fileset_file ./altera_reset_synchronizer.v VERILOG PATH ../../../../../../Users/BRIANS~1/AppData/Local/Temp/alt8111_8092788433843884890.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/altera_reset_synchronizer.v
+Info: alt_xcvr_reconfig_0: add_fileset_file ./altera_reset_controller.sdc OTHER PATH ../../../../../../Users/BRIANS~1/AppData/Local/Temp/alt8111_8092788433843884890.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/altera_reset_controller.sdc
+Info: alt_xcvr_reconfig_0: add_fileset_file ./altera_merlin_master_translator.sv SYSTEM_VERILOG PATH ../../../../../../Users/BRIANS~1/AppData/Local/Temp/alt8111_8092788433843884890.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/altera_merlin_master_translator.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./altera_merlin_slave_translator.sv SYSTEM_VERILOG PATH ../../../../../../Users/BRIANS~1/AppData/Local/Temp/alt8111_8092788433843884890.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/altera_merlin_slave_translator.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./altera_merlin_master_agent.sv SYSTEM_VERILOG PATH ../../../../../../Users/BRIANS~1/AppData/Local/Temp/alt8111_8092788433843884890.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/altera_merlin_master_agent.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./altera_merlin_slave_agent.sv SYSTEM_VERILOG PATH ../../../../../../Users/BRIANS~1/AppData/Local/Temp/alt8111_8092788433843884890.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/altera_merlin_slave_agent.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./altera_merlin_burst_uncompressor.sv SYSTEM_VERILOG PATH ../../../../../../Users/BRIANS~1/AppData/Local/Temp/alt8111_8092788433843884890.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/altera_merlin_burst_uncompressor.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./altera_avalon_sc_fifo.v VERILOG PATH ../../../../../../Users/BRIANS~1/AppData/Local/Temp/alt8111_8092788433843884890.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/altera_avalon_sc_fifo.v
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_mm_interconnect_0_router.sv SYSTEM_VERILOG PATH ../../../../../../Users/BRIANS~1/AppData/Local/Temp/alt8111_8092788433843884890.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_mm_interconnect_0_router.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_mm_interconnect_0_router_001.sv SYSTEM_VERILOG PATH ../../../../../../Users/BRIANS~1/AppData/Local/Temp/alt8111_8092788433843884890.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_mm_interconnect_0_router_001.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_mm_interconnect_0_router_002.sv SYSTEM_VERILOG PATH ../../../../../../Users/BRIANS~1/AppData/Local/Temp/alt8111_8092788433843884890.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_mm_interconnect_0_router_002.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_mm_interconnect_0_router_003.sv SYSTEM_VERILOG PATH ../../../../../../Users/BRIANS~1/AppData/Local/Temp/alt8111_8092788433843884890.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_mm_interconnect_0_router_003.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_mm_interconnect_0_cmd_demux.sv SYSTEM_VERILOG PATH ../../../../../../Users/BRIANS~1/AppData/Local/Temp/alt8111_8092788433843884890.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_mm_interconnect_0_cmd_demux.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_mm_interconnect_0_cmd_demux_001.sv SYSTEM_VERILOG PATH ../../../../../../Users/BRIANS~1/AppData/Local/Temp/alt8111_8092788433843884890.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_mm_interconnect_0_cmd_demux_001.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_mm_interconnect_0_cmd_mux.sv SYSTEM_VERILOG PATH ../../../../../../Users/BRIANS~1/AppData/Local/Temp/alt8111_8092788433843884890.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_mm_interconnect_0_cmd_mux.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./altera_merlin_arbitrator.sv SYSTEM_VERILOG PATH ../../../../../../Users/BRIANS~1/AppData/Local/Temp/alt8111_8092788433843884890.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/altera_merlin_arbitrator.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_mm_interconnect_0_cmd_mux_001.sv SYSTEM_VERILOG PATH ../../../../../../Users/BRIANS~1/AppData/Local/Temp/alt8111_8092788433843884890.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_mm_interconnect_0_cmd_mux_001.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_mm_interconnect_0_rsp_mux.sv SYSTEM_VERILOG PATH ../../../../../../Users/BRIANS~1/AppData/Local/Temp/alt8111_8092788433843884890.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_mm_interconnect_0_rsp_mux.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_mm_interconnect_0_rsp_mux_001.sv SYSTEM_VERILOG PATH ../../../../../../Users/BRIANS~1/AppData/Local/Temp/alt8111_8092788433843884890.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_mm_interconnect_0_rsp_mux_001.sv
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_mm_interconnect_0_avalon_st_adapter.v VERILOG PATH ../../../../../../Users/BRIANS~1/AppData/Local/Temp/alt8111_8092788433843884890.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_mm_interconnect_0_avalon_st_adapter.v
+Info: alt_xcvr_reconfig_0: add_fileset_file ./alt_xcvr_reconfig_cpu_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv SYSTEM_VERILOG PATH ../../../../../../Users/BRIANS~1/AppData/Local/Temp/alt8111_8092788433843884890.dir/0002_alt_xcvr_reconfig_0_gen/QUARTUS_SYNTH/submodules/alt_xcvr_reconfig_cpu_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv
+Info: alt_xcvr_reconfig_0: "low_latency_10g_1ch" instantiated alt_xcvr_reconfig "alt_xcvr_reconfig_0"
+Info: data_pattern_check_SFP_A: "low_latency_10g_1ch" instantiated altera_avalon_data_pattern_checker "data_pattern_check_SFP_A"
+Info: data_pattern_gen_SFP_A: "low_latency_10g_1ch" instantiated altera_avalon_data_pattern_generator "data_pattern_gen_SFP_A"
+Info: master_0: "low_latency_10g_1ch" instantiated altera_jtag_avalon_master "master_0"
+Info: pll_0: "low_latency_10g_1ch" instantiated altera_pll "pll_0"
+Info: timing_adapter_SFP_A_rx: "low_latency_10g_1ch" instantiated timing_adapter "timing_adapter_SFP_A_rx"
+Info: timing_adapter_SFP_A_tx: "low_latency_10g_1ch" instantiated timing_adapter "timing_adapter_SFP_A_tx"
+Info: xcvr_custom_phy_0: add_fileset_file ./altera_xcvr_functions.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/altera_xcvr_functions.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./altera_xcvr_custom.sv SYSTEM_VERILOG PATH .//altera_xcvr_custom.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./av_xcvr_custom_nr.sv SYSTEM_VERILOG PATH ../av/av_xcvr_custom_nr.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./av_xcvr_custom_native.sv SYSTEM_VERILOG PATH ../av/av_xcvr_custom_native.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./alt_xcvr_resync.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_resync.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./alt_xcvr_csr_common_h.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_csr_common_h.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./alt_xcvr_csr_common.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_csr_common.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./alt_xcvr_csr_pcs8g_h.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_csr_pcs8g_h.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./alt_xcvr_csr_pcs8g.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_csr_pcs8g.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./alt_xcvr_csr_selector.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_csr_selector.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./alt_xcvr_mgmt2dec.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_mgmt2dec.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./altera_wait_generate.v VERILOG PATH ../../altera_xcvr_generic/ctrl/altera_wait_generate.v
+Info: xcvr_custom_phy_0: add_fileset_file ./sv_reconfig_bundle_to_xcvr.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/sv_reconfig_bundle_to_xcvr.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./sv_reconfig_bundle_to_ip.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/sv_reconfig_bundle_to_ip.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./sv_reconfig_bundle_merger.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/sv_reconfig_bundle_merger.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./av_xcvr_h.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_xcvr_h.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./av_xcvr_avmm_csr.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_xcvr_avmm_csr.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./av_tx_pma_ch.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_tx_pma_ch.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./av_tx_pma.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_tx_pma.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./av_rx_pma.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_rx_pma.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./av_pma.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_pma.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./av_pcs_ch.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_pcs_ch.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./av_pcs.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_pcs.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./av_xcvr_avmm.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_xcvr_avmm.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./av_xcvr_native.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_xcvr_native.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./av_xcvr_plls.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_xcvr_plls.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./av_xcvr_data_adapter.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_xcvr_data_adapter.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./av_reconfig_bundle_to_basic.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_reconfig_bundle_to_basic.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./av_reconfig_bundle_to_xcvr.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_reconfig_bundle_to_xcvr.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./av_hssi_8g_rx_pcs_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/rbc/av_hssi_8g_rx_pcs_rbc.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./av_hssi_8g_tx_pcs_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/rbc/av_hssi_8g_tx_pcs_rbc.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./av_hssi_common_pcs_pma_interface_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/rbc/av_hssi_common_pcs_pma_interface_rbc.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./av_hssi_common_pld_pcs_interface_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/rbc/av_hssi_common_pld_pcs_interface_rbc.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./av_hssi_pipe_gen1_2_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/rbc/av_hssi_pipe_gen1_2_rbc.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./av_hssi_rx_pcs_pma_interface_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/rbc/av_hssi_rx_pcs_pma_interface_rbc.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./av_hssi_rx_pld_pcs_interface_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/rbc/av_hssi_rx_pld_pcs_interface_rbc.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./av_hssi_tx_pcs_pma_interface_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/rbc/av_hssi_tx_pcs_pma_interface_rbc.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./av_hssi_tx_pld_pcs_interface_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/rbc/av_hssi_tx_pld_pcs_interface_rbc.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./altera_xcvr_reset_control.sv SYSTEM_VERILOG PATH ../../alt_xcvr/altera_xcvr_reset_control/altera_xcvr_reset_control.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./alt_xcvr_reset_counter.sv SYSTEM_VERILOG PATH ../../alt_xcvr/altera_xcvr_reset_control/alt_xcvr_reset_counter.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./alt_xcvr_arbiter.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_arbiter.sv
+Info: xcvr_custom_phy_0: add_fileset_file ./alt_xcvr_m2s.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_m2s.sv
+Info: xcvr_custom_phy_0: "low_latency_10g_1ch" instantiated altera_xcvr_custom_phy "xcvr_custom_phy_0"
+Info: Reusing file I:/Altera_A5_board/arria_v_all_sfp/arria_v_four_sfp_link_test/qsys_core/low_latency_10g_1ch/synthesis/submodules/altera_xcvr_functions.sv
+Info: Reusing file I:/Altera_A5_board/arria_v_all_sfp/arria_v_four_sfp_link_test/qsys_core/low_latency_10g_1ch/synthesis/submodules/alt_xcvr_resync.sv
+Info: Reusing file I:/Altera_A5_board/arria_v_all_sfp/arria_v_four_sfp_link_test/qsys_core/low_latency_10g_1ch/synthesis/submodules/alt_xcvr_csr_selector.sv
+Info: Reusing file I:/Altera_A5_board/arria_v_all_sfp/arria_v_four_sfp_link_test/qsys_core/low_latency_10g_1ch/synthesis/submodules/altera_wait_generate.v
+Info: Reusing file I:/Altera_A5_board/arria_v_all_sfp/arria_v_four_sfp_link_test/qsys_core/low_latency_10g_1ch/synthesis/submodules/av_xcvr_h.sv
+Info: Reusing file I:/Altera_A5_board/arria_v_all_sfp/arria_v_four_sfp_link_test/qsys_core/low_latency_10g_1ch/synthesis/submodules/av_reconfig_bundle_to_basic.sv
+Info: Reusing file I:/Altera_A5_board/arria_v_all_sfp/arria_v_four_sfp_link_test/qsys_core/low_latency_10g_1ch/synthesis/submodules/av_reconfig_bundle_to_xcvr.sv
+Info: Reusing file I:/Altera_A5_board/arria_v_all_sfp/arria_v_four_sfp_link_test/qsys_core/low_latency_10g_1ch/synthesis/submodules/alt_xcvr_arbiter.sv
+Info: Reusing file I:/Altera_A5_board/arria_v_all_sfp/arria_v_four_sfp_link_test/qsys_core/low_latency_10g_1ch/synthesis/submodules/alt_xcvr_m2s.sv
+Warning: Overwriting different file I:/Altera_A5_board/arria_v_all_sfp/arria_v_four_sfp_link_test/qsys_core/low_latency_10g_1ch/synthesis/submodules/plain_files.txt
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_007: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_008: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_009: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "low_latency_10g_1ch" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: rst_controller: "low_latency_10g_1ch" instantiated altera_reset_controller "rst_controller"
+Info: Reusing file I:/Altera_A5_board/arria_v_all_sfp/arria_v_four_sfp_link_test/qsys_core/low_latency_10g_1ch/synthesis/submodules/altera_reset_controller.v
+Info: Reusing file I:/Altera_A5_board/arria_v_all_sfp/arria_v_four_sfp_link_test/qsys_core/low_latency_10g_1ch/synthesis/submodules/altera_reset_synchronizer.v
+Info: Reusing file I:/Altera_A5_board/arria_v_all_sfp/arria_v_four_sfp_link_test/qsys_core/low_latency_10g_1ch/synthesis/submodules/altera_reset_controller.sdc
+Info: data_pattern_checker: "data_pattern_check_SFP_A" instantiated altera_avalon_data_pattern_checker_core "data_pattern_checker"
+Info: Reusing file I:/Altera_A5_board/arria_v_all_sfp/arria_v_four_sfp_link_test/qsys_core/low_latency_10g_1ch/synthesis/submodules/altera_reset_controller.v
+Info: Reusing file I:/Altera_A5_board/arria_v_all_sfp/arria_v_four_sfp_link_test/qsys_core/low_latency_10g_1ch/synthesis/submodules/altera_reset_synchronizer.v
+Info: data_pattern_generator: "data_pattern_gen_SFP_A" instantiated altera_avalon_data_pattern_generator_core "data_pattern_generator"
+Info: Reusing file I:/Altera_A5_board/arria_v_all_sfp/arria_v_four_sfp_link_test/qsys_core/low_latency_10g_1ch/synthesis/submodules/altera_reset_controller.v
+Info: Reusing file I:/Altera_A5_board/arria_v_all_sfp/arria_v_four_sfp_link_test/qsys_core/low_latency_10g_1ch/synthesis/submodules/altera_reset_synchronizer.v
+Info: jtag_phy_embedded_in_jtag_master: "master_0" instantiated altera_jtag_dc_streaming "jtag_phy_embedded_in_jtag_master"
+Info: timing_adt: "master_0" instantiated timing_adapter "timing_adt"
+Info: fifo: "master_0" instantiated altera_avalon_sc_fifo "fifo"
+Info: Reusing file I:/Altera_A5_board/arria_v_all_sfp/arria_v_four_sfp_link_test/qsys_core/low_latency_10g_1ch/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: b2p: "master_0" instantiated altera_avalon_st_bytes_to_packets "b2p"
+Info: p2b: "master_0" instantiated altera_avalon_st_packets_to_bytes "p2b"
+Info: transacto: "master_0" instantiated altera_avalon_packets_to_master "transacto"
+Info: b2p_adapter: "master_0" instantiated channel_adapter "b2p_adapter"
+Info: p2b_adapter: "master_0" instantiated channel_adapter "p2b_adapter"
+Info: master_0_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "master_0_master_translator"
+Info: Reusing file I:/Altera_A5_board/arria_v_all_sfp/arria_v_four_sfp_link_test/qsys_core/low_latency_10g_1ch/synthesis/submodules/altera_merlin_master_translator.sv
+Info: data_pattern_check_SFP_A_csr_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "data_pattern_check_SFP_A_csr_slave_translator"
+Info: Reusing file I:/Altera_A5_board/arria_v_all_sfp/arria_v_four_sfp_link_test/qsys_core/low_latency_10g_1ch/synthesis/submodules/altera_merlin_slave_translator.sv
+Info: master_0_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "master_0_master_agent"
+Info: Reusing file I:/Altera_A5_board/arria_v_all_sfp/arria_v_four_sfp_link_test/qsys_core/low_latency_10g_1ch/synthesis/submodules/altera_merlin_master_agent.sv
+Info: data_pattern_check_SFP_A_csr_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "data_pattern_check_SFP_A_csr_slave_agent"
+Info: Reusing file I:/Altera_A5_board/arria_v_all_sfp/arria_v_four_sfp_link_test/qsys_core/low_latency_10g_1ch/synthesis/submodules/altera_merlin_slave_agent.sv
+Info: Reusing file I:/Altera_A5_board/arria_v_all_sfp/arria_v_four_sfp_link_test/qsys_core/low_latency_10g_1ch/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: master_0_master_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "master_0_master_limiter"
+Info: Reusing file I:/Altera_A5_board/arria_v_all_sfp/arria_v_four_sfp_link_test/qsys_core/low_latency_10g_1ch/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: Reusing file I:/Altera_A5_board/arria_v_all_sfp/arria_v_four_sfp_link_test/qsys_core/low_latency_10g_1ch/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file I:/Altera_A5_board/arria_v_all_sfp/arria_v_four_sfp_link_test/qsys_core/low_latency_10g_1ch/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file I:/Altera_A5_board/arria_v_all_sfp/arria_v_four_sfp_link_test/qsys_core/low_latency_10g_1ch/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: low_latency_10g_1ch: Done "low_latency_10g_1ch" with 34 modules, 155 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

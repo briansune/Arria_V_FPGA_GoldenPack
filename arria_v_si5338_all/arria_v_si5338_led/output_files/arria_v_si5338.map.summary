@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Mon Jun 29 00:59:38 2020
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+Revision Name : arria_v_si5338
+Top-level Entity Name : arria_v_si5338
+Family : Arria V
+Logic utilization (in ALMs) : N/A
+Total registers : 188
+Total pins : 14
+Total virtual pins : 0
+Total block memory bits : 6,144
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0
+Total DLLs : 0

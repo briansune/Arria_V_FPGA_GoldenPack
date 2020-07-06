@@ -1,0 +1,56 @@
+
+NAME
+
+    CBProSi534x8xFirmwareExport
+
+SYNOPSIS
+
+    CBProSi534x8xFirmwareExport [ --config-only ]
+                                --type bootrecord|standalone --format bin|hex 
+                                --project pathname --outfile pathname
+
+    CBProSi534x8xFirmwareExport --help
+
+DESCRIPTION
+
+    This tool creates a firmware image for the Si5383/84/88/89. The device
+    configuration specified in this design will be embedded in the firmware.
+    Please refer to the Si5383/84 or Si5388/89 Family Reference Manual for
+    more information regarding the MCU firmware upgrade process.
+
+OPTIONS
+
+    --config-only 
+
+        Do not include program flash in the firmware image. Only include the
+        device configuration data. Use this option with extreme caution: the
+        device you are programming must have a compatible version of firmware
+        loaded.
+
+    --format bin|hex
+
+        The file format: binary or Intel Hex.
+
+    --help 
+
+        Print detailed usage to the console and exit.
+
+    --outfile pathname
+
+        The file to save the firmware to. If this file already exists, it will
+        be overwritten. You must specify this.
+
+    --project pathname
+
+        The CBPro project file. The configuration present in this design will
+        be embedded in the firmware.
+
+    --type bootrecord|standalone
+
+        The type of firmware image to create: boot record that can be used
+        with bootloader or stand-alone firmware image.
+
+    --version 
+
+        Print this program's version number and exit.
+

@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Sat Jun 27 21:58:18 2020
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+Revision Name : arria_v_two_sfp_link
+Top-level Entity Name : arria_v_two_sfp_link
+Family : Arria V
+Logic utilization (in ALMs) : N/A
+Total registers : 3738
+Total pins : 15
+Total virtual pins : 0
+Total block memory bits : 4,608
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 2
+Total HSSI PMA RX Deserializers : 2
+Total HSSI TX PCSs : 2
+Total HSSI PMA TX Serializers : 2
+Total PLLs : 5
+Total DLLs : 0

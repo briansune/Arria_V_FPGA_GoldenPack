@@ -1,0 +1,20 @@
+Fitter Status : Successful - Fri Jul 03 23:54:00 2020
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+Revision Name : arria_v_golden_pwr_ddr_1066mhz
+Top-level Entity Name : top
+Family : Arria V
+Device : 5AGTFC7H3F35I3
+Timing Models : Final
+Logic utilization (in ALMs) : 5,093 / 91,680 ( 6 % )
+Total registers : 8784
+Total pins : 126 / 656 ( 19 % )
+Total virtual pins : 0
+Total block memory bits : 208,664 / 13,987,840 ( 1 % )
+Total RAM Blocks : 46 / 1,366 ( 3 % )
+Total DSP Blocks : 0 / 800 ( 0 % )
+Total HSSI RX PCSs : 0 / 24 ( 0 % )
+Total HSSI PMA RX Deserializers : 0 / 24 ( 0 % )
+Total HSSI TX PCSs : 0 / 24 ( 0 % )
+Total HSSI PMA TX Serializers : 0 / 24 ( 0 % )
+Total PLLs : 1 / 36 ( 3 % )
+Total DLLs : 1 / 4 ( 25 % )

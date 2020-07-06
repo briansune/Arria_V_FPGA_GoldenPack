@@ -1,0 +1,20 @@
+Fitter Status : Successful - Sun Jun 28 00:57:13 2020
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+Revision Name : hdmi_colorbar
+Top-level Entity Name : hdmi_colorbar
+Family : Arria V
+Device : 5AGTFC7H3F35I3
+Timing Models : Final
+Logic utilization (in ALMs) : 280 / 91,680 ( < 1 % )
+Total registers : 361
+Total pins : 36 / 656 ( 5 % )
+Total virtual pins : 0
+Total block memory bits : 0 / 13,987,840 ( 0 % )
+Total RAM Blocks : 0 / 1,366 ( 0 % )
+Total DSP Blocks : 0 / 800 ( 0 % )
+Total HSSI RX PCSs : 0 / 24 ( 0 % )
+Total HSSI PMA RX Deserializers : 0 / 24 ( 0 % )
+Total HSSI TX PCSs : 0 / 24 ( 0 % )
+Total HSSI PMA TX Serializers : 0 / 24 ( 0 % )
+Total PLLs : 1 / 36 ( 3 % )
+Total DLLs : 0 / 4 ( 0 % )

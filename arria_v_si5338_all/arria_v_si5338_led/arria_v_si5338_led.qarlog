@@ -1,0 +1,22 @@
+Quartus Prime Archive log --	C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/arria_v_si5338_led.qarlog
+
+Archive:	C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/arria_v_si5338_led.qar
+Date:		Mon Jun 29 01:02:10 2020
+Quartus Prime		17.1.0 Build 590 10/25/2017 SJ Standard Edition
+
+	=========== Files Selected: ===========
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/arria_v_si5338.qpf
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/arria_v_si5338.qsf
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/arria_v_si5338.sdc
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/arria_v_si5338.v
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/si5338_init_core.v
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/si5338_init_rom.qip
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/si5338_init_rom.v
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/si5338_init_rom_bb.v
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/si5338_rom.mif
+c:/intelfpga/17.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 11 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

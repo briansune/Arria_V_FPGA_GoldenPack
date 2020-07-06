@@ -1,0 +1,299 @@
+
+State Machine - |arria_v_sfp_b_udp|network:network_inst|udp_complete_64:udp_complete_inst|ip_complete_64:ip_complete_64_inst|arp_64:arp_inst|arp_eth_tx_64:arp_eth_tx_inst|state_reg
+Name state_reg.STATE_WRITE_HEADER 
+state_reg.STATE_IDLE 0 
+state_reg.STATE_WRITE_HEADER 1 
+
+State Machine - |arria_v_sfp_b_udp|network:network_inst|udp_complete_64:udp_complete_inst|ip_complete_64:ip_complete_64_inst|ip_64:ip_inst|ip_eth_tx_64:ip_eth_tx_64_inst|state_reg
+Name state_reg.STATE_WAIT_LAST state_reg.STATE_WRITE_PAYLOAD_LAST state_reg.STATE_WRITE_PAYLOAD state_reg.STATE_WRITE_HEADER_LAST state_reg.STATE_WRITE_HEADER state_reg.STATE_IDLE 
+state_reg.STATE_IDLE 0 0 0 0 0 0 
+state_reg.STATE_WRITE_HEADER 0 0 0 0 1 1 
+state_reg.STATE_WRITE_HEADER_LAST 0 0 0 1 0 1 
+state_reg.STATE_WRITE_PAYLOAD 0 0 1 0 0 1 
+state_reg.STATE_WRITE_PAYLOAD_LAST 0 1 0 0 0 1 
+state_reg.STATE_WAIT_LAST 1 0 0 0 0 1 
+
+State Machine - |arria_v_sfp_b_udp|phy:phy_inst|altera_xcvr_10gbaser:phy_inst|av_xcvr_10gbaser_nr:av_xcvr_10gbaser_nr_inst|av_xcvr_10gbaser_native:ch[0].av_xcvr_10gbaser_native_inst|alt_10gbaser_pcs:av_10gbaser_soft_pcs_inst|altera_10gbaser_phy_pcs_10g_top:pcs_10g_top_0|altera_10gbaser_phy_pcs_10g:pcs_10g_0|altera_10gbaser_phy_rx_top:rx_top|altera_10gbaser_phy_rx_fifo_wrap:rx_clockcomp|altera_10gbaser_phy_rx_fifo:av_rx_fifo|altera_10gbaser_phy_1588_latency:altera_10gbaser_phy_1588_latency|stratixv_10gbaser_1588_ppm_counter:sv_ppm_cntr|state
+Name state.BIT_20 state.BIT_17 state.BIT_14 state.00 
+state.00 0 0 0 0 
+state.BIT_14 0 0 1 1 
+state.BIT_17 0 1 0 1 
+state.BIT_20 1 0 0 1 
+
+State Machine - |arria_v_sfp_b_udp|phy:phy_inst|altera_xcvr_10gbaser:phy_inst|av_xcvr_10gbaser_nr:av_xcvr_10gbaser_nr_inst|av_xcvr_10gbaser_native:ch[0].av_xcvr_10gbaser_native_inst|alt_10gbaser_pcs:av_10gbaser_soft_pcs_inst|altera_10gbaser_phy_pcs_10g_top:pcs_10g_top_0|altera_10gbaser_phy_pcs_10g:pcs_10g_0|altera_10gbaser_phy_rx_top:rx_top|altera_10gbaser_phy_ber:ber|altera_10gbaser_phy_ber_sm:altera_10gbaser_phy_ber_sm|altera_10gbaser_phy_ber_sm
+Name altera_10gbaser_phy_ber_sm.SET_HI_BER_CLR_TIMER altera_10gbaser_phy_ber_sm.SET_HI_BER altera_10gbaser_phy_ber_sm.MONITOR altera_10gbaser_phy_ber_sm.SET_GOOD_BER_CLR_TIMER 
+altera_10gbaser_phy_ber_sm.SET_GOOD_BER_CLR_TIMER 0 0 0 0 
+altera_10gbaser_phy_ber_sm.MONITOR 0 0 1 1 
+altera_10gbaser_phy_ber_sm.SET_HI_BER 0 1 0 1 
+altera_10gbaser_phy_ber_sm.SET_HI_BER_CLR_TIMER 1 0 0 1 
+
+State Machine - |arria_v_sfp_b_udp|phy_reconfig:phy_reconfig_inst|alt_xcvr_reconfig:phy_reconfig_inst|alt_xcvr_reconfig_analog:analog.sc_analog|alt_xcvr_reconfig_analog_av:reconfig_analog_av|alt_xreconf_analog_datactrl_av:inst_analog_datactrl|alt_xreconf_analog_ctrlsm:inst_analog_ctrlsm|state
+Name state.STATE_GO_WRAGAIN state.STATE_LOCK_CHK state.STATE_RMW_WR state.STATE_RMW_GO2 state.STATE_RMW_WAIT state.STATE_RMW_RD state.STATE_RMW_GO state.STATE_READ state.STATE_GO state.STATE_IDLE 
+state.STATE_IDLE 0 0 0 0 0 0 0 0 0 0 
+state.STATE_GO 0 0 0 0 0 0 0 0 1 1 
+state.STATE_READ 0 0 0 0 0 0 0 1 0 1 
+state.STATE_RMW_GO 0 0 0 0 0 0 1 0 0 1 
+state.STATE_RMW_RD 0 0 0 0 0 1 0 0 0 1 
+state.STATE_RMW_WAIT 0 0 0 0 1 0 0 0 0 1 
+state.STATE_RMW_GO2 0 0 0 1 0 0 0 0 0 1 
+state.STATE_RMW_WR 0 0 1 0 0 0 0 0 0 1 
+state.STATE_LOCK_CHK 0 1 0 0 0 0 0 0 0 1 
+state.STATE_GO_WRAGAIN 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |arria_v_sfp_b_udp|phy_reconfig:phy_reconfig_inst|alt_xcvr_reconfig:phy_reconfig_inst|alt_xcvr_reconfig_offset_cancellation:offset.sc_offset|alt_xcvr_reconfig_offset_cancellation_av:offset_cancellation_av|alt_cal_av:alt_cal_inst|ret_state
+Name ret_state.PDOF_TEST_RD ret_state.CH_ADV ret_state.DPRIO_WAIT ret_state.CAL_PD_WR ret_state.IDLE ret_state.PDOF_TEST_WR 
+ret_state.IDLE 0 0 0 0 0 0 
+ret_state.CAL_PD_WR 0 0 0 1 1 0 
+ret_state.DPRIO_WAIT 0 0 1 0 1 0 
+ret_state.CH_ADV 0 1 0 0 1 0 
+ret_state.PDOF_TEST_RD 1 0 0 0 1 0 
+ret_state.PDOF_TEST_WR 0 0 0 0 1 1 
+
+State Machine - |arria_v_sfp_b_udp|phy_reconfig:phy_reconfig_inst|alt_xcvr_reconfig:phy_reconfig_inst|alt_xcvr_reconfig_offset_cancellation:offset.sc_offset|alt_xcvr_reconfig_offset_cancellation_av:offset_cancellation_av|alt_cal_av:alt_cal_inst|state
+Name state.PDOF_TEST_RD state.DPRIO_WRITE state.DPRIO_READ state.CH_ADV state.TEST_INPUT state.SAMPLE_TB state.DPRIO_WAIT state.CAL_PD_WR state.CHECK_PLL_RD state.TESTBUS_SET state.CH_WAIT state.IDLE state.PDOF_TEST_WR 
+state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.CH_WAIT 0 0 0 0 0 0 0 0 0 0 1 1 0 
+state.TESTBUS_SET 0 0 0 0 0 0 0 0 0 1 0 1 0 
+state.CHECK_PLL_RD 0 0 0 0 0 0 0 0 1 0 0 1 0 
+state.CAL_PD_WR 0 0 0 0 0 0 0 1 0 0 0 1 0 
+state.DPRIO_WAIT 0 0 0 0 0 0 1 0 0 0 0 1 0 
+state.SAMPLE_TB 0 0 0 0 0 1 0 0 0 0 0 1 0 
+state.TEST_INPUT 0 0 0 0 1 0 0 0 0 0 0 1 0 
+state.CH_ADV 0 0 0 1 0 0 0 0 0 0 0 1 0 
+state.DPRIO_READ 0 0 1 0 0 0 0 0 0 0 0 1 0 
+state.DPRIO_WRITE 0 1 0 0 0 0 0 0 0 0 0 1 0 
+state.PDOF_TEST_RD 1 0 0 0 0 0 0 0 0 0 0 1 0 
+state.PDOF_TEST_WR 0 0 0 0 0 0 0 0 0 0 0 1 1 
+
+State Machine - |arria_v_sfp_b_udp|phy_reconfig:phy_reconfig_inst|alt_xcvr_reconfig:phy_reconfig_inst|alt_xcvr_reconfig_offset_cancellation:offset.sc_offset|alt_xcvr_reconfig_offset_cancellation_av:offset_cancellation_av|state
+Name state.RELEASE_PHY_RESET_OVERRIDE_START_STATE state.RELEASE_PHY_RESET_OVERRIDE_DATA_STATE state.RELEASE_PHY_RESET_OVERRIDE_ADDR_STATE state.SET_PHY_RESET_OVERRIDE_START_STATE state.SET_PHY_RESET_OVERRIDE_DATA_STATE state.SET_PHY_RESET_OVERRIDE_ADDR_STATE state.RELEASE_OC_CALEN_DONE_STATE state.RELEASE_OC_CALEN_START_STATE state.RELEASE_OC_CALEN_DATA_STATE state.START_OC_CALEN_STATE state.SET_OC_CALEN_DATA_STATE state.SET_OC_CALEN_ADDR_STATE state.GET_TESTBUS_DATA_STATE state.GET_TESTBUS_ADDR_STATE state.WAIT_FOR_NEXT_STATE state.RELEASE_PMUTEX_STATE state.CHECK_PMUTEX_STATE state.READ_PMUTEX_STATE state.ACQUIRE_PMUTEX_STATE state.WRITE_DONE_STATE state.READ_DATA_STATE state.ADDRESS_OFFSET_STATE state.CHECK_REQ_DATA_STATE state.READ_REQ_DATA_STATE state.REQUEST_CONTROL_STATE state.SET_ADDR_OFFSET_REQ_STATE state.CHECK_PHY_ADDR_STATE state.READ_PHY_ADDR_STATE state.BUSY_STATE state.CONTROL_STATE state.WRITE_DATA_STATE state.LOGICAL_ADDRESS_STATE state.000000 
+state.000000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.LOGICAL_ADDRESS_STATE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.WRITE_DATA_STATE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.CONTROL_STATE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.BUSY_STATE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.READ_PHY_ADDR_STATE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.CHECK_PHY_ADDR_STATE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.SET_ADDR_OFFSET_REQ_STATE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.REQUEST_CONTROL_STATE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.READ_REQ_DATA_STATE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.CHECK_REQ_DATA_STATE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.ADDRESS_OFFSET_STATE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.READ_DATA_STATE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.WRITE_DONE_STATE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.ACQUIRE_PMUTEX_STATE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.READ_PMUTEX_STATE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.CHECK_PMUTEX_STATE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.RELEASE_PMUTEX_STATE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.WAIT_FOR_NEXT_STATE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.GET_TESTBUS_ADDR_STATE 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.GET_TESTBUS_DATA_STATE 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.SET_OC_CALEN_ADDR_STATE 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.SET_OC_CALEN_DATA_STATE 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.START_OC_CALEN_STATE 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.RELEASE_OC_CALEN_DATA_STATE 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.RELEASE_OC_CALEN_START_STATE 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.RELEASE_OC_CALEN_DONE_STATE 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.SET_PHY_RESET_OVERRIDE_ADDR_STATE 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.SET_PHY_RESET_OVERRIDE_DATA_STATE 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.SET_PHY_RESET_OVERRIDE_START_STATE 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.RELEASE_PHY_RESET_OVERRIDE_ADDR_STATE 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.RELEASE_PHY_RESET_OVERRIDE_DATA_STATE 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.RELEASE_PHY_RESET_OVERRIDE_START_STATE 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |arria_v_sfp_b_udp|phy:phy_inst|altera_xcvr_10gbaser:phy_inst|av_xcvr_10gbaser_nr:av_xcvr_10gbaser_nr_inst|av_xcvr_10gbaser_native:ch[0].av_xcvr_10gbaser_native_inst|alt_10gbaser_pcs:av_10gbaser_soft_pcs_inst|altera_10gbaser_phy_pcs_10g_top:pcs_10g_top_0|altera_10gbaser_phy_pcs_10g:pcs_10g_0|altera_10gbaser_phy_tx_top:tx_top|altera_10gbaser_phy_encode:encode|altera_10gbaser_phy_encode_type:ENCODE_PERLANE[0].TYPE|ctrl_in_enc
+Name ctrl_in_enc.1101 ctrl_in_enc.1100 ctrl_in_enc.1011 ctrl_in_enc.1010 ctrl_in_enc.1001 ctrl_in_enc.1000 ctrl_in_enc.0111 ctrl_in_enc.0110 ctrl_in_enc.0101 ctrl_in_enc.0100 ctrl_in_enc.0011 ctrl_in_enc.0010 ctrl_in_enc.0001 ctrl_in_enc.0000 
+ctrl_in_enc.0000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+ctrl_in_enc.0001 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+ctrl_in_enc.0010 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+ctrl_in_enc.0011 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+ctrl_in_enc.0100 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+ctrl_in_enc.0101 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+ctrl_in_enc.0110 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+ctrl_in_enc.0111 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+ctrl_in_enc.1000 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+ctrl_in_enc.1001 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+ctrl_in_enc.1010 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+ctrl_in_enc.1011 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+ctrl_in_enc.1100 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+ctrl_in_enc.1101 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |arria_v_sfp_b_udp|network:network_inst|eth_mac_10g_fifo:eth_mac_10g_fifo_inst|eth_mac_10g:eth_mac_10g_inst|axis_xgmii_tx_64:axis_xgmii_tx_inst|state_reg
+Name state_reg.STATE_WAIT_END state_reg.STATE_IFG state_reg.STATE_FCS_2 state_reg.STATE_FCS_1 state_reg.STATE_PAD state_reg.STATE_PAYLOAD state_reg.STATE_IDLE 
+state_reg.STATE_IDLE 0 0 0 0 0 0 0 
+state_reg.STATE_PAYLOAD 0 0 0 0 0 1 1 
+state_reg.STATE_PAD 0 0 0 0 1 0 1 
+state_reg.STATE_FCS_1 0 0 0 1 0 0 1 
+state_reg.STATE_FCS_2 0 0 1 0 0 0 1 
+state_reg.STATE_IFG 0 1 0 0 0 0 1 
+state_reg.STATE_WAIT_END 1 0 0 0 0 0 1 
+
+State Machine - |arria_v_sfp_b_udp|phy_reconfig:phy_reconfig_inst|alt_xcvr_reconfig:phy_reconfig_inst|alt_xcvr_reconfig_dcd:dcd.sc_dcd|alt_xcvr_reconfig_dcd_av:inst_alt_xcvr_reconfig_dcd_av|alt_xreconf_cif:inst_alt_xreconf_cif|alt_xreconf_basic_acq:inst_basic_acq|state
+Name state.ST_CLR_RECONFIG_BASIC_PADDR_MODE state.ST_RELEASE_REQ state.ST_START_AGAIN state.ST_CHECK_CTRLLOCK state.ST_READ_RECONFIG_BASIC_DATA state.ST_SET_RECONFIG_BASIC_READ state.ST_SET_RECONFIG_BASIC_WRITE state.ST_WRITE_DATA_TO_RECONFIG_BASIC state.ST_ACCESS_RECONFIG_BASIC_OFFSET_REG state.ST_CONFIRM_RECONFIG_BASIC_CH_LOCK state.ST_SET_RECONFIG_BASIC_PADDR_MODE state.ST_CHECK_PHY_ADD_LEGAL state.ST_READ_PHY_ADDRESS state.ST_WRITE_RECONFIG_BASIC_LCH state.ST_REQ_MUTEX state.0000 
+state.0000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.ST_REQ_MUTEX 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.ST_WRITE_RECONFIG_BASIC_LCH 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.ST_READ_PHY_ADDRESS 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.ST_CHECK_PHY_ADD_LEGAL 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.ST_SET_RECONFIG_BASIC_PADDR_MODE 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.ST_CONFIRM_RECONFIG_BASIC_CH_LOCK 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.ST_ACCESS_RECONFIG_BASIC_OFFSET_REG 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.ST_WRITE_DATA_TO_RECONFIG_BASIC 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.ST_SET_RECONFIG_BASIC_WRITE 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.ST_SET_RECONFIG_BASIC_READ 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.ST_READ_RECONFIG_BASIC_DATA 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.ST_CHECK_CTRLLOCK 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.ST_START_AGAIN 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.ST_RELEASE_REQ 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.ST_CLR_RECONFIG_BASIC_PADDR_MODE 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |arria_v_sfp_b_udp|phy_reconfig:phy_reconfig_inst|alt_xcvr_reconfig:phy_reconfig_inst|alt_xcvr_reconfig_dcd:dcd.sc_dcd|alt_xcvr_reconfig_dcd_av:inst_alt_xcvr_reconfig_dcd_av|alt_xcvr_reconfig_dcd_cal_av:inst_alt_xcvr_reconfig_dcd_cal|state_done
+Name state_done.STATE_DONE0 state_done.STATE_DONE2 state_done.STATE_DONE1 
+state_done.STATE_DONE0 0 0 0 
+state_done.STATE_DONE1 1 0 1 
+state_done.STATE_DONE2 1 1 0 
+
+State Machine - |arria_v_sfp_b_udp|phy_reconfig:phy_reconfig_inst|alt_xcvr_reconfig:phy_reconfig_inst|alt_xcvr_reconfig_dcd:dcd.sc_dcd|alt_xcvr_reconfig_dcd_av:inst_alt_xcvr_reconfig_dcd_av|alt_xcvr_reconfig_dcd_cal_av:inst_alt_xcvr_reconfig_dcd_cal|alt_xcvr_reconfig_dcd_control_av:inst_alt_xcvr_reconfig_dcd_control|manual_state
+Name manual_state.00 manual_state.MANUAL_DEASSERT manual_state.MANUAL_ASSERT 
+manual_state.00 0 0 0 
+manual_state.MANUAL_ASSERT 1 0 1 
+manual_state.MANUAL_DEASSERT 1 1 0 
+
+State Machine - |arria_v_sfp_b_udp|phy_reconfig:phy_reconfig_inst|alt_xcvr_reconfig:phy_reconfig_inst|alt_xcvr_reconfig_dcd:dcd.sc_dcd|alt_xcvr_reconfig_dcd_av:inst_alt_xcvr_reconfig_dcd_av|alt_xcvr_reconfig_dcd_cal_av:inst_alt_xcvr_reconfig_dcd_cal|alt_xcvr_reconfig_dcd_control_av:inst_alt_xcvr_reconfig_dcd_control|state
+Name state.STATE_RD_PHY_FIN state.STATE_DONE state.STATE_RESET_RTX_LST state.STATE_RESET_RSER_CLKMON state.STATE_RD_DCTUNE state.STATE_SET_DCTUNE state.STATE_RD_CMP_TOGGLE state.STATE_DEC_DCTUNE state.STATE_INC_DCTUNE state.STATE_RD_CMP_OUT state.STATE_RESET_DCTUNE state.STATE_RD_DEFAULT_DCTUNE state.STATE_WR_RTX_LST state.STATE_RD_RTX_LST state.STATE_WR_RSER_CLKMON state.STATE_RD_RSER_CLKMON state.STATE_RD_PHY_ID state.STATE_RD_PHY_REQ state.000000 
+state.000000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.STATE_RD_PHY_REQ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.STATE_RD_PHY_ID 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.STATE_RD_RSER_CLKMON 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.STATE_WR_RSER_CLKMON 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.STATE_RD_RTX_LST 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.STATE_WR_RTX_LST 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.STATE_RD_DEFAULT_DCTUNE 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.STATE_RESET_DCTUNE 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.STATE_RD_CMP_OUT 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.STATE_INC_DCTUNE 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.STATE_DEC_DCTUNE 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.STATE_RD_CMP_TOGGLE 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STATE_SET_DCTUNE 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STATE_RD_DCTUNE 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STATE_RESET_RSER_CLKMON 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STATE_RESET_RTX_LST 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STATE_DONE 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STATE_RD_PHY_FIN 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |arria_v_sfp_b_udp|phy:phy_inst|altera_xcvr_10gbaser:phy_inst|av_xcvr_10gbaser_nr:av_xcvr_10gbaser_nr_inst|av_xcvr_10gbaser_native:ch[0].av_xcvr_10gbaser_native_inst|alt_10gbaser_pcs:av_10gbaser_soft_pcs_inst|altera_10gbaser_phy_pcs_10g_top:pcs_10g_top_0|altera_10gbaser_phy_pcs_10g:pcs_10g_0|altera_10gbaser_phy_tx_top:tx_top|altera_10gbaser_phy_clockcomp:tx_altera_10gbaser_phy_clockcomp|altera_10gbaser_phy_1588_latency:altera_10gbaser_phy_1588_latency|stratixv_10gbaser_1588_ppm_counter:sv_ppm_cntr|state
+Name state.BIT_20 state.BIT_17 state.BIT_14 state.00 
+state.00 0 0 0 0 
+state.BIT_14 0 0 1 1 
+state.BIT_17 0 1 0 1 
+state.BIT_20 1 0 0 1 
+
+State Machine - |arria_v_sfp_b_udp|network:network_inst|udp_complete_64:udp_complete_inst|udp_64:udp_64_inst|udp_ip_tx_64:udp_ip_tx_64_inst|state_reg
+Name state_reg.STATE_WRITE_PAYLOAD_LAST state_reg.STATE_WRITE_PAYLOAD state_reg.STATE_WRITE_HEADER state_reg.STATE_IDLE state_reg.STATE_WAIT_LAST 
+state_reg.STATE_IDLE 0 0 0 0 0 
+state_reg.STATE_WRITE_HEADER 0 0 1 1 0 
+state_reg.STATE_WRITE_PAYLOAD 0 1 0 1 0 
+state_reg.STATE_WRITE_PAYLOAD_LAST 1 0 0 1 0 
+state_reg.STATE_WAIT_LAST 0 0 0 1 1 
+
+State Machine - |arria_v_sfp_b_udp|network:network_inst|udp_complete_64:udp_complete_inst|ip_complete_64:ip_complete_64_inst|ip_64:ip_inst|state_reg
+Name state_reg.STATE_IDLE state_reg.STATE_WAIT_PACKET state_reg.STATE_ARP_QUERY 
+state_reg.STATE_IDLE 0 0 0 
+state_reg.STATE_ARP_QUERY 1 0 1 
+state_reg.STATE_WAIT_PACKET 1 1 0 
+
+State Machine - |arria_v_sfp_b_udp|network:network_inst|udp_complete_64:udp_complete_inst|udp_64:udp_64_inst|udp_checksum_gen_64:udp_checksum_gen_64_inst|state_reg
+Name state_reg.STATE_FINISH_SUM_1 state_reg.STATE_SUM_PAYLOAD state_reg.STATE_SUM_HEADER state_reg.STATE_IDLE state_reg.STATE_FINISH_SUM_2 
+state_reg.STATE_IDLE 0 0 0 0 0 
+state_reg.STATE_SUM_HEADER 0 0 1 1 0 
+state_reg.STATE_SUM_PAYLOAD 0 1 0 1 0 
+state_reg.STATE_FINISH_SUM_1 1 0 0 1 0 
+state_reg.STATE_FINISH_SUM_2 0 0 0 1 1 
+
+State Machine - |arria_v_sfp_b_udp|network:network_inst|udp_complete_64:udp_complete_inst|udp_64:udp_64_inst|udp_ip_rx_64:udp_ip_rx_64_inst|state_reg
+Name state_reg.STATE_READ_PAYLOAD_LAST state_reg.STATE_READ_PAYLOAD state_reg.STATE_READ_HEADER state_reg.STATE_IDLE state_reg.STATE_WAIT_LAST 
+state_reg.STATE_IDLE 0 0 0 0 0 
+state_reg.STATE_READ_HEADER 0 0 1 1 0 
+state_reg.STATE_READ_PAYLOAD 0 1 0 1 0 
+state_reg.STATE_READ_PAYLOAD_LAST 1 0 0 1 0 
+state_reg.STATE_WAIT_LAST 0 0 0 1 1 
+
+State Machine - |arria_v_sfp_b_udp|network:network_inst|udp_complete_64:udp_complete_inst|ip_complete_64:ip_complete_64_inst|arp_64:arp_inst|arp_eth_rx_64:arp_eth_rx_inst|state_reg
+Name state_reg.STATE_IDLE state_reg.STATE_WAIT_LAST state_reg.STATE_READ_HEADER 
+state_reg.STATE_IDLE 0 0 0 
+state_reg.STATE_READ_HEADER 1 0 1 
+state_reg.STATE_WAIT_LAST 1 1 0 
+
+State Machine - |arria_v_sfp_b_udp|network:network_inst|udp_complete_64:udp_complete_inst|ip_complete_64:ip_complete_64_inst|ip_64:ip_inst|ip_eth_rx_64:ip_eth_rx_64_inst|state_reg
+Name state_reg.STATE_READ_PAYLOAD_LAST state_reg.STATE_READ_PAYLOAD state_reg.STATE_READ_HEADER state_reg.STATE_IDLE state_reg.STATE_WAIT_LAST 
+state_reg.STATE_IDLE 0 0 0 0 0 
+state_reg.STATE_READ_HEADER 0 0 1 1 0 
+state_reg.STATE_READ_PAYLOAD 0 1 0 1 0 
+state_reg.STATE_READ_PAYLOAD_LAST 1 0 0 1 0 
+state_reg.STATE_WAIT_LAST 0 0 0 1 1 
+
+State Machine - |arria_v_sfp_b_udp|network:network_inst|eth_axis_rx_64:eth_axis_rx_inst|state_reg
+Name state_reg.STATE_IDLE state_reg.STATE_READ_PAYLOAD state_reg.STATE_READ_HEADER 
+state_reg.STATE_IDLE 0 0 0 
+state_reg.STATE_READ_HEADER 1 0 1 
+state_reg.STATE_READ_PAYLOAD 1 1 0 
+
+State Machine - |arria_v_sfp_b_udp|network:network_inst|eth_axis_tx_64:eth_axis_tx_inst|state_reg
+Name state_reg.STATE_WRITE_PAYLOAD state_reg.STATE_WRITE_HEADER_LAST state_reg.STATE_WRITE_HEADER state_reg.STATE_IDLE 
+state_reg.STATE_IDLE 0 0 0 0 
+state_reg.STATE_WRITE_HEADER 0 0 1 1 
+state_reg.STATE_WRITE_HEADER_LAST 0 1 0 1 
+state_reg.STATE_WRITE_PAYLOAD 1 0 0 1 
+
+State Machine - |arria_v_sfp_b_udp|phy:phy_inst|altera_xcvr_10gbaser:phy_inst|av_xcvr_10gbaser_nr:av_xcvr_10gbaser_nr_inst|av_xcvr_10gbaser_native:ch[0].av_xcvr_10gbaser_native_inst|alt_10gbaser_pcs:av_10gbaser_soft_pcs_inst|altera_10gbaser_phy_pcs_10g_top:pcs_10g_top_0|altera_10gbaser_phy_pcs_10g:pcs_10g_0|altera_10gbaser_phy_rx_top:rx_top|altera_10gbaser_phy_rx_fifo_wrap:rx_clockcomp|altera_10gbaser_phy_rx_fifo:av_rx_fifo|wr_del_sm_basic
+Name wr_del_sm_basic.WR_ENABLE_BASIC 
+wr_del_sm_basic.WR_IDLE_BASIC 0 
+wr_del_sm_basic.WR_ENABLE_BASIC 1 
+
+State Machine - |arria_v_sfp_b_udp|phy:phy_inst|altera_xcvr_10gbaser:phy_inst|av_xcvr_10gbaser_nr:av_xcvr_10gbaser_nr_inst|av_xcvr_10gbaser_native:ch[0].av_xcvr_10gbaser_native_inst|alt_10gbaser_pcs:av_10gbaser_soft_pcs_inst|altera_10gbaser_phy_pcs_10g_top:pcs_10g_top_0|altera_10gbaser_phy_pcs_10g:pcs_10g_0|altera_10gbaser_phy_rx_top:rx_top|altera_10gbaser_phy_rx_fifo_wrap:rx_clockcomp|altera_10gbaser_phy_rx_fifo:av_rx_fifo|rd_add_sm_basic
+Name rd_add_sm_basic.RD_IDLE rd_add_sm_basic.RD_INSERT rd_add_sm_basic.RD_ENABLE 
+rd_add_sm_basic.RD_IDLE 0 0 0 
+rd_add_sm_basic.RD_ENABLE 1 0 1 
+rd_add_sm_basic.RD_INSERT 1 1 0 
+
+State Machine - |arria_v_sfp_b_udp|phy:phy_inst|altera_xcvr_10gbaser:phy_inst|av_xcvr_10gbaser_nr:av_xcvr_10gbaser_nr_inst|av_xcvr_10gbaser_native:ch[0].av_xcvr_10gbaser_native_inst|alt_10gbaser_pcs:av_10gbaser_soft_pcs_inst|altera_10gbaser_phy_pcs_10g_top:pcs_10g_top_0|altera_10gbaser_phy_pcs_10g:pcs_10g_0|altera_10gbaser_phy_rx_top:rx_top|altera_10gbaser_phy_rx_fifo_wrap:rx_clockcomp|altera_10gbaser_phy_rx_fifo:av_rx_fifo|rd_add_sm_basic_reg
+Name rd_add_sm_basic_reg.RD_IDLE rd_add_sm_basic_reg.RD_INSERT rd_add_sm_basic_reg.RD_ENABLE 
+rd_add_sm_basic_reg.RD_IDLE 0 0 0 
+rd_add_sm_basic_reg.RD_ENABLE 1 0 1 
+rd_add_sm_basic_reg.RD_INSERT 1 1 0 
+
+State Machine - |arria_v_sfp_b_udp|phy_reconfig:phy_reconfig_inst|alt_xcvr_reconfig:phy_reconfig_inst|alt_xcvr_reconfig_analog:analog.sc_analog|alt_xcvr_reconfig_analog_av:reconfig_analog_av|alt_xreconf_cif:inst_xreconf_cif|alt_xreconf_basic_acq:inst_basic_acq|state
+Name state.ST_CLR_RECONFIG_BASIC_PADDR_MODE state.ST_RELEASE_REQ state.ST_START_AGAIN state.ST_CHECK_CTRLLOCK state.ST_READ_RECONFIG_BASIC_DATA state.ST_SET_RECONFIG_BASIC_READ state.ST_SET_RECONFIG_BASIC_WRITE state.ST_WRITE_DATA_TO_RECONFIG_BASIC state.ST_ACCESS_RECONFIG_BASIC_OFFSET_REG state.ST_CONFIRM_RECONFIG_BASIC_CH_LOCK state.ST_SET_RECONFIG_BASIC_PADDR_MODE state.ST_CHECK_PHY_ADD_LEGAL state.ST_READ_PHY_ADDRESS state.ST_WRITE_RECONFIG_BASIC_LCH state.ST_REQ_MUTEX state.0000 
+state.0000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.ST_REQ_MUTEX 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.ST_WRITE_RECONFIG_BASIC_LCH 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.ST_READ_PHY_ADDRESS 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.ST_CHECK_PHY_ADD_LEGAL 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.ST_SET_RECONFIG_BASIC_PADDR_MODE 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.ST_CONFIRM_RECONFIG_BASIC_CH_LOCK 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.ST_ACCESS_RECONFIG_BASIC_OFFSET_REG 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.ST_WRITE_DATA_TO_RECONFIG_BASIC 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.ST_SET_RECONFIG_BASIC_WRITE 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.ST_SET_RECONFIG_BASIC_READ 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.ST_READ_RECONFIG_BASIC_DATA 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.ST_CHECK_CTRLLOCK 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.ST_START_AGAIN 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.ST_RELEASE_REQ 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.ST_CLR_RECONFIG_BASIC_PADDR_MODE 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |arria_v_sfp_b_udp|phy:phy_inst|altera_xcvr_10gbaser:phy_inst|av_xcvr_10gbaser_nr:av_xcvr_10gbaser_nr_inst|av_xcvr_10gbaser_native:ch[0].av_xcvr_10gbaser_native_inst|alt_10gbaser_pcs:av_10gbaser_soft_pcs_inst|altera_10gbaser_phy_pcs_10g_top:pcs_10g_top_0|altera_10gbaser_phy_pcs_10g:pcs_10g_0|altera_10gbaser_phy_rx_top:rx_top|altera_10gbaser_phy_blksync:blksync|altera_10gbaser_phy_lock_sm:altera_10gbaser_phy_lock_sm|altera_10gbaser_phy_lock_sm
+Name altera_10gbaser_phy_lock_sm.SH_INVALID_LOCK_RESET_SH_CNTRS altera_10gbaser_phy_lock_sm.SH_INVALID_LOCK altera_10gbaser_phy_lock_sm.SH_VALID_LOCK altera_10gbaser_phy_lock_sm.SH_VALID_LOCK_RESET_SH_CNTRS altera_10gbaser_phy_lock_sm.WAIT_FOR_SLIP_DONE altera_10gbaser_phy_lock_sm.SH_INVALID_NO_LOCK altera_10gbaser_phy_lock_sm.SH_VALID_NO_LOCK altera_10gbaser_phy_lock_sm.altera_10gbaser_phy_lock_sm_RESET 
+altera_10gbaser_phy_lock_sm.altera_10gbaser_phy_lock_sm_RESET 0 0 0 0 0 0 0 0 
+altera_10gbaser_phy_lock_sm.SH_VALID_NO_LOCK 0 0 0 0 0 0 1 1 
+altera_10gbaser_phy_lock_sm.SH_INVALID_NO_LOCK 0 0 0 0 0 1 0 1 
+altera_10gbaser_phy_lock_sm.WAIT_FOR_SLIP_DONE 0 0 0 0 1 0 0 1 
+altera_10gbaser_phy_lock_sm.SH_VALID_LOCK_RESET_SH_CNTRS 0 0 0 1 0 0 0 1 
+altera_10gbaser_phy_lock_sm.SH_VALID_LOCK 0 0 1 0 0 0 0 1 
+altera_10gbaser_phy_lock_sm.SH_INVALID_LOCK 0 1 0 0 0 0 0 1 
+altera_10gbaser_phy_lock_sm.SH_INVALID_LOCK_RESET_SH_CNTRS 1 0 0 0 0 0 0 1 
+
+State Machine - |arria_v_sfp_b_udp|network:network_inst|eth_mac_10g_fifo:eth_mac_10g_fifo_inst|eth_mac_10g:eth_mac_10g_inst|axis_xgmii_rx_64:axis_xgmii_rx_inst|state_reg
+Name state_reg.STATE_IDLE state_reg.STATE_LAST state_reg.STATE_PAYLOAD 
+state_reg.STATE_IDLE 0 0 0 
+state_reg.STATE_PAYLOAD 1 0 1 
+state_reg.STATE_LAST 1 1 0 

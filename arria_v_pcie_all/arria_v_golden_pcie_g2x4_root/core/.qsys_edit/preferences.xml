@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable filter="All Interfaces">
+  <columns>
+   <connections preferredWidth="175" />
+   <irq preferredWidth="34" />
+   <name preferredWidth="199" />
+   <inputclock preferredWidth="161" />
+   <autoexport visible="1" />
+   <description preferredWidth="252" />
+  </columns>
+ </systemtable>
+ <library
+   expandedCategories="Library/Interface Protocols/PCI Express,Library,Project,Library/Interface Protocols" />
+ <window width="1936" height="1056" x="-8" y="-8" />
+ <hdlexample language="VERILOG" />
+</preferences>

@@ -1,0 +1,27 @@
+Clock,State,DSPLL,Frequency
+
+# Inputs
+IN0,Enabled,AB,19.44M
+IN1,Enabled,AB,19.44M
+IN2,Enabled,CD,50M
+IN3,Enabled,CD,50M
+
+# Outputs
+OUT0,Enabled,D,161+17/128 MHz + 5 ppm
+OUT1,Enabled,D,OUT0/2
+OUT2,Enabled,A,19.44M
+OUT3,Enabled,A,19.44M
+OUT4,Enabled,B,672+21/128M
+OUT5,Enabled,B,672+21/128M
+OUT6,Enabled,C,148.5M
+OUT7,Enabled,C,148.5M
+
+# Bandwidth
+OLBW,,A,100
+FLBW,,A,2k
+OLBW,,B,100
+FLBW,,B,2k
+OLBW,,C,100
+FLBW,,C,2k
+OLBW,,D,100
+FLBW,,D,2k

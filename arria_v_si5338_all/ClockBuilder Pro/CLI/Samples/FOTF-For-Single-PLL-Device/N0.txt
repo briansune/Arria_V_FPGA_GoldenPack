@@ -1,0 +1,7 @@
+# N0 Plans
+
+Plan,Item,Value
+
+# Plan #1
+1,OUT0,155.52M
+1,OUT1,622.08M/2

@@ -1,0 +1,56 @@
+
+State Machine - |top|ddr3_sfp_side:ddr3_sfp_side_inst|ddr3_sfp_side_0002:ddr3_sfp_side_inst|ddr3_sfp_side_s0:s0|sequencer_phy_mgr:sequencer_phy_mgr_inst|state_phy_curr
+Name state_phy_curr.STATE_PHY_DONE 
+state_phy_curr.STATE_PHY_IDLE 0 
+state_phy_curr.STATE_PHY_DONE 1 
+
+State Machine - |top|ddr3_sfp_side:ddr3_sfp_side_inst|ddr3_sfp_side_0002:ddr3_sfp_side_inst|ddr3_sfp_side_c0:c0|alt_mem_if_nextgen_ddr3_controller_core:ng0|alt_mem_ddrx_controller_st_top:alt_mem_ddrx_controller_top_inst|alt_mem_ddrx_controller:controller_inst|alt_mem_ddrx_cmd_gen:cmd_gen_inst|ecc_state_sm
+Name ecc_state_sm.FULL_RD ecc_state_sm.0100 ecc_state_sm.FULL_WR ecc_state_sm.PARWR_WR ecc_state_sm.0001 ecc_state_sm.IDLE ecc_state_sm.CORRECT_WR 
+ecc_state_sm.IDLE 0 0 0 0 0 0 0 
+ecc_state_sm.0001 0 0 0 0 1 1 0 
+ecc_state_sm.PARWR_WR 0 0 0 1 0 1 0 
+ecc_state_sm.FULL_WR 0 0 1 0 0 1 0 
+ecc_state_sm.0100 0 1 0 0 0 1 0 
+ecc_state_sm.FULL_RD 1 0 0 0 0 1 0 
+ecc_state_sm.CORRECT_WR 0 0 0 0 0 1 1 
+
+State Machine - |top|ddr3_sfp_side:ddr3_sfp_side_inst|ddr3_sfp_side_0002:ddr3_sfp_side_inst|ddr3_sfp_side_s0:s0|rw_manager_ddr3:sequencer_rw_mgr_inst|rw_manager_generic:rw_mgr_inst|state
+Name state.STATE_RW_REFRESH state.STATE_RW_DONE state.STATE_RW_EXEC state.STATE_RW_IDLE state.STATE_RW_RESTORE 
+state.STATE_RW_IDLE 0 0 0 0 0 
+state.STATE_RW_EXEC 0 0 1 1 0 
+state.STATE_RW_DONE 0 1 0 1 0 
+state.STATE_RW_REFRESH 1 0 0 1 0 
+state.STATE_RW_RESTORE 0 0 0 1 1 
+
+State Machine - |top|ddr3_sfp_side:ddr3_sfp_side_inst|ddr3_sfp_side_0002:ddr3_sfp_side_inst|ddr3_sfp_side_s0:s0|sequencer_data_mgr:sequencer_data_mgr_inst|state_avl_curr
+Name state_avl_curr.STATE_AVL_DONE 
+state_avl_curr.STATE_AVL_IDLE 0 
+state_avl_curr.STATE_AVL_DONE 1 
+
+State Machine - |top|ddr3_sfp_side:ddr3_sfp_side_inst|ddr3_sfp_side_0002:ddr3_sfp_side_inst|ddr3_sfp_side_s0:s0|sequencer_phy_mgr:sequencer_phy_mgr_inst|state_avl_curr
+Name state_avl_curr.STATE_AVL_IDLE state_avl_curr.STATE_AVL_DONE state_avl_curr.STATE_AVL_EXEC 
+state_avl_curr.STATE_AVL_IDLE 0 0 0 
+state_avl_curr.STATE_AVL_EXEC 1 0 1 
+state_avl_curr.STATE_AVL_DONE 1 1 0 
+
+State Machine - |top|ddr3_sfp_side:ddr3_sfp_side_inst|ddr3_sfp_side_0002:ddr3_sfp_side_inst|ddr3_sfp_side_s0:s0|sequencer_reg_file:sequencer_reg_file_inst|state
+Name state.READ4 state.READ3 state.READ2 state.WRITE2 state.IDLE state.INIT 
+state.INIT 0 0 0 0 0 0 
+state.IDLE 0 0 0 0 1 1 
+state.WRITE2 0 0 0 1 0 1 
+state.READ2 0 0 1 0 0 1 
+state.READ3 0 1 0 0 0 1 
+state.READ4 1 0 0 0 0 1 
+
+State Machine - |top|ddr3_sfp_side:ddr3_sfp_side_inst|ddr3_sfp_side_0002:ddr3_sfp_side_inst|ddr3_sfp_side_s0:s0|rw_manager_ddr3:sequencer_rw_mgr_inst|rw_manager_generic:rw_mgr_inst|rw_manager_core:rw_mgr_core_inst|state
+Name state.RW_MGR_STATE_DONE state.RW_MGR_STATE_READING state.RW_MGR_STATE_RUNNING state.RW_MGR_STATE_IDLE 
+state.RW_MGR_STATE_IDLE 0 0 0 0 
+state.RW_MGR_STATE_RUNNING 0 0 1 1 
+state.RW_MGR_STATE_READING 0 1 0 1 
+state.RW_MGR_STATE_DONE 1 0 0 1 
+
+State Machine - |top|ddr3_sfp_side:ddr3_sfp_side_inst|ddr3_sfp_side_0002:ddr3_sfp_side_inst|ddr3_sfp_side_s0:s0|sequencer_scc_mgr:sequencer_scc_mgr_inst|scc_state_curr
+Name scc_state_curr.STATE_SCC_IDLE scc_state_curr.STATE_SCC_DONE scc_state_curr.STATE_SCC_LOAD 
+scc_state_curr.STATE_SCC_IDLE 0 0 0 
+scc_state_curr.STATE_SCC_LOAD 1 0 1 
+scc_state_curr.STATE_SCC_DONE 1 1 0 

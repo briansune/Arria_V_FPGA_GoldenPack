@@ -1,0 +1,3 @@
+Clock,State,DSPLL,Frequency
+OUT0,Enabled,A,161+17/128 MHz + 5 ppm
+OUT1,Enabled,A,OUT0/2

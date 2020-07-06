@@ -1,0 +1,1 @@
+set_global_assignment -name QIP_FILE [file join $::quartus(qip_path) low_latency_10g_1ch/low_latency_10g_1ch.qip]

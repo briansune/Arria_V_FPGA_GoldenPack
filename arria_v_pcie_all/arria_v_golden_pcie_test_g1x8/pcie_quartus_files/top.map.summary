@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Sun Jul 05 00:03:28 2020
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+Revision Name : top
+Top-level Entity Name : top_hw
+Family : Arria V
+Logic utilization (in ALMs) : N/A
+Total registers : 12003
+Total pins : 29
+Total virtual pins : 0
+Total block memory bits : 736,038
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 9
+Total HSSI PMA RX Deserializers : 8
+Total HSSI TX PCSs : 9
+Total HSSI PMA TX Serializers : 9
+Total PLLs : 9
+Total DLLs : 0

@@ -1,0 +1,742 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2017  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+# Date created = 09:57:15  July 09, 2019
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		arria_v_golden_top_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Arria V"
+set_global_assignment -name DEVICE 5AGTFC7H3F35I3
+set_global_assignment -name TOP_LEVEL_ENTITY top
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 17.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "09:57:15  JULY 09, 2019"
+set_global_assignment -name LAST_QUARTUS_VERSION "17.1.0 Standard Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP "-40"
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 100
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
+
+
+
+
+
+
+set_location_assignment PIN_AE29 -to DDR3_SFP_SIDE_A[15]
+set_location_assignment PIN_AG29 -to DDR3_SFP_SIDE_A[14]
+set_location_assignment PIN_AG17 -to DDR3_SFP_SIDE_A[13]
+set_location_assignment PIN_AE18 -to DDR3_SFP_SIDE_A[12]
+set_location_assignment PIN_AL29 -to DDR3_SFP_SIDE_A[11]
+set_location_assignment PIN_AN17 -to DDR3_SFP_SIDE_A[10]
+set_location_assignment PIN_AH17 -to DDR3_SFP_SIDE_A[9]
+set_location_assignment PIN_AL23 -to DDR3_SFP_SIDE_A[8]
+set_location_assignment PIN_AL28 -to DDR3_SFP_SIDE_A[7]
+set_location_assignment PIN_AN27 -to DDR3_SFP_SIDE_A[6]
+set_location_assignment PIN_AK23 -to DDR3_SFP_SIDE_A[5]
+set_location_assignment PIN_AG26 -to DDR3_SFP_SIDE_A[4]
+set_location_assignment PIN_AC17 -to DDR3_SFP_SIDE_A[3]
+set_location_assignment PIN_AE17 -to DDR3_SFP_SIDE_A[2]
+set_location_assignment PIN_AD17 -to DDR3_SFP_SIDE_A[1]
+set_location_assignment PIN_AH19 -to DDR3_SFP_SIDE_A[0]
+
+set_location_assignment PIN_AE23 -to DDR3_SFP_SIDE_BA[2]
+set_location_assignment PIN_AF25 -to DDR3_SFP_SIDE_BA[1]
+set_location_assignment PIN_AL17 -to DDR3_SFP_SIDE_BA[0]
+
+set_location_assignment PIN_AM17 -to DDR3_SFP_SIDE_CAS_n[0]
+set_location_assignment PIN_AB17 -to DDR3_SFP_SIDE_CK[0]
+set_location_assignment PIN_AA17 -to DDR3_SFP_SIDE_CK_n[0]
+set_location_assignment PIN_AC18 -to DDR3_SFP_SIDE_CKE[0]
+set_location_assignment PIN_AK17 -to DDR3_SFP_SIDE_CS_n[0]
+set_location_assignment PIN_AJ17 -to DDR3_SFP_SIDE_ODT[0]
+set_location_assignment PIN_AJ20 -to DDR3_SFP_SIDE_RAS_n[0]
+set_location_assignment PIN_AL30 -to DDR3_SFP_SIDE_RESET_n
+set_location_assignment PIN_AP17 -to DDR3_SFP_SIDE_WE_n[0]
+set_location_assignment PIN_AL31 -to DDR3_SFP_RZQ
+
+
+
+
+set_location_assignment PIN_AM22 -to DDR3_SFP_SIDE_DM[7]
+set_location_assignment PIN_AP22 -to DDR3_SFP_SIDE_DM[6]
+set_location_assignment PIN_AM19 -to DDR3_SFP_SIDE_DM[5]
+set_location_assignment PIN_AK20 -to DDR3_SFP_SIDE_DM[4]
+set_location_assignment PIN_AH24 -to DDR3_SFP_SIDE_DM[3]
+set_location_assignment PIN_AJ26 -to DDR3_SFP_SIDE_DM[2]
+set_location_assignment PIN_AM28 -to DDR3_SFP_SIDE_DM[1]
+set_location_assignment PIN_AJ28 -to DDR3_SFP_SIDE_DM[0]
+
+
+set_location_assignment PIN_AE22 -to DDR3_SFP_SIDE_DQ[63]
+set_location_assignment PIN_AG21 -to DDR3_SFP_SIDE_DQ[62]
+set_location_assignment PIN_AJ22 -to DDR3_SFP_SIDE_DQ[61]
+set_location_assignment PIN_AK21 -to DDR3_SFP_SIDE_DQ[60]
+set_location_assignment PIN_AL21 -to DDR3_SFP_SIDE_DQ[59]
+set_location_assignment PIN_AN21 -to DDR3_SFP_SIDE_DQ[58]
+set_location_assignment PIN_AL22 -to DDR3_SFP_SIDE_DQ[57]
+set_location_assignment PIN_AC22 -to DDR3_SFP_SIDE_DQ[56]
+set_location_assignment PIN_AD23 -to DDR3_SFP_SIDE_DQ[55]
+set_location_assignment PIN_AN24 -to DDR3_SFP_SIDE_DQ[54]
+set_location_assignment PIN_AP23 -to DDR3_SFP_SIDE_DQ[53]
+set_location_assignment PIN_AN23 -to DDR3_SFP_SIDE_DQ[52]
+set_location_assignment PIN_AF23 -to DDR3_SFP_SIDE_DQ[51]
+set_location_assignment PIN_AG23 -to DDR3_SFP_SIDE_DQ[50]
+set_location_assignment PIN_AL24 -to DDR3_SFP_SIDE_DQ[49]
+set_location_assignment PIN_AM23 -to DDR3_SFP_SIDE_DQ[48]
+set_location_assignment PIN_AH18 -to DDR3_SFP_SIDE_DQ[47]
+set_location_assignment PIN_AG18 -to DDR3_SFP_SIDE_DQ[46]
+set_location_assignment PIN_AF19 -to DDR3_SFP_SIDE_DQ[45]
+set_location_assignment PIN_AC19 -to DDR3_SFP_SIDE_DQ[44]
+set_location_assignment PIN_AL18 -to DDR3_SFP_SIDE_DQ[43]
+set_location_assignment PIN_AK18 -to DDR3_SFP_SIDE_DQ[42]
+set_location_assignment PIN_AL19 -to DDR3_SFP_SIDE_DQ[41]
+set_location_assignment PIN_AJ19 -to DDR3_SFP_SIDE_DQ[40]
+set_location_assignment PIN_AP20 -to DDR3_SFP_SIDE_DQ[39]
+set_location_assignment PIN_AN20 -to DDR3_SFP_SIDE_DQ[38]
+set_location_assignment PIN_AH20 -to DDR3_SFP_SIDE_DQ[37]
+set_location_assignment PIN_AG20 -to DDR3_SFP_SIDE_DQ[36]
+set_location_assignment PIN_AF20 -to DDR3_SFP_SIDE_DQ[35]
+set_location_assignment PIN_AE20 -to DDR3_SFP_SIDE_DQ[34]
+set_location_assignment PIN_AD20 -to DDR3_SFP_SIDE_DQ[33]
+set_location_assignment PIN_AD21 -to DDR3_SFP_SIDE_DQ[32]
+set_location_assignment PIN_AE24 -to DDR3_SFP_SIDE_DQ[31]
+set_location_assignment PIN_AC24 -to DDR3_SFP_SIDE_DQ[30]
+set_location_assignment PIN_AC25 -to DDR3_SFP_SIDE_DQ[29]
+set_location_assignment PIN_AB24 -to DDR3_SFP_SIDE_DQ[28]
+set_location_assignment PIN_AK24 -to DDR3_SFP_SIDE_DQ[27]
+set_location_assignment PIN_AH25 -to DDR3_SFP_SIDE_DQ[26]
+set_location_assignment PIN_AG24 -to DDR3_SFP_SIDE_DQ[25]
+set_location_assignment PIN_AJ25 -to DDR3_SFP_SIDE_DQ[24]
+set_location_assignment PIN_AL25 -to DDR3_SFP_SIDE_DQ[23]
+set_location_assignment PIN_AK26 -to DDR3_SFP_SIDE_DQ[22]
+set_location_assignment PIN_AH26 -to DDR3_SFP_SIDE_DQ[21]
+set_location_assignment PIN_AF26 -to DDR3_SFP_SIDE_DQ[20]
+set_location_assignment PIN_AM25 -to DDR3_SFP_SIDE_DQ[19]
+set_location_assignment PIN_AP25 -to DDR3_SFP_SIDE_DQ[18]
+set_location_assignment PIN_AP26 -to DDR3_SFP_SIDE_DQ[17]
+set_location_assignment PIN_AN26 -to DDR3_SFP_SIDE_DQ[16]
+set_location_assignment PIN_AL27 -to DDR3_SFP_SIDE_DQ[15]
+set_location_assignment PIN_AK27 -to DDR3_SFP_SIDE_DQ[14]
+set_location_assignment PIN_AH29 -to DDR3_SFP_SIDE_DQ[13]
+set_location_assignment PIN_AM29 -to DDR3_SFP_SIDE_DQ[12]
+set_location_assignment PIN_AP27 -to DDR3_SFP_SIDE_DQ[11]
+set_location_assignment PIN_AP28 -to DDR3_SFP_SIDE_DQ[10]
+set_location_assignment PIN_AP29 -to DDR3_SFP_SIDE_DQ[9]
+set_location_assignment PIN_AN29 -to DDR3_SFP_SIDE_DQ[8]
+set_location_assignment PIN_AH28 -to DDR3_SFP_SIDE_DQ[7]
+set_location_assignment PIN_AF28 -to DDR3_SFP_SIDE_DQ[6]
+set_location_assignment PIN_AM30 -to DDR3_SFP_SIDE_DQ[5]
+set_location_assignment PIN_AM31 -to DDR3_SFP_SIDE_DQ[4]
+set_location_assignment PIN_AP30 -to DDR3_SFP_SIDE_DQ[3]
+set_location_assignment PIN_AN30 -to DDR3_SFP_SIDE_DQ[2]
+set_location_assignment PIN_AP31 -to DDR3_SFP_SIDE_DQ[1]
+set_location_assignment PIN_AP32 -to DDR3_SFP_SIDE_DQ[0]
+
+
+set_location_assignment PIN_AH22 -to DDR3_SFP_SIDE_DQS[7]
+set_location_assignment PIN_AJ23 -to DDR3_SFP_SIDE_DQS[6]
+set_location_assignment PIN_AP19 -to DDR3_SFP_SIDE_DQS[5]
+set_location_assignment PIN_AM20 -to DDR3_SFP_SIDE_DQS[4]
+set_location_assignment PIN_AE25 -to DDR3_SFP_SIDE_DQS[3]
+set_location_assignment PIN_AM26 -to DDR3_SFP_SIDE_DQS[2]
+set_location_assignment PIN_AH27 -to DDR3_SFP_SIDE_DQS[1]
+set_location_assignment PIN_AK29 -to DDR3_SFP_SIDE_DQS[0]
+
+
+set_location_assignment PIN_AH21 -to DDR3_SFP_SIDE_DQS_n[7]
+set_location_assignment PIN_AH23 -to DDR3_SFP_SIDE_DQS_n[6]
+set_location_assignment PIN_AN18 -to DDR3_SFP_SIDE_DQS_n[5]
+set_location_assignment PIN_AL20 -to DDR3_SFP_SIDE_DQS_n[4]
+set_location_assignment PIN_AD24 -to DDR3_SFP_SIDE_DQS_n[3]
+set_location_assignment PIN_AL26 -to DDR3_SFP_SIDE_DQS_n[2]
+set_location_assignment PIN_AG27 -to DDR3_SFP_SIDE_DQS_n[1]
+set_location_assignment PIN_AJ29 -to DDR3_SFP_SIDE_DQS_n[0]
+
+
+
+
+set_location_assignment PIN_AF17 -to DDR3_SFP_refclk
+
+
+
+set_location_assignment PIN_AG8 -to LED[0]
+set_location_assignment PIN_AF8 -to LED[1]
+set_location_assignment PIN_AF7 -to LED[2]
+set_location_assignment PIN_AE7 -to LED[3]
+set_location_assignment PIN_AE6 -to LED[4]
+set_location_assignment PIN_AD6 -to LED[5]
+set_location_assignment PIN_AC7 -to LED[6]
+set_location_assignment PIN_AC6 -to LED[7]
+
+set_location_assignment PIN_AL5 -to OSC_50
+set_location_assignment PIN_C6 -to BUTTON
+
+
+
+
+
+
+
+
+
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name ENABLE_BENEFICIAL_SKEW_OPTIMIZATION_FOR_NON_GLOBAL_CLOCKS ON -to ddr3_sfp_side_inst|ddr3_sfp_side_inst -tag __ddr3_sfp_side_p0
+set_global_assignment -name USE_DLL_FREQUENCY_FOR_DQS_DELAY_CHAIN ON
+set_global_assignment -name UNIPHY_SEQUENCER_DQS_CONFIG_ENABLE ON
+set_global_assignment -name OPTIMIZE_MULTI_CORNER_TIMING ON
+set_global_assignment -name ECO_REGENERATE_REPORT ON
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+
+
+
+
+
+
+
+
+set_global_assignment -name SDC_FILE src/top.sdc
+set_global_assignment -name VERILOG_FILE src/top.v
+set_global_assignment -name VERILOG_FILE src/Avalon_bus_RW_Test.v
+set_global_assignment -name QIP_FILE ddr3_sfp_side/ddr3_sfp_side.qip
+set_instance_assignment -name IO_STANDARD "SSTL-15" -to DDR3_SFP_RZQ -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[1] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[1] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[1] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[2] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[2] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[2] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[3] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[3] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[3] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[4] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[4] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[4] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[5] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[5] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[5] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[6] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[6] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[6] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[7] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[7] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[7] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[8] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[8] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[8] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[9] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[9] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[9] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[10] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[10] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[10] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[11] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[11] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[11] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[12] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[12] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[12] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[13] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[13] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[13] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[14] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[14] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[14] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[15] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[15] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[15] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[16] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[16] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[16] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[17] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[17] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[17] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[18] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[18] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[18] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[19] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[19] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[19] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[20] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[20] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[20] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[21] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[21] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[21] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[22] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[22] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[22] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[23] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[23] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[23] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[24] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[24] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[24] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[25] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[25] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[25] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[26] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[26] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[26] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[27] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[27] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[27] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[28] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[28] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[28] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[29] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[29] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[29] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[30] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[30] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[30] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[31] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[31] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[31] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[32] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[32] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[32] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[33] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[33] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[33] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[34] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[34] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[34] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[35] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[35] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[35] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[36] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[36] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[36] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[37] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[37] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[37] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[38] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[38] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[38] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[39] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[39] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[39] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[40] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[40] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[40] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[41] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[41] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[41] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[42] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[42] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[42] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[43] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[43] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[43] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[44] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[44] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[44] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[45] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[45] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[45] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[46] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[46] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[46] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[47] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[47] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[47] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[48] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[48] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[48] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[49] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[49] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[49] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[50] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[50] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[50] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[51] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[51] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[51] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[52] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[52] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[52] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[53] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[53] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[53] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[54] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[54] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[54] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[55] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[55] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[55] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[56] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[56] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[56] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[57] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[57] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[57] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[58] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[58] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[58] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[59] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[59] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[59] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[60] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[60] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[60] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[61] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[61] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[61] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[62] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[62] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[62] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DQ[63] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[63] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQ[63] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to DDR3_SFP_SIDE_DQS[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQS[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQS[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name D5_DELAY 6 -to DDR3_SFP_SIDE_DQS[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name D6_DELAY 0 -to DDR3_SFP_SIDE_DQS[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to DDR3_SFP_SIDE_DQS[1] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQS[1] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQS[1] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name D5_DELAY 6 -to DDR3_SFP_SIDE_DQS[1] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name D6_DELAY 0 -to DDR3_SFP_SIDE_DQS[1] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to DDR3_SFP_SIDE_DQS[2] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQS[2] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQS[2] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name D5_DELAY 6 -to DDR3_SFP_SIDE_DQS[2] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name D6_DELAY 0 -to DDR3_SFP_SIDE_DQS[2] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to DDR3_SFP_SIDE_DQS[3] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQS[3] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQS[3] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name D5_DELAY 6 -to DDR3_SFP_SIDE_DQS[3] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name D6_DELAY 0 -to DDR3_SFP_SIDE_DQS[3] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to DDR3_SFP_SIDE_DQS[4] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQS[4] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQS[4] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name D5_DELAY 6 -to DDR3_SFP_SIDE_DQS[4] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name D6_DELAY 0 -to DDR3_SFP_SIDE_DQS[4] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to DDR3_SFP_SIDE_DQS[5] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQS[5] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQS[5] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name D5_DELAY 6 -to DDR3_SFP_SIDE_DQS[5] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name D6_DELAY 0 -to DDR3_SFP_SIDE_DQS[5] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to DDR3_SFP_SIDE_DQS[6] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQS[6] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQS[6] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name D5_DELAY 6 -to DDR3_SFP_SIDE_DQS[6] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name D6_DELAY 0 -to DDR3_SFP_SIDE_DQS[6] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to DDR3_SFP_SIDE_DQS[7] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQS[7] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQS[7] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name D5_DELAY 6 -to DDR3_SFP_SIDE_DQS[7] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name D6_DELAY 0 -to DDR3_SFP_SIDE_DQS[7] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to DDR3_SFP_SIDE_DQS_n[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQS_n[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQS_n[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name D5_DELAY 6 -to DDR3_SFP_SIDE_DQS_n[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name D6_DELAY 0 -to DDR3_SFP_SIDE_DQS_n[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to DDR3_SFP_SIDE_DQS_n[1] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQS_n[1] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQS_n[1] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name D5_DELAY 6 -to DDR3_SFP_SIDE_DQS_n[1] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name D6_DELAY 0 -to DDR3_SFP_SIDE_DQS_n[1] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to DDR3_SFP_SIDE_DQS_n[2] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQS_n[2] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQS_n[2] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name D5_DELAY 6 -to DDR3_SFP_SIDE_DQS_n[2] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name D6_DELAY 0 -to DDR3_SFP_SIDE_DQS_n[2] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to DDR3_SFP_SIDE_DQS_n[3] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQS_n[3] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQS_n[3] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name D5_DELAY 6 -to DDR3_SFP_SIDE_DQS_n[3] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name D6_DELAY 0 -to DDR3_SFP_SIDE_DQS_n[3] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to DDR3_SFP_SIDE_DQS_n[4] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQS_n[4] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQS_n[4] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name D5_DELAY 6 -to DDR3_SFP_SIDE_DQS_n[4] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name D6_DELAY 0 -to DDR3_SFP_SIDE_DQS_n[4] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to DDR3_SFP_SIDE_DQS_n[5] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQS_n[5] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQS_n[5] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name D5_DELAY 6 -to DDR3_SFP_SIDE_DQS_n[5] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name D6_DELAY 0 -to DDR3_SFP_SIDE_DQS_n[5] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to DDR3_SFP_SIDE_DQS_n[6] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQS_n[6] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQS_n[6] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name D5_DELAY 6 -to DDR3_SFP_SIDE_DQS_n[6] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name D6_DELAY 0 -to DDR3_SFP_SIDE_DQS_n[6] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to DDR3_SFP_SIDE_DQS_n[7] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQS_n[7] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DQS_n[7] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name D5_DELAY 6 -to DDR3_SFP_SIDE_DQS_n[7] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name D6_DELAY 0 -to DDR3_SFP_SIDE_DQS_n[7] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to DDR3_SFP_SIDE_CK[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITHOUT CALIBRATION" -to DDR3_SFP_SIDE_CK[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name D5_DELAY 2 -to DDR3_SFP_SIDE_CK[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to DDR3_SFP_SIDE_CK_n[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITHOUT CALIBRATION" -to DDR3_SFP_SIDE_CK_n[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name D5_DELAY 2 -to DDR3_SFP_SIDE_CK_n[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_A[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DDR3_SFP_SIDE_A[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_A[10] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DDR3_SFP_SIDE_A[10] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_A[11] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DDR3_SFP_SIDE_A[11] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_A[12] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DDR3_SFP_SIDE_A[12] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_A[13] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DDR3_SFP_SIDE_A[13] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_A[1] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DDR3_SFP_SIDE_A[1] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_A[2] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DDR3_SFP_SIDE_A[2] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_A[3] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DDR3_SFP_SIDE_A[3] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_A[4] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DDR3_SFP_SIDE_A[4] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_A[5] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DDR3_SFP_SIDE_A[5] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_A[6] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DDR3_SFP_SIDE_A[6] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_A[7] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DDR3_SFP_SIDE_A[7] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_A[8] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DDR3_SFP_SIDE_A[8] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_A[9] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DDR3_SFP_SIDE_A[9] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_BA[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DDR3_SFP_SIDE_BA[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_BA[1] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DDR3_SFP_SIDE_BA[1] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_BA[2] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DDR3_SFP_SIDE_BA[2] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_CS_n[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DDR3_SFP_SIDE_CS_n[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_WE_n[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DDR3_SFP_SIDE_WE_n[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_RAS_n[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DDR3_SFP_SIDE_RAS_n[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_CAS_n[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DDR3_SFP_SIDE_CAS_n[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_ODT[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DDR3_SFP_SIDE_ODT[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_CKE[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DDR3_SFP_SIDE_CKE[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD 1.5V -to DDR3_SFP_SIDE_RESET_n -tag __ddr3_sfp_side_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DDR3_SFP_SIDE_RESET_n -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DM[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DM[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DM[1] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DM[1] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DM[2] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DM[2] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DM[3] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DM[3] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DM[4] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DM[4] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DM[5] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DM[5] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DM[6] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DM[6] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to DDR3_SFP_SIDE_DM[7] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to DDR3_SFP_SIDE_DM[7] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15" -to DDR3_SFP_refclk -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[1] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[2] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[3] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[4] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[5] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[6] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[7] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[8] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[9] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[10] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[11] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[12] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[13] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[14] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[15] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[16] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[17] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[18] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[19] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[20] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[21] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[22] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[23] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[24] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[25] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[26] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[27] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[28] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[29] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[30] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[31] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[32] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[33] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[34] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[35] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[36] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[37] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[38] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[39] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[40] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[41] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[42] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[43] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[44] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[45] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[46] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[47] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[48] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[49] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[50] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[51] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[52] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[53] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[54] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[55] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[56] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[57] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[58] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[59] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[60] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[61] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[62] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQ[63] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DM[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DM[1] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DM[2] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DM[3] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DM[4] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DM[5] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DM[6] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DM[7] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQS[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQS[1] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQS[2] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQS[3] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQS[4] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQS[5] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQS[6] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQS[7] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQS_n[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQS_n[1] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQS_n[2] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQS_n[3] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQS_n[4] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQS_n[5] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQS_n[6] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_DQS_n[7] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_A[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_A[10] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_A[11] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_A[12] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_A[13] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_A[1] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_A[2] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_A[3] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_A[4] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_A[5] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_A[6] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_A[7] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_A[8] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_A[9] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_BA[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_BA[1] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_BA[2] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_CS_n[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_WE_n[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_RAS_n[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_CAS_n[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_ODT[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_CKE[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_RESET_n -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_CK[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to DDR3_SFP_SIDE_CK_n[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name GLOBAL_SIGNAL "DUAL-REGIONAL CLOCK" -to ddr3_sfp_side_inst|ddr3_sfp_side_inst|pll0|pll_addr_cmd_clk -tag __ddr3_sfp_side_p0
+set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -to ddr3_sfp_side_inst|ddr3_sfp_side_inst|pll0|pll_afi_clk -tag __ddr3_sfp_side_p0
+set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -to ddr3_sfp_side_inst|ddr3_sfp_side_inst|pll0|pll_hr_clk -tag __ddr3_sfp_side_p0
+set_instance_assignment -name GLOBAL_SIGNAL "DUAL-REGIONAL CLOCK" -to ddr3_sfp_side_inst|ddr3_sfp_side_inst|pll0|pll_avl_clk -tag __ddr3_sfp_side_p0
+set_instance_assignment -name GLOBAL_SIGNAL "DUAL-REGIONAL CLOCK" -to ddr3_sfp_side_inst|ddr3_sfp_side_inst|pll0|pll_config_clk -tag __ddr3_sfp_side_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to ddr3_sfp_side_inst|ddr3_sfp_side_inst|p0|umemphy|ureset|phy_reset_mem_stable_n -tag __ddr3_sfp_side_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to ddr3_sfp_side_inst|ddr3_sfp_side_inst|p0|umemphy|ureset|phy_reset_n -tag __ddr3_sfp_side_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to ddr3_sfp_side_inst|ddr3_sfp_side_inst|s0|sequencer_rw_mgr_inst|rw_mgr_inst|rw_mgr_core_inst|rw_soft_reset_n -tag __ddr3_sfp_side_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to ddr3_sfp_side_inst|ddr3_sfp_side_inst|p0|umemphy|uio_pads|dq_ddio[0].read_capture_clk_buffer -tag __ddr3_sfp_side_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to ddr3_sfp_side_inst|ddr3_sfp_side_inst|p0|umemphy|uread_datapath|reset_n_fifo_write_side[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to ddr3_sfp_side_inst|ddr3_sfp_side_inst|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[0] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to ddr3_sfp_side_inst|ddr3_sfp_side_inst|p0|umemphy|uio_pads|dq_ddio[1].read_capture_clk_buffer -tag __ddr3_sfp_side_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to ddr3_sfp_side_inst|ddr3_sfp_side_inst|p0|umemphy|uread_datapath|reset_n_fifo_write_side[1] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to ddr3_sfp_side_inst|ddr3_sfp_side_inst|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[1] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to ddr3_sfp_side_inst|ddr3_sfp_side_inst|p0|umemphy|uio_pads|dq_ddio[2].read_capture_clk_buffer -tag __ddr3_sfp_side_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to ddr3_sfp_side_inst|ddr3_sfp_side_inst|p0|umemphy|uread_datapath|reset_n_fifo_write_side[2] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to ddr3_sfp_side_inst|ddr3_sfp_side_inst|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[2] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to ddr3_sfp_side_inst|ddr3_sfp_side_inst|p0|umemphy|uio_pads|dq_ddio[3].read_capture_clk_buffer -tag __ddr3_sfp_side_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to ddr3_sfp_side_inst|ddr3_sfp_side_inst|p0|umemphy|uread_datapath|reset_n_fifo_write_side[3] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to ddr3_sfp_side_inst|ddr3_sfp_side_inst|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[3] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to ddr3_sfp_side_inst|ddr3_sfp_side_inst|p0|umemphy|uio_pads|dq_ddio[4].read_capture_clk_buffer -tag __ddr3_sfp_side_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to ddr3_sfp_side_inst|ddr3_sfp_side_inst|p0|umemphy|uread_datapath|reset_n_fifo_write_side[4] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to ddr3_sfp_side_inst|ddr3_sfp_side_inst|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[4] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to ddr3_sfp_side_inst|ddr3_sfp_side_inst|p0|umemphy|uio_pads|dq_ddio[5].read_capture_clk_buffer -tag __ddr3_sfp_side_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to ddr3_sfp_side_inst|ddr3_sfp_side_inst|p0|umemphy|uread_datapath|reset_n_fifo_write_side[5] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to ddr3_sfp_side_inst|ddr3_sfp_side_inst|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[5] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to ddr3_sfp_side_inst|ddr3_sfp_side_inst|p0|umemphy|uio_pads|dq_ddio[6].read_capture_clk_buffer -tag __ddr3_sfp_side_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to ddr3_sfp_side_inst|ddr3_sfp_side_inst|p0|umemphy|uread_datapath|reset_n_fifo_write_side[6] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to ddr3_sfp_side_inst|ddr3_sfp_side_inst|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[6] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to ddr3_sfp_side_inst|ddr3_sfp_side_inst|p0|umemphy|uio_pads|dq_ddio[7].read_capture_clk_buffer -tag __ddr3_sfp_side_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to ddr3_sfp_side_inst|ddr3_sfp_side_inst|p0|umemphy|uread_datapath|reset_n_fifo_write_side[7] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to ddr3_sfp_side_inst|ddr3_sfp_side_inst|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[7] -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PLL_COMPENSATION_MODE DIRECT -to ddr3_sfp_side_inst|ddr3_sfp_side_inst|pll0|fbout -tag __ddr3_sfp_side_p0
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

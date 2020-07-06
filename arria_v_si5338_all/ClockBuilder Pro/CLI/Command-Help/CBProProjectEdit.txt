@@ -1,0 +1,124 @@
+
+NAME
+
+    CBProProjectEdit
+
+SYNOPSIS
+
+    CBProProjectEdit [ --design-id ascii-text ]
+                     --edit-file edits.txt 
+                     --in-project oldproj.slabtimeproj 
+                     --out-project newproj.slabtimeproj
+
+    CBProProjectEdit --help
+
+DESCRIPTION
+
+    Allows you to make some basic edits to a configuration, and save the
+    resulting new design to a project file. Clock frequencies and state can be
+    edited. On supported devices, DSPLL bandwidth and assignment can also be
+    defined. Editing is done via a simple text configuration file you specify
+    on the command line.
+
+EDIT FILE
+
+    You must specify an edit file on the command line using the --edit-file
+    option. This file will define what changes you want to make to one or more
+    clock inputs and/outputs. The format of the file varies depending on
+    whether the device in your project file has a single or multiple DSPLLs.
+
+    If a single DSPLL device:
+
+    Clock,State,Frequency
+    IN0,Enabled,19.44 MHz
+    IN1,Unused
+    OUT0,Enabled,25*(825/128)M
+    OUT1,Disabled,625M
+    OUT5,Unused
+
+    The header (Clock,State,Frequency) is required. Comments via lines
+    starting with # are allowed, as are blank lines. Inputs can have one of
+    two states: Enabled or Unused. Outputs have three possible states:
+    Enabled, Disabled, or Unused. You **do not** have to list every input or
+    output clock: any not listed will retain the setting in the project file.
+
+    If a multiple DSPLL device:
+
+    Clock,State,DSPLL,Frequency
+    IN0,Enabled,ABCD,19.44 MHz
+    IN1,Unused
+    OUT0,Enabled,A,25*(825/128)M
+    OUT1,Enabled,B,625M
+    OUT5,Unused
+
+    This adds a column for DSPLL assignment to the format. Note that in the
+    case of an input, you list all DSPLLs that the input will feed.
+
+    On select devices, DSPLL bandwidth can also be changed by specifying OLBW
+    (nominal), FLBW (fastlock), or HOBW (holdover exit) as a clock name.
+    Example for single DSPLL device:
+
+    OLBW,,100 Hz
+    FLBW,,1k
+
+    Example for multi-DSPLL device:
+
+    OLBW,,A,100
+    FLBW,,A,1k
+    OLBW,,B,200
+    FLBW,,B,2k
+
+    You can also specify bandwidth for multiple DSPLLs at once:
+
+    OLBW,,AB,100 Hz
+    FLBW,,AB,1 kHz
+
+EXAMPLE
+
+    CBProProjectEdit --in-project Si5345-Original-Project.slabtimeproj
+                     --edit-file Si5345-Edits.txt
+                     --out-project Si5345-Edited-Project.slabtimeproj
+
+
+        Applies configuration edits in Si5345-Edits.txt to project file
+        Si5345-Original-Project.slabtimeproj, creating
+        Si5345-Edited-Project.slabtimeproj.
+
+        This example is in Edit-And-Export-For-Single-PLL-Device under the
+        C:\Program Files (x86)\Silicon Laboratories\ClockBuilder
+        Pro\CLI\Samples folder. An example for a multi-PLL device is in the
+        Edit-And-Export-For-Multi-PLL-Device folder.
+
+OPTIONS
+
+    --design-id ascii-text
+
+        Some ASCII text to store in the DESIGN_ID registers. This is optional.
+        If you do not specify, then the value in the input project file will
+        be left as-is.
+
+    --edit-file pathname
+
+        The edits to make are defined in this file. See EDIT FILE for details.
+        You must specify this.
+
+    --help 
+
+        Print detailed usage to the console and exit.
+
+    --in-project pathname
+
+        The input project. You are modifying this design. The underlying file
+        will not be changed unless you specify --out_project to be the same
+        file. You must specify this.
+
+    --out-project pathname
+
+        The project file to save the edited design to. This can be the same
+        file as --in_project, but normally you will be saving to another file.
+        You must specify this.
+
+    --version 
+
+        Print this program's version number and exit.
+

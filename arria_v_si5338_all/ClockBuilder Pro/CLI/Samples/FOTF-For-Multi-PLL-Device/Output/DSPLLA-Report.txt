@@ -1,0 +1,249 @@
+DSPLLA Frequency-On-The-Fly Report
+
+Base Project: Si5347-RevD-Project.slabtimeproj
+Part: Si5347
+Design ID: <none>
+Inputs Vary Between Plans: Yes
+Created By: CBProFOTF1 v2.26.7 [2018-08-30]
+Timestamp: 2018-08-30 12:05:24 GMT-05:00
+
+Base Plan
+=========
+IN0:  25 MHz
+      on DSPLL A
+IN1:  25 MHz
+      on DSPLL A
+OUT0: 161.1328125 MHz
+OUT1: 644.53125 MHz
+
+Fpfd = 1.9230769230769230... MHz [ 1 + 12/13 MHz ]
+Fdco = 1.2890625 GHz [ 1 + 37/128 GHz ]
+
+P0 = 13/1
+P1 = 13/1
+MA = 670.3125 [ 670 + 5/16 ]
+N0 = 10.9661090909090909... [ 10 + 6642/6875 ]
+R0 = 8
+R1 = 2
+
+Nominal Bandwidth:
+  Desired: 80.000 Hz
+  Actual:  78.469 Hz
+  Coefficients:
+     BW0:  15
+     BW1:  30
+     BW2:  13
+     BW3:  12
+     BW4:  3
+     BW5:  63
+Fastlock Bandwidth:
+  Desired: 1.000 kHz
+  Actual:  1.258 kHz
+  Coefficients:
+     BW0:  19
+     BW1:  40
+     BW2:  9
+     BW3:  8
+     BW4:  3
+     BW5:  63
+Holdover Bandwidth:
+   N/A (Ramped Exit from Holdover)
+
+LOL:
+   Set Threshold:   10 ppm
+   Clear Threshold: 1 ppm
+
+Precision OOF:
+
+Input  Enable   Assert Threshold  De-Assert Threshold
+-----  -------  ----------------  -------------------
+IN0    Enabled  100.0000 ppm      98.0000 ppm        
+IN1    Enabled  100.0000 ppm      98.0000 ppm        
+
+Fast OOF:
+
+Input  Enable   Assert Threshold  De-Assert Threshold
+-----  -------  ----------------  -------------------
+IN0    Enabled  4000 ppm          3000 ppm           
+IN1    Enabled  4000 ppm          3000 ppm           
+
+Plan #1
+=======
+IN0:  155.52 MHz
+      on DSPLL A
+IN1:  155.52 MHz
+      on DSPLL A
+OUT0: 148.5 MHz
+OUT1: 27 MHz
+
+Fpfd = 1.9938461538461538... MHz [ 1 + 323/325 MHz ]
+Fdco = 1.188 GHz [ 1 + 47/250 GHz ]
+
+P0 = 78/1
+P1 = 78/1
+MA = 595.8333333333333333... [ 595 + 5/6 ]
+N0 = 11.8989898989898989... [ 11 + 89/99 ]
+R0 = 8
+R1 = 44
+
+Nominal Bandwidth:
+  Desired: 20.000 Hz
+  Actual:  18.373 Hz
+  Coefficients:
+     BW0:  14
+     BW1:  26
+     BW2:  15
+     BW3:  14
+     BW4:  1
+     BW5:  63
+Fastlock Bandwidth:
+  Desired: 100.000 Hz
+  Actual:  73.500 Hz
+  Coefficients:
+     BW0:  16
+     BW1:  33
+     BW2:  13
+     BW3:  12
+     BW4:  1
+     BW5:  63
+Holdover Bandwidth:
+   N/A (Ramped Exit from Holdover)
+
+LOL:
+   Set Threshold:   30 ppm
+   Clear Threshold: 3 ppm
+
+Precision OOF:
+
+Input  Enable   Assert Threshold  De-Assert Threshold
+-----  -------  ----------------  -------------------
+IN0    Enabled  10.0000 ppm       1.0000 ppm         
+IN1    Enabled  100.0000 ppm      98.0000 ppm        
+
+Fast OOF:
+
+Input  Enable   Assert Threshold  De-Assert Threshold
+-----  -------  ----------------  -------------------
+IN0    Enabled  2000 ppm          1000 ppm           
+IN1    Enabled  4000 ppm          3000 ppm           
+
+Plan #2
+=======
+IN0:  19.44 MHz
+      on DSPLL A
+IN1:  19.44 MHz
+      on DSPLL A
+OUT0: 155.52 MHz
+OUT1: 622.08 MHz
+
+Fpfd = 1.944 MHz [ 1 + 118/125 MHz ]
+Fdco = 1.24416 GHz [ 1 + 763/3125 GHz ]
+
+P0 = 10/1
+P1 = 10/1
+MA = 640
+N0 = 11.3618827160493827... [ 11 + 469/1296 ]
+R0 = 8
+R1 = 2
+
+Nominal Bandwidth:
+  Desired: 80.000 Hz
+  Actual:  75.726 Hz
+  Coefficients:
+     BW0:  15
+     BW1:  29
+     BW2:  13
+     BW3:  12
+     BW4:  3
+     BW5:  63
+Fastlock Bandwidth:
+  Desired: 1.000 kHz
+  Actual:  1.214 kHz
+  Coefficients:
+     BW0:  19
+     BW1:  40
+     BW2:  9
+     BW3:  8
+     BW4:  3
+     BW5:  63
+Holdover Bandwidth:
+   N/A (Ramped Exit from Holdover)
+
+LOL:
+   Set Threshold:   300 ppm
+   Clear Threshold: 30 ppm
+
+Precision OOF:
+
+Input  Enable   Assert Threshold  De-Assert Threshold
+-----  -------  ----------------  -------------------
+IN0    Enabled  100.0000 ppm      98.0000 ppm        
+IN1    Enabled  100.0000 ppm      98.0000 ppm        
+
+Fast OOF:
+
+Input  Enable   Assert Threshold  De-Assert Threshold
+-----  -------  ----------------  -------------------
+IN0    Enabled  4000 ppm          3000 ppm           
+IN1    Enabled  4000 ppm          3000 ppm           
+
+Plan #3
+=======
+IN0:  10.5025423728813559... MHz [ 10 + 593/1180 MHz ]
+      on DSPLL A
+IN1:  10.5025423728813559... MHz [ 10 + 593/1180 MHz ]
+      on DSPLL A
+OUT0: 168.041015625 MHz
+OUT1: 672.1640625 MHz
+
+Fpfd = 1.7504237288135593... MHz [ 1 + 1771/2360 MHz ]
+Fdco = 1.344328125 GHz [ 1 + 22037/64000 GHz ]
+
+P0 = 6/1
+P1 = 6/1
+MA = 768.0015432098765432... [ 768 + 1/648 ]
+N0 = 10.5152899334007461... [ 10 + 14778/28679 ]
+R0 = 8
+R1 = 2
+
+Nominal Bandwidth:
+  Desired: 80.000 Hz
+  Actual:  72.816 Hz
+  Coefficients:
+     BW0:  15
+     BW1:  29
+     BW2:  13
+     BW3:  12
+     BW4:  3
+     BW5:  63
+Fastlock Bandwidth:
+  Desired: 1.000 kHz
+  Actual:  1.167 kHz
+  Coefficients:
+     BW0:  19
+     BW1:  40
+     BW2:  9
+     BW3:  8
+     BW4:  3
+     BW5:  63
+Holdover Bandwidth:
+   N/A (Ramped Exit from Holdover)
+
+LOL:
+   Set Threshold:   10 ppm
+   Clear Threshold: 1 ppm
+
+Precision OOF:
+
+Input  Enable   Assert Threshold  De-Assert Threshold
+-----  -------  ----------------  -------------------
+IN0    Enabled  100.0000 ppm      98.0000 ppm        
+IN1    Enabled  100.0000 ppm      98.0000 ppm        
+
+Fast OOF:
+
+Input  Enable   Assert Threshold  De-Assert Threshold
+-----  -------  ----------------  -------------------
+IN0    Enabled  4000 ppm          3000 ppm           
+IN1    Enabled  4000 ppm          3000 ppm           
+

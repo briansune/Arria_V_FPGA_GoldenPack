@@ -1,0 +1,7 @@
+
+State Machine - |arria_v_si5338_iic_id|fsm_stage
+Name fsm_stage.11 fsm_stage.10 fsm_stage.01 fsm_stage.00 
+fsm_stage.00 0 0 0 0 
+fsm_stage.01 0 0 1 1 
+fsm_stage.10 0 1 0 1 
+fsm_stage.11 1 0 0 1 

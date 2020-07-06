@@ -1,0 +1,158 @@
+set_global_assignment -entity "phy" -library "phy" -name IP_TOOL_NAME "altera_xcvr_10gbaser"
+set_global_assignment -entity "phy" -library "phy" -name IP_TOOL_VERSION "17.1"
+set_global_assignment -entity "phy" -library "phy" -name IP_TOOL_ENV "mwpim"
+set_global_assignment -library "phy" -name MISC_FILE [file join $::quartus(qip_path) "phy.cmp"]
+set_global_assignment -entity "phy" -library "phy" -name IP_TARGETED_DEVICE_FAMILY "Arria V"
+set_global_assignment -entity "phy" -library "phy" -name IP_GENERATED_DEVICE_FAMILY "{Arria V}"
+set_global_assignment -entity "phy" -library "phy" -name IP_QSYS_MODE "UNKNOWN"
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -entity "phy" -library "phy" -name IP_COMPONENT_NAME "cGh5"
+set_global_assignment -entity "phy" -library "phy" -name IP_COMPONENT_DISPLAY_NAME "MTBHQkFTRS1SIFBIWQ=="
+set_global_assignment -entity "phy" -library "phy" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "phy" -library "phy" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "phy" -library "phy" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "phy" -library "phy" -name IP_COMPONENT_VERSION "MTcuMQ=="
+set_global_assignment -entity "phy" -library "phy" -name IP_COMPONENT_DESCRIPTION "MTBHQkFTRS1SIFBIWQ=="
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_NAME "YWx0ZXJhX3hjdnJfMTBnYmFzZXI="
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_DISPLAY_NAME "MTBHQkFTRS1SIFBIWQ=="
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_VERSION "MTcuMQ=="
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_DESCRIPTION "MTBHQkFTRS1SIFBIWQ=="
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_PARAMETER "bnVtX2NoYW5uZWxz::MQ==::TnVtYmVyIG9mIGNoYW5uZWxz"
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_PARAMETER "b3BlcmF0aW9uX21vZGU=::ZHVwbGV4::TW9kZSBvZiBvcGVyYXRpb24="
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_PARAMETER "ZXh0ZXJuYWxfcG1hX2N0cmxfY29uZmln::MA==::VXNlIGV4dGVybmFsIFBNQSBjb250cm9sIGFuZCByZWNvbmZpZw=="
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_PARAMETER "Y29udHJvbF9waW5fb3V0::MA==::RW5hYmxlIGFkZGl0aW9uYWwgY29udHJvbCBhbmQgc3RhdHVzIHBpbnM="
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_PARAMETER "cmVjb3ZlcmVkX2Nsa19vdXQ=::MA==::RW5hYmxlIHJ4X3JlY292ZXJlZF9jbGsgcGlu"
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_PARAMETER "cGxsX2xvY2tlZF9vdXQ=::MQ==::RW5hYmxlIHBsbF9sb2NrZWQgc3RhdHVzIHBvcnQ="
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_PARAMETER "Z3VpX3BsbF90eXBl::Q01V::UExMIHR5cGU="
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_PARAMETER "cmVmX2Nsa19mcmVx::NjQ0LjUzMTI1IE1Ieg==::UmVmZXJlbmNlIGNsb2NrIGZyZXF1ZW5jeQ=="
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_PARAMETER "cG1hX21vZGU=::NDA=::UENTIC8gUE1BIGludGVyZmFjZSB3aWR0aA=="
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_PARAMETER "cGxsX3R5cGU=::Q01V::cGxsX3R5cGU="
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_PARAMETER "c3RhcnRpbmdfY2hhbm5lbF9udW1iZXI=::MA==::U3RhcnRpbmcgY2hhbm5lbCBudW1iZXI="
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_PARAMETER "cmVjb25maWdfaW50ZXJmYWNlcw==::Mg==::TnVtYmVyIG9mIHJlY29uZmlnIGludGVyZmFjZXM="
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_PARAMETER "c3lzX2Nsa19pbl9oeg==::MTUwMDAwMDAw::c3lzX2Nsa19pbl9oeg=="
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_PARAMETER "cnhfdXNlX2NvcmVjbGs=::MA==::RW5hYmxlIHJ4X2NvcmVjbGtpbiBwb3J0"
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_PARAMETER "Z3VpX2VtYmVkZGVkX3Jlc2V0::MQ==::RW5hYmxlIGVtYmVkZGVkIHJlc2V0IGNvbnRyb2xsZXI="
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_PARAMETER "ZW1iZWRkZWRfcmVzZXQ=::MQ==::ZW1iZWRkZWRfcmVzZXQ="
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_PARAMETER "bGF0YWRq::MA==::RW5hYmxlIElFRUUgMTU4OCBsYXRlbmN5IGFkanVzdG1lbnQgcG9ydHM="
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_PARAMETER "aGlnaF9wcmVjaXNpb25fbGF0YWRq::MQ==::RW5hYmxlIEhpZ2ggUHJlY2lzaW9uIElFRUUgMTU4OCBsYXRlbmN5IG1lYXN1cmVtZW50"
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_PARAMETER "dHhfdGVybWluYXRpb24=::T0NUXzEwMF9PSE1T::VHJhbnNtaXR0ZXIgdGVybWluYXRpb24gcmVzaXN0YW5jZQ=="
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_PARAMETER "dHhfdm9kX3NlbGVjdGlvbg==::Nw==::VHJhbnNtaXR0ZXIgVk9EIGNvbnRyb2wgc2V0dGluZw=="
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_PARAMETER "dHhfcHJlZW1wX3ByZXRhcA==::MA==::UHJlLWVtcGhhc2lzIHByZS10YXAgc2V0dGluZw=="
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_PARAMETER "dHhfcHJlZW1wX3ByZXRhcF9pbnY=::MA==::SW52ZXJ0IHRoZSBwcmUtZW1waGFzaXMgcHJlLXRhcCBwb2xhcml0eSBzZXR0aW5n"
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_PARAMETER "dHhfcHJlZW1wX3RhcF8x::MTU=::UHJlLWVtcGhhc2lzIGZpcnN0IHBvc3QtdGFwIHNldHRpbmc="
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_PARAMETER "dHhfcHJlZW1wX3RhcF8y::MA==::UHJlLWVtcGhhc2lzIHNlY29uZCBwb3N0LXRhcCBzZXR0aW5n"
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_PARAMETER "dHhfcHJlZW1wX3RhcF8yX2ludg==::MA==::SW52ZXJ0IHRoZSBzZWNvbmQgcG9zdC10YXAgcG9sYXJpdHkgc2V0dGluZw=="
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_PARAMETER "cnhfY29tbW9uX21vZGU=::MC44MnY=::UmVjZWl2ZXIgY29tbW9uIG1vZGUgdm9sdGFnZQ=="
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_PARAMETER "cnhfdGVybWluYXRpb24=::T0NUXzEwMF9PSE1T::UmVjZWl2ZXIgdGVybWluYXRpb24gcmVzaXN0YW5jZQ=="
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_PARAMETER "cnhfZXFfZGNfZ2Fpbg==::MA==::UmVjZWl2ZXIgREMgZ2Fpbg=="
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_PARAMETER "cnhfZXFfY3RybA==::MA==::UmVjZWl2ZXIgc3RhdGljIGVxdWFsaXplciBzZXR0aW5n"
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_PARAMETER "bWdtdF9jbGtfaW5faHo=::MTUwMDAwMDAw::bWdtdF9jbGtfaW5faHo="
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_COMPONENT_PARAMETER "bWdtdF9jbGtfaW5fbWh6::MTUw::bWdtdF9jbGtfaW5fbWh6"
+
+set_global_assignment -library "phy" -name VERILOG_FILE [file join $::quartus(qip_path) "phy.v"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/altera_xcvr_functions.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/alt_reset_ctrl_lego.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/alt_reset_ctrl_tgx_cdrauto.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/alt_xcvr_resync.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/alt_xcvr_csr_common_h.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/alt_xcvr_csr_common.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/alt_xcvr_csr_pcs8g_h.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/alt_xcvr_csr_pcs8g.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/alt_xcvr_csr_selector.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/alt_xcvr_mgmt2dec.sv"]
+set_global_assignment -library "phy" -name VERILOG_FILE [file join $::quartus(qip_path) "phy/altera_wait_generate.v"]
+set_global_assignment -library "phy" -name VERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_clock_crosser.v"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_pipeline_stage.sv"]
+set_global_assignment -library "phy" -name VERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_pipeline_base.v"]
+set_global_assignment -library "phy" -name VERILOG_FILE [file join $::quartus(qip_path) "phy/altera_std_synchronizer_nocut.v"]
+set_global_assignment -library "phy" -name VERILOG_FILE [file join $::quartus(qip_path) "phy/alt_10gbaser_pcs.v"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_params.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_async_fifo_fpga.sv"]
+set_global_assignment -library "phy" -name VERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_bitsync.v"]
+set_global_assignment -library "phy" -name VERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_bitsync2.v"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_clockcomp.sv"]
+set_global_assignment -library "phy" -name VERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_clk_ctrl.v"]
+set_global_assignment -library "phy" -name VERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_gearbox_exp.v"]
+set_global_assignment -library "phy" -name VERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_gearbox_red.v"]
+set_global_assignment -library "phy" -name VERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_pcs_10g.v"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_pcs_10g_top.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_reg_map_av.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_rx_fifo.sv"]
+set_global_assignment -library "phy" -name VERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_rx_fifo_wrap.v"]
+set_global_assignment -library "phy" -name VERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_rx_top.v"]
+set_global_assignment -library "phy" -name VERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_tx_top.v"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_1588_latency.sv"]
+set_global_assignment -library "phy" -name VERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_ber.v"]
+set_global_assignment -library "phy" -name VERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_ber_cnt_ns.v"]
+set_global_assignment -library "phy" -name VERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_ber_sm.v"]
+set_global_assignment -library "phy" -name VERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_blksync.v"]
+set_global_assignment -library "phy" -name VERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_blksync_datapath.v"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_decode.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_decode_type.sv"]
+set_global_assignment -library "phy" -name VERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_descramble.v"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_encode.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_encode_type.sv"]
+set_global_assignment -library "phy" -name VERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_lock_sm.v"]
+set_global_assignment -library "phy" -name VERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_nto1mux.v"]
+set_global_assignment -library "phy" -name VERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_prbs_gen_xg.v"]
+set_global_assignment -library "phy" -name VERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_prbs_ver_xg.v"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_random_err_cnt_ns.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_random_gen.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_random_ver.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_random_ver_10g.sv"]
+set_global_assignment -library "phy" -name VERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_register_with_byte_enable.v"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_rx_sm_datapath.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_rx_sm_ns.sv"]
+set_global_assignment -library "phy" -name VERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_scramble.v"]
+set_global_assignment -library "phy" -name VERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_square_wave_gen.v"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_tx_sm_datapath.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_tx_sm_ns.sv"]
+set_global_assignment -library "phy" -name VERILOG_FILE [file join $::quartus(qip_path) "phy/altera_10gbaser_phy_word_align.v"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/csr_pcs10gbaser_h.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/csr_pcs10gbaser.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/sv_reconfig_bundle_to_xcvr.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/sv_reconfig_bundle_to_ip.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/sv_reconfig_bundle_merger.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/av_xcvr_h.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/av_xcvr_avmm_csr.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/av_tx_pma_ch.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/av_tx_pma.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/av_rx_pma.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/av_pma.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/av_pcs_ch.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/av_pcs.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/av_xcvr_avmm.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/av_xcvr_native.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/av_xcvr_plls.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/av_xcvr_data_adapter.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/av_reconfig_bundle_to_basic.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/av_reconfig_bundle_to_xcvr.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/av_hssi_8g_rx_pcs_rbc.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/av_hssi_8g_tx_pcs_rbc.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/av_hssi_common_pcs_pma_interface_rbc.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/av_hssi_common_pld_pcs_interface_rbc.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/av_hssi_pipe_gen1_2_rbc.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/av_hssi_rx_pcs_pma_interface_rbc.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/av_hssi_rx_pld_pcs_interface_rbc.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/av_hssi_tx_pcs_pma_interface_rbc.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/av_hssi_tx_pld_pcs_interface_rbc.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/av_xcvr_10gbaser_nr.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/av_xcvr_10gbaser_native.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/altera_xcvr_native_av_functions_h.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/altera_xcvr_native_av.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/altera_xcvr_10gbaser.sv"]
+set_global_assignment -library "phy" -name SDC_FILE [file join $::quartus(qip_path) "phy/alt_10gbaser_phy.sdc"]
+set_global_assignment -library "phy" -name SOURCE_FILE [file join $::quartus(qip_path) "phy/alt_10gbaser_pcs.ocp"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/altera_xcvr_reset_control.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/alt_xcvr_reset_counter.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/alt_xcvr_arbiter.sv"]
+set_global_assignment -library "phy" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy/alt_xcvr_m2s.sv"]
+set_global_assignment -library "phy" -name SOURCE_FILE [file join $::quartus(qip_path) "phy/plain_files.txt"]
+set_global_assignment -library "phy" -name SOURCE_FILE [file join $::quartus(qip_path) "phy/qencrypt_files.txt"]
+
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_TOOL_NAME "altera_xcvr_10gbaser"
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_TOOL_VERSION "17.1"
+set_global_assignment -entity "altera_xcvr_10gbaser" -library "phy" -name IP_TOOL_ENV "mwpim"

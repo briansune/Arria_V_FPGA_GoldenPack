@@ -1,0 +1,104 @@
+; Silabs USBXpress Driver
+; Copyright (c) 2011, Silicon Laboratories
+
+
+[Version]
+Signature=$WINDOWS NT$
+Class=USB
+ClassGUID={36fc9e60-c465-11cf-8056-444553540000}
+Provider=%MFGNAME%
+DriverVer=02/28/2016,3.3
+CatalogFile=SiUSBXp.cat
+
+[Manufacturer]
+%MFGNAME%=DeviceList, NTamd64
+
+[DestinationDirs]
+DefaultDestDir=10		;System32\Drivers
+DriverCopyFiles=10		,System32\Drivers
+
+[SourceDisksNames.x86]
+1=%INSTDISK%,,,
+
+[SourceDisksFiles.x86]
+SiUSBXp.sys=1,\x86
+SiLib.sys=1,\x86
+
+[SourceDisksNames.amd64]
+1=%INSTDISK%,,,
+
+[SourceDisksFiles.amd64]
+SiUSBXp.sys=1,\x64
+SiLib.sys=1,\x64
+
+; NOTE: PID EA61 is the default PID in the USBXpress SDK; unfortunately
+; it was used in pre-CBPro Timing EVBs like Si5351. Some customers
+; may have a different USB device that uses this PID and this will
+; cause issues.
+
+[DeviceList]
+%USB\VID_10C4&PID_8A0C.DeviceDesc%=DriverInstall, USB\VID_10C4&PID_8A0C
+%USB\VID_10C4&PID_8999.DeviceDesc%=DriverInstall, USB\VID_10C4&PID_8999
+%USB\VID_10C4&PID_8ADA.DeviceDesc%=DriverInstall, USB\VID_10C4&PID_8ADA
+%USB\VID_10C4&PID_8B2A.DeviceDesc%=DriverInstall, USB\VID_10C4&PID_8B2A
+%USB\VID_10C4&PID_8B63.DeviceDesc%=DriverInstall, USB\VID_10C4&PID_8B63
+%USB\VID_10C4&PID_EA61.DeviceDesc%=DriverInstall, USB\VID_10C4&PID_EA61
+%USB\VID_10C4&PID_8C6C.DeviceDesc%=DriverInstall, USB\VID_10C4&PID_8C6C
+%USB\VID_10C4&PID_8CB1.DeviceDesc%=DriverInstall, USB\VID_10C4&PID_8CB1
+
+[DeviceList.NTamd64]
+%USB\VID_10C4&PID_8A0C.DeviceDesc%=DriverInstall, USB\VID_10C4&PID_8A0C
+%USB\VID_10C4&PID_8999.DeviceDesc%=DriverInstall, USB\VID_10C4&PID_8999
+%USB\VID_10C4&PID_8ADA.DeviceDesc%=DriverInstall, USB\VID_10C4&PID_8ADA
+%USB\VID_10C4&PID_8B2A.DeviceDesc%=DriverInstall, USB\VID_10C4&PID_8B2A
+%USB\VID_10C4&PID_8B63.DeviceDesc%=DriverInstall, USB\VID_10C4&PID_8B63
+%USB\VID_10C4&PID_EA61.DeviceDesc%=DriverInstall, USB\VID_10C4&PID_EA61
+%USB\VID_10C4&PID_8C6C.DeviceDesc%=DriverInstall, USB\VID_10C4&PID_8C6C
+%USB\VID_10C4&PID_8CB1.DeviceDesc%=DriverInstall, USB\VID_10C4&PID_8CB1
+
+[ControlFlags]
+ExcludeFromSelect=*
+
+;------------------------------------------------------------------------------
+;  Windows 2000 Sections
+;------------------------------------------------------------------------------
+
+
+[DriverInstall.NT]
+CopyFiles=DriverCopyFiles
+
+[DriverCopyFiles]
+SiUSBXp.sys,,,2
+SiLib.sys,,,2
+
+[DriverInstall.NT.Services]
+AddService=SIUSBXP,2,DriverService
+
+[DriverService]
+ServiceType=1
+StartType=3
+ErrorControl=1
+ServiceBinary=%10%\system32\drivers\SiUSBXp.sys
+
+[DriverInstall.nt.hw]
+AddReg=DriverHwAddReg
+
+[DriverHwAddReg]
+; HKR,,FriendlyName,,%FRIENDLYNAME%
+
+
+;------------------------------------------------------------------------------
+;  String Definitions
+;------------------------------------------------------------------------------
+
+[Strings]
+MFGNAME="Silicon Labs"
+INSTDISK="Silicon Labs Silicon Labs Timing EVB Driver Installation Disc"
+USB\VID_10C4&PID_8A0C.DeviceDesc="Silicon Labs ClockBuilder Programmer"
+USB\VID_10C4&PID_8999.DeviceDesc="Silicon Labs Si538x/4x EVB"
+USB\VID_10C4&PID_8ADA.DeviceDesc="Silicon Labs Si512xx EVB"
+USB\VID_10C4&PID_8B2A.DeviceDesc="Silicon Labs Si5344 Clock Gen Stick"
+USB\VID_10C4&PID_8B63.DeviceDesc="Silicon Labs Si5332 EVB"
+USB\VID_10C4&PID_EA61.DeviceDesc="Silicon Labs Timing EVB"
+USB\VID_10C4&PID_8C6C.DeviceDesc="Silicon Labs Si55xx EVB"
+USB\VID_10C4&PID_8CB1.DeviceDesc="Silicon Labs Timing Universal EEVB"

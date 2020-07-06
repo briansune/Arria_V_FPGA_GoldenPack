@@ -1,0 +1,262 @@
+
+NAME
+
+    CBProDeviceWrite
+
+SYNOPSIS
+
+    CBProDeviceWrite [ options ] --project pathname
+    CBProDeviceWrite [ options ] --settings pathname
+    CBProDeviceWrite [ options ] --registers pathname
+    CBProDeviceWrite --list-devices
+
+    CBProDeviceWrite --help
+
+DESCRIPTION
+
+    Writes a project file, settings file, or registers file to a supported
+    Silicon Labs device (DUT). Writes are VOLATILE. The device can be located
+    on a Silicon Labs Timing evaluation Board (EVB) or ClockBuilder Pro Field
+    Programmer (FP), either in a socket or wired to the field programmer via
+    serial cable. In each case, the operation is the exact same as if the
+    corresponding tool was selected in the EVB GUI File menu. In the case of
+    writing a project file, the behavior is also the same as when you click
+    the "Write to EVB" or "Write to FP" button in the ClockBuilder Pro wizard.
+
+    If more than one EVB or FP is connected to your PC, you must use the
+    --device option to specify which you are targeting. You pass an identifier
+    for the device, which can be listed using the --list-devices option. For
+    example, CBProDeviceWrite --list-devices might return:
+
+         00-00-16-B1-20-A2 (Si5345 EVB)
+         00-00-15-E2-E2-60 (Si5380 EVB)
+
+    You can then pass either 00-00-16-B1-20-A2 or 00-00-15-E2-E2-60 to the
+    --device argument. For example:
+
+         CBProDeviceWrite --device 00-00-15-E2-E2-60
+                          --project Si5380-RevD-TEST1.slabtimeproj
+
+    After the write has completed, a status message will be printed to the
+    console indicating success or any error. The program will exit with status
+    code 0 on success, and 1 on error.
+
+VALIDATION
+
+    By default, DUT writes in all three modes are validated via DUT read back.
+    With project file writes this occurs at the end of programming. With
+    setting and register file writes, validation is performed after every
+    setting or register write. Any self-clearing settings/registers are
+    automatically not validated. For example, if an Si5380 register script
+    contained a write to SOFT_RST, the read back would be skipped as this is a
+    self-clearing setting that instructs the DSPLL to perform a soft reset,
+    and a read always returns 0.
+
+    You can disable validation using the --no-validate command line option.
+
+FIELD PROGRAMMER
+
+    You must configure communication settings when using a ClockBuilder Pro
+    Field Programmer. The following options are available:
+
+         --family family-id
+              Device family. Required if writing a register or settings file
+              via serial cable. Optional in other cases as family can be 
+              infered by the project file or socket.
+
+         --mode i2c|spi3wire|spi4wire
+              Communication mode. See below for when required.
+
+         --io-voltage 1.8|2.5|3.3
+              I/O supply voltage. See below for when required.
+
+         --speed 100k|400k|1M|2M|...|12M
+              Bus speed. Optional. The fastest speed is selected by default.
+
+         --i2c-address
+              I2C address. Required in I2C mode.
+
+    Family ID    Description                           Mode Reqd?  I/O Voltage
+    Reqd?
+    -----------  ------------------------------------  ---------- 
+    -----------------
+    si538x4x     Si534x/7x/8x/9x (not firmware based)  Always      Always     
+         
+    si538x4xfw   Si5383/84 (firmware based)            Never       Never      
+         
+    si538x4xfw2  Si5388/89 (firmware based)            Never       Never      
+         
+    si5332       Si5332/57                             Never       Always     
+         
+    si533x       Si5338/56                             Never       Always     
+         
+    si55xx       Si55xx                                Always      Never      
+         
+
+
+SETTINGS FILE FORMAT
+
+    The general syntax is setting_name<sep>setting_value, where comma, space,
+    or tab can be used as a separator. The value can be in hex or decimal
+    notation. # and // comments are supported, either at the end or beginning
+    of a line.
+
+    For example:
+
+    # Comma separator
+    DESIGN_ID0,65 # Decimal value (ASCII 'A')
+
+    // Space separator
+    DESIGN_ID1 0x42 // Hex value (ASCII 'B')
+
+
+REGISTERS FILE FORMAT
+
+    The general syntax is register_address<sep>data_value, where comma, space,
+    or tab can be used as a separator. Both address and decimal must be in hex
+    notation. # and // comments are supported, either at the end or beginning
+    of a line.
+
+    For example:
+
+    # Comma separator
+    0x026B,0x41 # DESIGN_ID0 = 'A'
+
+    // Space separator
+    0x026C 0x42 // DESIGN_ID1 = 'B'
+
+    // Hex is assumed for registers; this is same as above
+    026C 42
+
+    You can also specify a delay in microseconds in a register script. Some
+    examples:
+
+    Pause 500
+    # Pause 500 msec
+    // Pause 500msec
+    Delay 500 msec
+
+EXAMPLE - WRITE PROJECT FILE TO EVB
+
+    C:\> CBProDeviceWrite --project Si5345-RevD-TEST1-Project.slabtimeproj
+
+    Searching for EVBs/FPs ...
+    Loading project file ...
+    Writing project to Si5345 Rev D EVB ...
+    Validating write ...
+    Success
+
+    Writes a CBPro project file to an Evaluation Board.
+
+EXAMPLE - WRITE REGISTER SCRIPT TO SI5383 DEVICE ON PCB USING FIELD PROGRAMMER
+
+    C:\> CBProDeviceWrite --registers Si5383-RevD-TEST2-Registers.txt --family
+    si538x4xfw --i2c-address 0x6c
+
+    Searching for EVBs/FPs ...
+    Writing registers on Field Programmer (with validation) ...
+    Success
+
+    Writes a register export script created by CBPro using the field
+    programmer. Because the target family is si538x4xfw, only I2C address
+    neeeds to specified (the device family only supports I2C at 3.3V I/O
+    voltage).
+
+EXAMPLE - WRITE SETTINGS ON SI5346 DEVICE ON PCB USING FIELD PROGRAMMER
+
+    C:\> CBProDeviceWrite --settings settings.txt --mode i2c --i2c-address
+    0x7c --io-voltage 3.3 --family si538x4x
+
+    Searching for EVBs/FPs ...
+    Writing settings on Field Programmer (with validation) ...
+    Success
+
+    Writes a number of device settings (register bitfields) using the field
+    programmer. Because the target family is si538x4x and it supports multiple
+    serial protocols, --mode must be used to specify I2C mode. Likewise, I/O
+    voltage must be configured using the --io-voltage option.
+
+EXAMPLE - WRITE SETTINGS ON SI5332 DEVICE ON PCB USING FIELD PROGRAMMER
+
+    C:\> CBProDeviceWrite --settings settings.txt --i2c-address 0x6a --family
+    si5332
+
+    Searching for EVBs/FPs ...
+    Writing settings on Field Programmer (with validation) ...
+    Success
+
+    Writes a number of device settings (register bitfields) using the field
+    programmer. Because the target family is si5332 and it only supports I2C,
+    --mode is not required. Also, fixed 3.3V I/O voltage is used so
+    --io-voltage is also not specified.
+
+OPTIONS
+
+    --device id
+
+        Select the Evaluation Board or Field Programmer to target. Required if
+        there are 2 or more EVBs/FPs attached to the PC.
+
+    --family family-id
+
+        A device family that is being targeted. See FIELD PROGRAMMER section.
+
+    --help 
+
+        Print detailed usage to the console and exit.
+
+    --i2c-address addr
+
+        7-bit I2C address when using the ClockBuilder Pro field programmer in
+        I2C mode. There is no default. You can specify the address in 0xNN hex
+        format or NN decimal.
+
+    --io-voltage 1.8|2.5|3.3
+
+        I/O voltage when using the ClockBuilder Pro field programmer. See
+        FIELD PROGRAMMER section.
+
+    --list-devices 
+
+        List Silicon Labs Timing devices -- Evaluation Boards and Field
+        Programmers -- connected to the PC and exit.
+
+    --mode i2c|spi3wire|spi4wire
+
+        Communication mode when using the ClockBuilder Pro field programmer.
+        See FIELD PROGRAMMER section.
+
+    --no-validate 
+
+        Normally, writes are validated via read back. Specify this option to
+        disable. See VALIDATION section for details related to setting and
+        register file modes.
+
+    --noscan-in-fp-registers-mode 
+
+        Communication with the device using the field programmer is normally
+        verified before an operation by reading fixed identification
+        register(s) such as PN_BASE on Si538x/4x. Specifying this option will
+        disable this behavior when --registers mode is used.
+
+    --project pathname
+
+        A project file to write to the device.
+
+    --registers pathname
+
+        A registers file to write to the device.
+
+    --settings pathname
+
+        A settings file to write to the device.
+
+    --speed 100k|400k|1M|2M|...|12M
+
+        I2C or SPI bus speed when using the ClockBuilder Pro field programmer.
+        The default is 400 kHz in I2C mode and 12 MHz in SPI mode.
+
+    --version 
+
+        Print this program's version number and exit.
+

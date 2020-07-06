@@ -1,0 +1,7 @@
+Clock,State,DSPLL,Frequency
+OUT0,Enabled,A,161+17/128 MHz - 5 ppm
+OUT1,Enabled,A,OUT0/2
+
+# Any items not specified -- inputs, other outputs, 
+# and bandwidth -- retain their setting in the base 
+# project file

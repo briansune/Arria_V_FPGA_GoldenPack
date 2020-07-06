@@ -1,0 +1,63 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst low_latency_10g_1ch.master_0.b2p -pg 1
+preplace inst low_latency_10g_1ch.master_0 -pg 1 -lvl 3 -y 280
+preplace inst low_latency_10g_1ch.timing_adapter_SFP_A_rx -pg 1 -lvl 8 -y 340
+preplace inst low_latency_10g_1ch.master_0.transacto -pg 1
+preplace inst low_latency_10g_1ch.data_pattern_gen_SFP_A -pg 1 -lvl 4 -y 290
+preplace inst low_latency_10g_1ch -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst low_latency_10g_1ch.master_0.clk_src -pg 1
+preplace inst low_latency_10g_1ch.data_pattern_gen_SFP_B -pg 1 -lvl 4 -y 70
+preplace inst low_latency_10g_1ch.data_pattern_gen_SFP_A.data_pattern_generator -pg 1
+preplace inst low_latency_10g_1ch.timing_adapter_SFP_B_tx -pg 1 -lvl 5 -y 30
+preplace inst low_latency_10g_1ch.master_0.b2p_adapter -pg 1
+preplace inst low_latency_10g_1ch.master_0.fifo -pg 1
+preplace inst low_latency_10g_1ch.data_pattern_check_SFP_A -pg 1 -lvl 9 -y 280
+preplace inst low_latency_10g_1ch.alt_xcvr_reconfig_0 -pg 1 -lvl 9 -y 900
+preplace inst low_latency_10g_1ch.ref_clk -pg 1 -lvl 5 -y 360
+preplace inst low_latency_10g_1ch.pll_0 -pg 1 -lvl 2 -y 300
+preplace inst low_latency_10g_1ch.master_0.timing_adt -pg 1
+preplace inst low_latency_10g_1ch.data_pattern_check_SFP_B -pg 1 -lvl 9 -y 440
+preplace inst low_latency_10g_1ch.clk_50 -pg 1 -lvl 1 -y 240
+preplace inst low_latency_10g_1ch.master_0.p2b_adapter -pg 1
+preplace inst low_latency_10g_1ch.master_0.jtag_phy_embedded_in_jtag_master -pg 1
+preplace inst low_latency_10g_1ch.data_pattern_check_SFP_A.data_pattern_checker -pg 1
+preplace inst low_latency_10g_1ch.master_0.p2b -pg 1
+preplace inst low_latency_10g_1ch.master_0.clk_rst -pg 1
+preplace inst low_latency_10g_1ch.xcvr_custom_phy_0 -pg 1 -lvl 7 -y 420
+preplace inst low_latency_10g_1ch.timing_adapter_SFP_B_rx -pg 1 -lvl 8 -y 520
+preplace inst low_latency_10g_1ch.data_pattern_gen_SFP_B.data_pattern_generator -pg 1
+preplace inst low_latency_10g_1ch.timing_adapter_SFP_A_tx -pg 1 -lvl 5 -y 180
+preplace inst low_latency_10g_1ch.data_pattern_check_SFP_B.data_pattern_checker -pg 1
+preplace netloc FAN_OUT<net_container>low_latency_10g_1ch</net_container>(SLAVE)data_pattern_check_SFP_A.reset,(SLAVE)xcvr_custom_phy_0.phy_mgmt_clk_reset,(SLAVE)pll_0.reset,(SLAVE)data_pattern_gen_SFP_B.reset,(MASTER)clk_50.clk_reset,(SLAVE)alt_xcvr_reconfig_0.mgmt_rst_reset,(SLAVE)timing_adapter_SFP_A_tx.reset,(SLAVE)timing_adapter_SFP_A_rx.reset,(SLAVE)data_pattern_check_SFP_B.reset,(SLAVE)master_0.clk_reset,(SLAVE)timing_adapter_SFP_B_tx.reset,(SLAVE)timing_adapter_SFP_B_rx.reset,(SLAVE)data_pattern_gen_SFP_A.reset) 1 1 8 410 290 610 240 890 230 1260 270 NJ 270 2000 710 2760 610 3200
+preplace netloc POINT_TO_POINT<net_container>low_latency_10g_1ch</net_container>(MASTER)clk_50.clk,(SLAVE)pll_0.refclk) 1 1 1 430
+preplace netloc POINT_TO_POINT<net_container>low_latency_10g_1ch</net_container>(SLAVE)alt_xcvr_reconfig_0.reconfig_from_xcvr,(SLAVE)xcvr_custom_phy_0.reconfig_from_xcvr) 1 6 3 2060 990 NJ 990 NJ
+preplace netloc FAN_OUT<net_container>low_latency_10g_1ch</net_container>(SLAVE)timing_adapter_SFP_A_rx.clk,(MASTER)xcvr_custom_phy_0.rx_clkout0,(SLAVE)data_pattern_check_SFP_A.pattern_in_clk) 1 7 2 2700 330 3120
+preplace netloc POINT_TO_POINT<net_container>low_latency_10g_1ch</net_container>(MASTER)timing_adapter_SFP_B_tx.out,(SLAVE)xcvr_custom_phy_0.tx_parallel_data1) 1 5 2 NJ 620 NJ
+preplace netloc POINT_TO_POINT<net_container>low_latency_10g_1ch</net_container>(SLAVE)data_pattern_check_SFP_B.pattern_in,(MASTER)timing_adapter_SFP_B_rx.out) 1 8 1 3180
+preplace netloc EXPORT<net_container>low_latency_10g_1ch</net_container>(SLAVE)xcvr_custom_phy_0.tx_ready,(SLAVE)low_latency_10g_1ch.xcvr_custom_phy_0_tx_ready) 1 0 7 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ
+preplace netloc EXPORT<net_container>low_latency_10g_1ch</net_container>(SLAVE)low_latency_10g_1ch.refclk_in,(SLAVE)ref_clk.clk_in) 1 0 5 NJ 450 NJ 450 NJ 450 NJ 450 NJ
+preplace netloc EXPORT<net_container>low_latency_10g_1ch</net_container>(SLAVE)alt_xcvr_reconfig_0.reconfig_busy,(SLAVE)low_latency_10g_1ch.alt_xcvr_reconfig_0_reconfig_busy) 1 0 9 NJ 970 NJ 970 NJ 970 NJ 970 NJ 970 NJ 970 NJ 970 NJ 970 NJ
+preplace netloc FAN_OUT<net_container>low_latency_10g_1ch</net_container>(SLAVE)data_pattern_gen_SFP_B.pattern_out_clk,(SLAVE)timing_adapter_SFP_B_tx.clk,(MASTER)xcvr_custom_phy_0.tx_clkout1) 1 3 5 930 30 1240 120 NJ 120 NJ 120 2680
+preplace netloc EXPORT<net_container>low_latency_10g_1ch</net_container>(SLAVE)xcvr_custom_phy_0.tx_serial_data,(SLAVE)low_latency_10g_1ch.xcvr_custom_phy_0_tx_serial_data) 1 0 7 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 NJ
+preplace netloc FAN_OUT<net_container>low_latency_10g_1ch</net_container>(SLAVE)timing_adapter_SFP_A_tx.clk,(SLAVE)data_pattern_gen_SFP_A.pattern_out_clk,(MASTER)xcvr_custom_phy_0.tx_clkout0) 1 3 5 930 410 1280 740 NJ 740 NJ 740 2660
+preplace netloc POINT_TO_POINT<net_container>low_latency_10g_1ch</net_container>(MASTER)xcvr_custom_phy_0.rx_parallel_data1,(SLAVE)timing_adapter_SFP_B_rx.in) 1 7 1 N
+preplace netloc POINT_TO_POINT<net_container>low_latency_10g_1ch</net_container>(SLAVE)timing_adapter_SFP_B_tx.in,(MASTER)data_pattern_gen_SFP_B.pattern_out) 1 4 1 1220
+preplace netloc FAN_OUT<net_container>low_latency_10g_1ch</net_container>(SLAVE)data_pattern_gen_SFP_B.csr_slave,(SLAVE)xcvr_custom_phy_0.phy_mgmt,(SLAVE)alt_xcvr_reconfig_0.reconfig_mgmt,(SLAVE)data_pattern_check_SFP_B.csr_slave,(SLAVE)data_pattern_gen_SFP_A.csr_slave,(SLAVE)data_pattern_check_SFP_A.csr_slave,(MASTER)master_0.master) 1 3 6 910 250 NJ 290 NJ 290 2020 310 NJ 310 3100
+preplace netloc EXPORT<net_container>low_latency_10g_1ch</net_container>(SLAVE)low_latency_10g_1ch.clk_50_reset,(SLAVE)clk_50.clk_in_reset) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>low_latency_10g_1ch</net_container>(SLAVE)alt_xcvr_reconfig_0.reconfig_to_xcvr,(SLAVE)xcvr_custom_phy_0.reconfig_to_xcvr) 1 6 3 2080 1030 NJ 1030 NJ
+preplace netloc POINT_TO_POINT<net_container>low_latency_10g_1ch</net_container>(SLAVE)timing_adapter_SFP_A_tx.in,(MASTER)data_pattern_gen_SFP_A.pattern_out) 1 4 1 1240
+preplace netloc POINT_TO_POINT<net_container>low_latency_10g_1ch</net_container>(MASTER)timing_adapter_SFP_A_tx.out,(SLAVE)xcvr_custom_phy_0.tx_parallel_data0) 1 5 2 NJ 210 2040
+preplace netloc EXPORT<net_container>low_latency_10g_1ch</net_container>(SLAVE)low_latency_10g_1ch.xcvr_custom_phy_0_pll_locked,(SLAVE)xcvr_custom_phy_0.pll_locked) 1 0 7 NJ 640 NJ 640 NJ 640 NJ 640 NJ 640 NJ 640 NJ
+preplace netloc EXPORT<net_container>low_latency_10g_1ch</net_container>(SLAVE)xcvr_custom_phy_0.rx_ready,(SLAVE)low_latency_10g_1ch.xcvr_custom_phy_0_rx_ready) 1 0 7 NJ 660 NJ 660 NJ 660 NJ 660 NJ 660 NJ 660 NJ
+preplace netloc EXPORT<net_container>low_latency_10g_1ch</net_container>(SLAVE)low_latency_10g_1ch.pll_0_locked,(SLAVE)pll_0.locked) 1 0 2 NJ 310 NJ
+preplace netloc POINT_TO_POINT<net_container>low_latency_10g_1ch</net_container>(SLAVE)data_pattern_check_SFP_A.pattern_in,(MASTER)timing_adapter_SFP_A_rx.out) 1 8 1 3140
+preplace netloc EXPORT<net_container>low_latency_10g_1ch</net_container>(SLAVE)low_latency_10g_1ch.clk_50,(SLAVE)clk_50.clk_in) 1 0 1 NJ
+preplace netloc EXPORT<net_container>low_latency_10g_1ch</net_container>(SLAVE)low_latency_10g_1ch.xcvr_custom_phy_0_rx_serial_data,(SLAVE)xcvr_custom_phy_0.rx_serial_data) 1 0 7 NJ 680 NJ 680 NJ 680 NJ 680 NJ 680 NJ 680 NJ
+preplace netloc FAN_OUT<net_container>low_latency_10g_1ch</net_container>(SLAVE)timing_adapter_SFP_B_rx.clk,(SLAVE)data_pattern_check_SFP_B.pattern_in_clk,(MASTER)xcvr_custom_phy_0.rx_clkout1) 1 7 2 2740 510 N
+preplace netloc FAN_OUT<net_container>low_latency_10g_1ch</net_container>(SLAVE)data_pattern_check_SFP_A.csr_clk,(MASTER)pll_0.outclk0,(SLAVE)master_0.clk,(SLAVE)data_pattern_gen_SFP_B.csr_clk,(SLAVE)data_pattern_check_SFP_B.csr_clk,(SLAVE)alt_xcvr_reconfig_0.mgmt_clk_clk,(SLAVE)xcvr_custom_phy_0.phy_mgmt_clk,(SLAVE)data_pattern_gen_SFP_A.csr_clk) 1 2 7 630 220 870 190 NJ 170 NJ 190 2080 290 NJ 290 3160
+preplace netloc POINT_TO_POINT<net_container>low_latency_10g_1ch</net_container>(MASTER)ref_clk.clk,(SLAVE)xcvr_custom_phy_0.pll_ref_clk) 1 5 2 NJ 510 NJ
+preplace netloc POINT_TO_POINT<net_container>low_latency_10g_1ch</net_container>(SLAVE)timing_adapter_SFP_A_rx.in,(MASTER)xcvr_custom_phy_0.rx_parallel_data0) 1 7 1 2720
+preplace netloc EXPORT<net_container>low_latency_10g_1ch</net_container>(SLAVE)low_latency_10g_1ch.refclk_reset,(SLAVE)ref_clk.clk_in_reset) 1 0 5 NJ 470 NJ 470 NJ 470 NJ 470 NJ
+levelinfo -pg 1 0 200 3540
+levelinfo -hier low_latency_10g_1ch 210 240 480 710 1070 1490 1880 2400 2970 3370 3530

@@ -1,0 +1,7 @@
+{
+	"common_dir" : "/data/kclee/PCIE/15.0/AN456/15.0.0_b145/av_devkit/av_x8_g1_ast128_5AGTFD7K3F40I3_g1_x8/",
+	"acds_version" : "Version 15.0.0",
+	"platform" : "linux",
+	"os" : "Red Hat",
+	"qpf" : "top.qpf"
+}

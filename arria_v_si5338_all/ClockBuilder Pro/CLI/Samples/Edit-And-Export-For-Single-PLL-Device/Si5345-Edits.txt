@@ -1,0 +1,10 @@
+Clock,State,Frequency
+
+# Comments are supported
+# IN1,14.4MHz
+
+OUT0,Unused,
+OUT5,Enabled,OUT4*2
+
+OLBW,,1k
+FLBW,,2k

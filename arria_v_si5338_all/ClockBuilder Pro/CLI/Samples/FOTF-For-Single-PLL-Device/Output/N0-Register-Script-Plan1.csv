@@ -1,0 +1,26 @@
+# N0 Register Script - Plan1
+#
+# Base Project: Si5345-RevD-Project.slabtimeproj
+# Part: Si5345
+# Design ID: <none>
+# Inputs Vary Between Plans: No
+# Created By: CBProFOTF1 v2.23.5 [2018-05-02]
+# Timestamp: 2018-05-02 10:37:13 GMT-05:00
+#
+# OUT0: 155.52 MHz
+# OUT1: 311.04 MHz
+# 
+# Fms0 = 622.08 MHz [ 622 + 2/25 MHz ]
+# N0 = 21.8252488124517746... [ 21 + 1095191/1327104 ]
+# R0 = 4
+# R1 = 2
+# 
+Address,Value
+# Write Configuration
+0x0303,0xB8
+0x0304,0xB0
+0x0305,0xCF
+0x0306,0x0D
+0x030B,0xA2
+# Configuration Postamble
+0x030C,0x01

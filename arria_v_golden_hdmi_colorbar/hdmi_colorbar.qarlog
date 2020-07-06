@@ -1,0 +1,38 @@
+Quartus Prime Archive log --	C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_hdmi_colorbar/hdmi_colorbar.qarlog
+
+Archive:	C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_hdmi_colorbar/hdmi_colorbar.qar
+Date:		Sun Jun 28 01:01:07 2020
+Quartus Prime		17.1.0 Build 590 10/25/2017 SJ Standard Edition
+
+	=========== Files Selected: ===========
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_hdmi_colorbar/hdmi_colorbar.qpf
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_hdmi_colorbar/hdmi_colorbar.qsf
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_hdmi_colorbar/src/hdmi_colorbar.sdc
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_hdmi_colorbar/src/hdmi_colorbar.v
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_hdmi_colorbar/src/i2c_master/i2c_config.v
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_hdmi_colorbar/src/i2c_master/i2c_master_bit_ctrl.v
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_hdmi_colorbar/src/i2c_master/i2c_master_byte_ctrl.v
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_hdmi_colorbar/src/i2c_master/i2c_master_defines.v
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_hdmi_colorbar/src/i2c_master/i2c_master_top.v
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_hdmi_colorbar/src/mv_debounce.v
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_hdmi_colorbar/src/pattern/mv_pattern.v
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_hdmi_colorbar/src/pattern/mv_pattern0.v
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_hdmi_colorbar/src/pattern/mv_pattern1.v
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_hdmi_colorbar/src/pattern/mv_pattern2.v
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_hdmi_colorbar/src/pattern/mv_pattern3.v
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_hdmi_colorbar/src/pattern/mv_pattern4.v
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_hdmi_colorbar/src/pattern/mv_pattern5.v
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_hdmi_colorbar/src/pattern/mv_pattern6.v
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_hdmi_colorbar/src/pattern/mv_timing_gen_xy.v
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_hdmi_colorbar/src/pattern/mv_timing_xy.v
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_hdmi_colorbar/src/pattern/mv_video_timing.v
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_hdmi_colorbar/src/pll/pll.cmp
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_hdmi_colorbar/src/pll/pll.qip
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_hdmi_colorbar/src/pll/pll.v
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_hdmi_colorbar/src/pll/pll/pll_0002.qip
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_hdmi_colorbar/src/pll/pll/pll_0002.v
+c:/intelfpga/17.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 27 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

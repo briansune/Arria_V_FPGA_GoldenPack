@@ -1,0 +1,24 @@
+Quartus Prime Archive log --	C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_gmii_b/rgmii_b.qarlog
+
+Archive:	C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_gmii_b/rgmii_b.qar
+Date:		Sat Jun 27 13:53:00 2020
+Quartus Prime		17.1.0 Build 590 10/25/2017 SJ Standard Edition
+
+	=========== Files Selected: ===========
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_gmii_b/rgmii_b.qpf
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_gmii_b/rgmii_b.qsf
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_gmii_b/src/crc.v
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_gmii_b/src/iprecieve.v
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_gmii_b/src/ipsend.v
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_gmii_b/src/mdio_com.v
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_gmii_b/src/ram/ram.qip
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_gmii_b/src/ram/ram.v
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_gmii_b/src/ram/ram_bb.v
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_gmii_b/src/rgmii_b.sdc
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_gmii_b/src/rgmii_b.v
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_golden_gmii_b/src/udp.v
+c:/intelfpga/17.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 13 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

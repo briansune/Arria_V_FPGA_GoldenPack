@@ -1,0 +1,27 @@
+# DSPLL B  Plans
+
+Plan,Item,Value
+
+# Plan #1
+1,OLBW,20
+1,FLBW,100
+
+# Plan #2
+2,OLBW,40
+2,FLBW,1000
+
+# Plan #3
+3,OLBW,100
+3,FLBW,1000
+
+# Plan #4
+4,OLBW,200
+4,FLBW,1000
+
+# Plan #5
+5,OLBW,400
+5,FLBW,1000
+
+# Plan #6
+6,OLBW,800
+6,FLBW,1000

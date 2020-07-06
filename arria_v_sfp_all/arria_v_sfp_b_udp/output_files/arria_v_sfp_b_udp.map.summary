@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Sun Jun 28 16:27:04 2020
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+Revision Name : arria_v_sfp_b_udp
+Top-level Entity Name : arria_v_sfp_b_udp
+Family : Arria V
+Logic utilization (in ALMs) : N/A
+Total registers : 8211
+Total pins : 16
+Total virtual pins : 0
+Total block memory bits : 354,224
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 1
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 1
+Total PLLs : 4
+Total DLLs : 0

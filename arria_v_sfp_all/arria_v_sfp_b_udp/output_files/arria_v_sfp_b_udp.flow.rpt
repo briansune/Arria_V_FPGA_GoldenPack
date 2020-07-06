@@ -1,0 +1,465 @@
+Flow report for arria_v_sfp_b_udp
+Sun Jun 28 16:30:53 2020
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Flow Summary                                                                      ;
++---------------------------------+-------------------------------------------------+
+; Flow Status                     ; Successful - Sun Jun 28 16:30:53 2020           ;
+; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Standard Edition ;
+; Revision Name                   ; arria_v_sfp_b_udp                               ;
+; Top-level Entity Name           ; arria_v_sfp_b_udp                               ;
+; Family                          ; Arria V                                         ;
+; Device                          ; 5AGTFC7H3F35I3                                  ;
+; Timing Models                   ; Final                                           ;
+; Logic utilization (in ALMs)     ; 5,961 / 91,680 ( 7 % )                          ;
+; Total registers                 ; 8539                                            ;
+; Total pins                      ; 19 / 656 ( 3 % )                                ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 354,224 / 13,987,840 ( 3 % )                    ;
+; Total DSP Blocks                ; 0 / 800 ( 0 % )                                 ;
+; Total HSSI RX PCSs              ; 0 / 24 ( 0 % )                                  ;
+; Total HSSI PMA RX Deserializers ; 1 / 24 ( 4 % )                                  ;
+; Total HSSI TX PCSs              ; 0 / 24 ( 0 % )                                  ;
+; Total HSSI PMA TX Serializers   ; 1 / 24 ( 4 % )                                  ;
+; Total PLLs                      ; 4 / 36 ( 11 % )                                 ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                                   ;
++---------------------------------+-------------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 06/28/2020 16:25:22 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; arria_v_sfp_b_udp   ;
++-------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                                                  ;
++-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+------------+
+; Assignment Name                     ; Value                                                                                                                            ; Default Value ; Entity Name ; Section Id ;
++-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID               ; 11967469382.159333272118276                                                                                                      ; --            ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 100                                                                                                                              ; --            ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; -40                                                                                                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/pll/pll.cmp                                                                                                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/pll/pll_sim/pll.vo                                                                                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy.cmp                                                                                                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/phy.v                                                                                                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/altera_xcvr_functions.sv                                                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_xcvr_functions.sv                                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/alt_reset_ctrl_lego.sv                                                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/alt_reset_ctrl_tgx_cdrauto.sv                                                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/alt_xcvr_resync.sv                                                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/alt_reset_ctrl_lego.sv                                                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/alt_reset_ctrl_tgx_cdrauto.sv                                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/alt_xcvr_resync.sv                                                                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/alt_xcvr_csr_common_h.sv                                                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/alt_xcvr_csr_common.sv                                                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/alt_xcvr_csr_pcs8g_h.sv                                                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/alt_xcvr_csr_pcs8g.sv                                                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/alt_xcvr_csr_selector.sv                                                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/alt_xcvr_mgmt2dec.sv                                                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/altera_wait_generate.v                                                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/alt_xcvr_csr_common_h.sv                                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/alt_xcvr_csr_common.sv                                                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/alt_xcvr_csr_pcs8g_h.sv                                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/alt_xcvr_csr_pcs8g.sv                                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/alt_xcvr_csr_selector.sv                                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/alt_xcvr_mgmt2dec.sv                                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_wait_generate.v                                                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/altera_10gbaser_phy_clock_crosser.v                                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_clock_crosser.v                                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/altera_10gbaser_phy_pipeline_stage.sv                                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_pipeline_stage.sv                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/altera_10gbaser_phy_pipeline_base.v                                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_pipeline_base.v                                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/altera_std_synchronizer_nocut.v                                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/alt_10gbaser_pcs.v                                                                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_params.sv                                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_async_fifo_fpga.sv                                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_bitsync.v                                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_bitsync2.v                                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_clockcomp.sv                                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_clk_ctrl.v                                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_gearbox_exp.v                                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_gearbox_red.v                                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_pcs_10g.v                                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_pcs_10g_top.sv                                                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_reg_map_av.sv                                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_rx_fifo.sv                                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_rx_fifo_wrap.v                                                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_rx_top.v                                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_tx_top.v                                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/alt_10gbaser_pcs.v                                                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_params.sv                                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_async_fifo_fpga.sv                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_bitsync.v                                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_bitsync2.v                                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_clockcomp.sv                                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_clk_ctrl.v                                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_gearbox_exp.v                                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_gearbox_red.v                                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_pcs_10g.v                                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_pcs_10g_top.sv                                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_reg_map_av.sv                                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_rx_fifo.sv                                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_rx_fifo_wrap.v                                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_rx_top.v                                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_tx_top.v                                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_1588_latency.sv                                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_ber.v                                                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_ber_cnt_ns.v                                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_ber_sm.v                                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_blksync.v                                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_blksync_datapath.v                                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_decode.sv                                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_decode_type.sv                                                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_descramble.v                                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_encode.sv                                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_encode_type.sv                                                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_lock_sm.v                                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_nto1mux.v                                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_prbs_gen_xg.v                                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_prbs_ver_xg.v                                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_random_err_cnt_ns.sv                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_random_gen.sv                                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_random_ver.sv                                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_random_ver_10g.sv                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_register_with_byte_enable.v                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_rx_sm_datapath.sv                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_rx_sm_ns.sv                                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_scramble.v                                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_square_wave_gen.v                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_tx_sm_datapath.sv                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_tx_sm_ns.sv                                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_10gbaser_phy_word_align.v                                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_1588_latency.sv                                                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_ber.v                                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_ber_cnt_ns.v                                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_ber_sm.v                                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_blksync.v                                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_blksync_datapath.v                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_decode.sv                                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_decode_type.sv                                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_descramble.v                                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_encode.sv                                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_encode_type.sv                                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_lock_sm.v                                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_nto1mux.v                                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_prbs_gen_xg.v                                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_prbs_ver_xg.v                                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_random_err_cnt_ns.sv                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_random_gen.sv                                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_random_ver.sv                                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_random_ver_10g.sv                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_register_with_byte_enable.v                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_rx_sm_datapath.sv                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_rx_sm_ns.sv                                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_scramble.v                                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_square_wave_gen.v                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_tx_sm_datapath.sv                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_tx_sm_ns.sv                                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec/altera_10gbaser_phy_word_align.v                                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/csr_pcs10gbaser_h.sv                                                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/csr_pcs10gbaser.sv                                                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/csr_pcs10gbaser_h.sv                                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/csr_pcs10gbaser.sv                                                                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/sv_reconfig_bundle_to_xcvr.sv                                                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/sv_reconfig_bundle_to_ip.sv                                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/sv_reconfig_bundle_merger.sv                                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/sv_reconfig_bundle_to_xcvr.sv                                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/sv_reconfig_bundle_to_ip.sv                                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/sv_reconfig_bundle_merger.sv                                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/av_xcvr_h.sv                                                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/av_xcvr_avmm_csr.sv                                                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/av_tx_pma_ch.sv                                                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/av_tx_pma.sv                                                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/av_rx_pma.sv                                                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/av_pma.sv                                                                                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/av_pcs_ch.sv                                                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/av_pcs.sv                                                                                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/av_xcvr_avmm.sv                                                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/av_xcvr_native.sv                                                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/av_xcvr_plls.sv                                                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/av_xcvr_data_adapter.sv                                                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/av_reconfig_bundle_to_basic.sv                                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/av_reconfig_bundle_to_xcvr.sv                                                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/av_xcvr_h.sv                                                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/av_xcvr_avmm_csr.sv                                                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/av_tx_pma_ch.sv                                                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/av_tx_pma.sv                                                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/av_rx_pma.sv                                                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/av_pma.sv                                                                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/av_pcs_ch.sv                                                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/av_pcs.sv                                                                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/av_xcvr_avmm.sv                                                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/av_xcvr_native.sv                                                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/av_xcvr_plls.sv                                                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/av_xcvr_data_adapter.sv                                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/av_reconfig_bundle_to_basic.sv                                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/av_reconfig_bundle_to_xcvr.sv                                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/av_hssi_8g_rx_pcs_rbc.sv                                                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/av_hssi_8g_tx_pcs_rbc.sv                                                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/av_hssi_common_pcs_pma_interface_rbc.sv                                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/av_hssi_common_pld_pcs_interface_rbc.sv                                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/av_hssi_pipe_gen1_2_rbc.sv                                                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/av_hssi_rx_pcs_pma_interface_rbc.sv                                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/av_hssi_rx_pld_pcs_interface_rbc.sv                                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/av_hssi_tx_pcs_pma_interface_rbc.sv                                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/av_hssi_tx_pld_pcs_interface_rbc.sv                                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/av_hssi_8g_rx_pcs_rbc.sv                                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/av_hssi_8g_tx_pcs_rbc.sv                                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/av_hssi_common_pcs_pma_interface_rbc.sv                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/av_hssi_common_pld_pcs_interface_rbc.sv                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/av_hssi_pipe_gen1_2_rbc.sv                                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/av_hssi_rx_pcs_pma_interface_rbc.sv                                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/av_hssi_rx_pld_pcs_interface_rbc.sv                                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/av_hssi_tx_pcs_pma_interface_rbc.sv                                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/av_hssi_tx_pld_pcs_interface_rbc.sv                                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/av_xcvr_10gbaser_nr.sv                                                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/av_xcvr_10gbaser_native.sv                                                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/av_xcvr_10gbaser_nr.sv                                                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/av_xcvr_10gbaser_native.sv                                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/altera_xcvr_native_av_functions_h.sv                                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/altera_xcvr_native_av.sv                                                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_xcvr_native_av_functions_h.sv                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_xcvr_native_av.sv                                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/altera_xcvr_10gbaser.sv                                                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_xcvr_10gbaser.sv                                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/altera_xcvr_reset_control.sv                                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/alt_xcvr_reset_counter.sv                                                                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/altera_xcvr_reset_control.sv                                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/alt_xcvr_reset_counter.sv                                                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/alt_xcvr_arbiter.sv                                                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/alt_xcvr_m2s.sv                                                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/alt_xcvr_arbiter.sv                                                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor/alt_xcvr_m2s.sv                                                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/plain_files.txt                                                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/mentor_files.txt                                                                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/cadence_files.txt                                                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/synopsys_files.txt                                                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy/phy_sim/altera_xcvr_10gbaser/aldec_files.txt                                                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig.cmp                                                                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/phy_reconfig.v                                                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/altera_xcvr_functions.sv                                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/altera_xcvr_functions.sv                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/av_xcvr_h.sv                                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/av_xcvr_h.sv                                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_resync.sv                                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/alt_xcvr_resync.sv                                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_h.sv                                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/alt_xcvr_reconfig_h.sv                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig.sv                                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/alt_xcvr_reconfig.sv                                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_cal_seq.sv                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/alt_xcvr_reconfig_cal_seq.sv                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xreconf_cif.sv                                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/alt_xreconf_cif.sv                                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xreconf_uif.sv                                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/alt_xreconf_uif.sv                                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xreconf_basic_acq.sv                                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/alt_xreconf_basic_acq.sv                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_analog.sv                                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/alt_xcvr_reconfig_analog.sv                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_analog_av.sv                                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/alt_xcvr_reconfig_analog_av.sv                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xreconf_analog_datactrl_av.sv                                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/alt_xreconf_analog_datactrl_av.sv                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xreconf_analog_rmw_av.sv                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/alt_xreconf_analog_rmw_av.sv                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xreconf_analog_ctrlsm.sv                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/alt_xreconf_analog_ctrlsm.sv                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_offset_cancellation.sv                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/alt_xcvr_reconfig_offset_cancellation.sv                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_offset_cancellation_av.sv                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/alt_xcvr_reconfig_offset_cancellation_av.sv                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_eyemon.sv                                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/alt_xcvr_reconfig_eyemon.sv                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_dfe.sv                                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/alt_xcvr_reconfig_dfe.sv                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_adce.sv                                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/alt_xcvr_reconfig_adce.sv                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_dcd.sv                                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/alt_xcvr_reconfig_dcd.sv                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_dcd_av.sv                                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_dcd_cal_av.sv                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_dcd_control_av.sv                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/alt_xcvr_reconfig_dcd_av.sv                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/alt_xcvr_reconfig_dcd_cal_av.sv                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/alt_xcvr_reconfig_dcd_control_av.sv                                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_mif.sv                                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/alt_xcvr_reconfig_mif.sv                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/av_xcvr_reconfig_mif.sv                                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/av_xcvr_reconfig_mif_ctrl.sv                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/av_xcvr_reconfig_mif_avmm.sv                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/av_xcvr_reconfig_mif.sv                                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/av_xcvr_reconfig_mif_ctrl.sv                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/av_xcvr_reconfig_mif_avmm.sv                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_pll.sv                                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/alt_xcvr_reconfig_pll.sv                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/av_xcvr_reconfig_pll.sv                                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/av_xcvr_reconfig_pll_ctrl.sv                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/av_xcvr_reconfig_pll.sv                                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/av_xcvr_reconfig_pll_ctrl.sv                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_soc.sv                                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_cpu_ram.sv                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_cpu_ram.hex                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_direct.sv                                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_arbiter_acq.sv                                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_basic.sv                                                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/alt_arbiter_acq.sv                                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/alt_xcvr_reconfig_basic.sv                                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/av_xrbasic_l2p_addr.sv                                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/av_xrbasic_l2p_ch.sv                                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/av_xrbasic_l2p_rom.sv                                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/av_xrbasic_lif_csr.sv                                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/av_xrbasic_lif.sv                                                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/av_xcvr_reconfig_basic.sv                                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/av_xrbasic_l2p_addr.sv                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/av_xrbasic_l2p_ch.sv                                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/av_xrbasic_l2p_rom.sv                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/av_xrbasic_lif_csr.sv                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/av_xrbasic_lif.sv                                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/av_xcvr_reconfig_basic.sv                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_arbiter.sv                                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_m2s.sv                                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/altera_wait_generate.v                                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_csr_selector.sv                                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/alt_xcvr_arbiter.sv                                                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/alt_xcvr_m2s.sv                                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/altera_wait_generate.v                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/alt_xcvr_csr_selector.sv                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/sv_reconfig_bundle_to_basic.sv                                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/sv_reconfig_bundle_to_basic.sv                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/av_reconfig_bundle_to_basic.sv                                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/av_reconfig_bundle_to_xcvr.sv                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/av_reconfig_bundle_to_basic.sv                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor/av_reconfig_bundle_to_xcvr.sv                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_cpu.v                                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_cpu_reconfig_cpu.v                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_cpu_reconfig_cpu_nios2_waves.do                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_cpu_reconfig_cpu_rf_ram_a.dat                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_cpu_reconfig_cpu_rf_ram_a.hex                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_cpu_reconfig_cpu_rf_ram_a.mif                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_cpu_reconfig_cpu_rf_ram_b.dat                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_cpu_reconfig_cpu_rf_ram_b.hex                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_cpu_reconfig_cpu_rf_ram_b.mif                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_cpu_reconfig_cpu_test_bench.v                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_cpu_mm_interconnect_0.v                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_cpu_irq_mapper.sv                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/altera_reset_controller.v                                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/altera_reset_synchronizer.v                                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/altera_reset_controller.sdc                                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/altera_merlin_master_translator.sv                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/altera_merlin_slave_translator.sv                                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/altera_merlin_master_agent.sv                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/altera_merlin_slave_agent.sv                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/altera_merlin_burst_uncompressor.sv                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/altera_avalon_sc_fifo.v                                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_cpu_mm_interconnect_0_router.sv                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_cpu_mm_interconnect_0_router_001.sv                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_cpu_mm_interconnect_0_router_002.sv                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_cpu_mm_interconnect_0_router_003.sv                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_cpu_mm_interconnect_0_cmd_demux.sv                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_cpu_mm_interconnect_0_cmd_demux_001.sv                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_cpu_mm_interconnect_0_cmd_mux.sv                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/altera_merlin_arbitrator.sv                                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_cpu_mm_interconnect_0_cmd_mux_001.sv                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_cpu_mm_interconnect_0_rsp_mux.sv                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_cpu_mm_interconnect_0_rsp_mux_001.sv                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_cpu_mm_interconnect_0_avalon_st_adapter.v                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/alt_xcvr_reconfig_cpu_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/plain_files.txt                                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/mentor_files.txt                                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/cadence_files.txt                                                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/synopsys_files.txt                                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; rtl/phy_reconfig/phy_reconfig_sim/alt_xcvr_reconfig/aldec_files.txt                                                              ; --            ; --          ; --         ;
+; NUM_PARALLEL_PROCESSORS             ; All                                                                                                                              ; --            ; --          ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                                                                                           ; --            ; --          ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                                                                                           ; --            ; --          ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                                                                                           ; --            ; --          ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                                                                              ; --            ; --          ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                                                                            ; --            ; --          ; --         ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                                                                                     ; --            ; --          ; --         ;
+; SMART_RECOMPILE                     ; On                                                                                                                               ; Off           ; --          ; --         ;
+; SPD_FILE                            ; rtl/pll/pll.spd                                                                                                                  ; --            ; --          ; --         ;
+; SPD_FILE                            ; rtl/phy/phy.spd                                                                                                                  ; --            ; --          ; --         ;
+; SPD_FILE                            ; rtl/phy_reconfig/phy_reconfig.spd                                                                                                ; --            ; --          ; --         ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                                                                                               ; --            ; --          ; --         ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                                                                                               ; --            ; --          ; --         ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                                                                                               ; --            ; --          ; --         ;
++-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:01:36     ; 1.6                     ; 5319 MB             ; 00:02:03                           ;
+; Fitter               ; 00:03:28     ; 1.2                     ; 8180 MB             ; 00:09:16                           ;
+; Assembler            ; 00:00:14     ; 1.0                     ; 4993 MB             ; 00:00:14                           ;
+; Total                ; 00:05:18     ; --                      ; --                  ; 00:11:33                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; DESKTOP-4UKJC18  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-4UKJC18  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-4UKJC18  ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off arria_v_sfp_b_udp -c arria_v_sfp_b_udp
+quartus_fit --read_settings_files=off --write_settings_files=off arria_v_sfp_b_udp -c arria_v_sfp_b_udp
+quartus_asm --read_settings_files=off --write_settings_files=off arria_v_sfp_b_udp -c arria_v_sfp_b_udp
+
+
+

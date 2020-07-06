@@ -1,0 +1,54 @@
+
+NAME
+
+    CBProRegmapExport
+
+SYNOPSIS
+
+    CBProRegmapExport [ opts ] --project project-filename
+
+    CBProRegmapExport --help
+
+DESCRIPTION
+
+    This tool exports meta-data about all of the customer facing settings and
+    registers for a particular revision of a device. This is referred to as a
+    register map aka regmap. Two types of exports are created: regmap tables
+    and regmap C code files. Both are created in the folder you select.
+
+    Three table versions are saved: CSV data, text report, and HTML report.
+    For each setting, the following are defined:
+
+    + Setting name (PN_BASE, N0_NUM, etc).
+    + Register start address, bit offset within start address, and length.
+    + NVM classification: not NVM backend (None), stored in user burnable NVM
+    (User), or stored in protected factory programmed NVM (SiLab).
+    + Setting type: read-only (R/O), read-write (R/W), or self-clearing (S/C).
+
+    The C code is a header (.h) file containing a struct typedef and array of
+    settings meta-data.
+
+OPTIONS
+
+    --create-out-folder 
+
+        Create the output folder does not exist already.
+
+    --help 
+
+        Print detailed usage to the console and exit.
+
+    --out-folder folder
+
+        The output folder. If this is not specified, the folder where the tool
+        is run is used.
+
+    --project pathname
+
+        Select the regmap to export based on this project file. You must
+        specify this.
+
+    --version 
+
+        Print this program's version number and exit.
+

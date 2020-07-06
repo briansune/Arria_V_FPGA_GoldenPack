@@ -1,0 +1,20 @@
+Fitter Status : Successful - Sat Jun 27 21:13:25 2020
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+Revision Name : led_test
+Top-level Entity Name : led_test
+Family : Arria V
+Device : 5AGTFC7H3F35I3
+Timing Models : Final
+Logic utilization (in ALMs) : 24 / 91,680 ( < 1 % )
+Total registers : 52
+Total pins : 10 / 656 ( 2 % )
+Total virtual pins : 0
+Total block memory bits : 0 / 13,987,840 ( 0 % )
+Total RAM Blocks : 0 / 1,366 ( 0 % )
+Total DSP Blocks : 0 / 800 ( 0 % )
+Total HSSI RX PCSs : 0 / 24 ( 0 % )
+Total HSSI PMA RX Deserializers : 0 / 24 ( 0 % )
+Total HSSI TX PCSs : 0 / 24 ( 0 % )
+Total HSSI PMA TX Serializers : 0 / 24 ( 0 % )
+Total PLLs : 0 / 36 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )

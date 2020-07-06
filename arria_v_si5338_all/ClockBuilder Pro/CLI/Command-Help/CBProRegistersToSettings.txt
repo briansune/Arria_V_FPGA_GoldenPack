@@ -1,0 +1,100 @@
+
+NAME
+
+    CBProRegistersToSettings
+
+SYNOPSIS
+
+    CBProRegistersToSettings --part name --revision rev 
+                             --infile pathname [ --outfile pathname ]
+                             [ --format csv|text|html ] 
+
+    CBProRegistersToSettings --list-parts
+
+    CBProRegistersToSettings --help
+
+DESCRIPTION
+
+    Breaks out device register values by named setting (bitfield). For
+    example, if the device is Si5345 Revision D and regs.txt contains:
+
+    0x0109,0x09
+    0x0302,0x00
+    0x0303,0x00
+    0x0304,0x00
+    0x0305,0x80
+    0x0306,0x05
+    0x0307,0x00
+    0x0308,0x00
+    0x0309,0x00
+    0x030A,0x00
+    0x030B,0x80
+
+    CBProRegistersToSettings --part si5345 --rev d --infile regs.txt will
+    translate these registers to the settings:
+
+    Location      NVM   Flag  SettingName     DecValue     HexValue
+    ------------  ----  ----  --------------  -----------  -----------
+    0x0109[2:0]   User  R/W   OUT0_FORMAT     1            0x01
+    0x0109[3]     User  R/W   OUT0_SYNC_EN    1            0x01
+    0x0109[5:4]   User  R/W   OUT0_DIS_STATE  0            0x00
+    0x0109[7:6]   User  R/W   OUT0_CMOS_DRV   0            0x00
+    0x0302[43:0]  User  R/W   N0_NUM          23622320128  0x580000000
+    0x0308[31:0]  User  R/W   N0_DEN          2147483648   0x80000000
+
+    Text, CSV, and HTML output format is supported using the --format option.
+
+    If a setting's registers are only partially specified, 0x00 is assumed for
+    missing addresses.
+
+OPTIONS
+
+    --format csv|text|html
+
+        The output format. The default is a text table.
+
+    --help 
+
+        Print detailed usage to the console and exit.
+
+    --infile pathname
+
+        The register file to parse. Required.
+
+    --list-parts 
+
+        List part numbers supported by this tool. Unreleased or customer
+        specific parts are not listed.
+
+    --order file|address|name
+
+        The order to list the settings by. The default is file order, which
+        lists the setting names in the order they are set in the original
+        file. Address order sorts by device address low to high and within an
+        register bitfields get sorted by bit position low to high. Name order
+        uses simple alphanumeric sort of setting name.
+
+    --outfile pathname
+
+        The output file where the settings breakout will be saved. Optional.
+        If not specified, output will be to the console (standard output).
+
+    --part name
+
+        The part the register file is associated with. For example, si5345.
+        Argument is case insensitive. Required. Use --list-parts to see
+        supported parts.
+
+    --rev rev
+
+        The part device revision the register file is associated with. For
+        example, D. Argument is case insensitive. Required.
+
+    --unlock password
+
+        Provides Silicon Labs employees access to extended reporting.
+
+    --version 
+
+        Print this program's version number and exit.
+

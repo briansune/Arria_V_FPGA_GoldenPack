@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<instance entity-name="altera_xcvr_10gbaser" version="17.1" >
+<generic name="device_family" value="Arria V" />
+<generic name="num_channels" value="1" />
+<generic name="operation_mode" value="duplex" />
+<generic name="external_pma_ctrl_config" value="0" />
+<generic name="control_pin_out" value="0" />
+<generic name="recovered_clk_out" value="0" />
+<generic name="pll_locked_out" value="1" />
+<generic name="gui_pll_type" value="CMU" />
+<generic name="ref_clk_freq" value="644.53125 MHz" />
+<generic name="pma_mode" value="40" />
+<generic name="starting_channel_number" value="0" />
+<generic name="sys_clk_in_hz" value="150000000" />
+<generic name="rx_use_coreclk" value="0" />
+<generic name="gui_embedded_reset" value="1" />
+<generic name="latadj" value="0" />
+<generic name="high_precision_latadj" value="1" />
+<generic name="tx_termination" value="OCT_100_OHMS" />
+<generic name="tx_vod_selection" value="7" />
+<generic name="tx_preemp_pretap" value="0" />
+<generic name="tx_preemp_pretap_inv" value="0" />
+<generic name="tx_preemp_tap_1" value="15" />
+<generic name="tx_preemp_tap_2" value="0" />
+<generic name="tx_preemp_tap_2_inv" value="0" />
+<generic name="rx_common_mode" value="0.82v" />
+<generic name="rx_termination" value="OCT_100_OHMS" />
+<generic name="rx_eq_dc_gain" value="0" />
+<generic name="rx_eq_ctrl" value="0" />
+<generic name="mgmt_clk_in_hz" value="150000000" />
+</instance>

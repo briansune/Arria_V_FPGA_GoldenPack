@@ -1,0 +1,21 @@
+Clock,State,Frequency
+
+# Comments are supported
+
+IN0,Enabled,10MHz
+IN1,Enabled,10MHz
+
+OUT0,Enabled,156.25 MHz
+OUT1,Enabled,156.25 MHz
+OUT2,Enabled,156.25 MHz
+OUT3,Enabled,156.25 MHz
+OUT4,Enabled,156.25 MHz
+OUT5,Unused,
+OUT6,Enabled,125 MHz
+OUT7,Enabled,125 MHz
+OUT8,Enabled,125 MHz
+OUT9,Enabled,125 MHz
+
+# Items are optional; if not supplied, value in base project is used
+# OLBW,,100
+# FLBW,,1k

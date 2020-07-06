@@ -1,0 +1,20 @@
+Clock,State,Frequency
+
+# Comments are supported
+
+IN0,Enabled,125MHz
+IN1,Enabled,125MHz
+
+OUT0,Enabled,25 MHz
+OUT1,Enabled,25 MHz
+OUT2,Enabled,625M
+OUT3,Enabled,625M
+OUT4,Enabled,625M
+OUT5,Unused,
+OUT6,Enabled,100 MHz
+OUT7,Enabled,100 MHz
+OUT8,Enabled,39813.2*255/236/256M
+OUT9,Enabled,39813.2*255/236/256M
+
+OLBW,,400
+FLBW,,2k

@@ -1,0 +1,125 @@
+
+NAME
+
+    CBProSi534x8xFirmwareDownload
+
+SYNOPSIS
+
+    CBProSi534x8xFirmwareDownload [ options ] --bootrecord-file pathname
+    CBProSi534x8xFirmwareDownload [ options ] --standalone-file pathname
+    CBProSi534x8xFirmwareDownload --list-devices
+
+    CBProSi534x8xFirmwareDownload --help
+
+DESCRIPTION
+
+    Writes a firmware file to a supported Silicon Labs device. Supports device
+    being in program mode or already in bootloader mode. Firmware write is
+    verified.
+
+    The following firmware formats are supported:
+
+    + Boot Record: a firmware image packed into a boot record that is
+    compatible with the device's bootloader. Use the --bootrecord-file option
+    to specify this type of firmware image.
+    + Stand-Alone: a firmware image normally used with Silicon Labs MCU
+    development tools and debug adapter. CBPro will convert this type of file
+    to the boot record file automatically. Use the --standalone-file option to
+    specify this type of firmware image
+
+    Supports the following types of targets:
+
+    + The device is on a Silicon Labs Evaluation Board (EVB)
+    + The device is on a 3rd party board and connected to a Silicon Labs
+    ClockBuilder Field Programmer (FP) via wired serial connection
+    + The device is in a supported socket connected to the Silicon Labs
+    ClockBuilder Field Programmer (FP)
+
+    If more than one EVB or FP is connected to your PC, you must use the
+    --device option to specify which you are targeting. You pass an identifier
+    for the device, which can be listed using the --list-devices option. For
+    example, CBProSi534x8xFirmwareDownload --list-devices might return:
+
+         00-00-16-B1-20-A2 (Si5383 EVB)
+         00-00-15-E2-E2-60 (Si5380 EVB)
+
+    You can then pass either 00-00-16-B1-20-A2 or 00-00-15-E2-E2-60 to the
+    --device argument. For example:
+
+         CBProSi534x8xFirmwareDownload --device 00-00-15-E2-E2-60
+                                       --bootrecord-file si5383.bin
+
+    Status messages are displayed to the console as the download progresses.
+    The program will exit with status code 0 on success, and 1 on error.
+
+FIELD PROGRAMMER
+
+    You must configure communication settings when using a ClockBuilder Pro
+    Field Programmer. The following options are available:
+
+         --i2c-address
+              I2C address. Required.
+
+         --speed 100k|400k
+              Bus speed. Optional. 400 kHz is selected by default.
+
+EXAMPLES
+
+    CBProSi534x8xFirmwareDownload.exe --i2c-address 0x6c --bootrecord-file
+    sibrecord.bin
+
+        Downloads a bootrecord-based firmware image using the ClockBuilder Pro
+        Field Programmer. Sets I2C bus speed to 400 kHz (the default). The
+        device must be configured for address 0x6C. The device can be in
+        program mode or already in bootloader mode.
+
+    CBProSi534x8xFirmwareDownload.exe --standalone-file sifw.hex
+
+        Downloads a stand-alone firmware image to a Silicon Labs Evaluation
+        Board. The file swfw.hex is converted internally to bootrecord format.
+        The device on the EVB can be in program mode or already in bootloader
+        mode.
+
+OPTIONS
+
+    --bootrecord-file pathname
+
+        A bootrecord-based firmware file to program on the device. Can be a
+        .hex or .bin file.
+
+    --device id
+
+        Select the Evaluation Board or Field Programmer to target. Required if
+        there are 2 or more EVBs/FPs attached to the PC.
+
+    --help 
+
+        Print detailed usage to the console and exit.
+
+    --i2c-address addr
+
+        7-bit I2C address when using the ClockBuilder Pro field programmer.
+        There is no default. You can specify the address in 0xNN hex format or
+        NN decimal.
+
+    --list-devices 
+
+        List Silicon Labs Timing devices -- Evaluation Boards and Field
+        Programmers -- connected to the PC and exit.
+
+    --speed 100k|400k
+
+        I2C bus speed when using the ClockBuilder Pro field programmer. The
+        default is 400 kHz.
+
+    --standalone-file pathname
+
+        A standard firmware image that is normally downloaded using a Silicon
+        Labs USB Debug Adapter. This tool will convert it to a the boot record
+        format and flash using the device's bootloader. Can be a .hex or .bin
+        file.
+
+    --version 
+
+        Print this program's version number and exit.
+

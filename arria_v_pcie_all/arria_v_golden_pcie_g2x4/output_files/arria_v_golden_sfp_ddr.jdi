@@ -1,0 +1,16 @@
+<sld_project_info>
+  <project>
+    <hash md5_digest_80b="b4293ce8ea71b91ebb7a"/>
+  </project>
+  <file_info>
+    <file device="5AGTFC7H3F35I3" path="arria_v_golden_sfp_ddr.sof" usercode="0xFFFFFFFF"/>
+  </file_info>
+  <sld_infos>
+    <sld_info hpath="top:top_inst" name="top_inst">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME top HAS_SOPCINFO 1 GENERATION_ID 1593941271"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
+  </sld_infos>
+</sld_project_info>

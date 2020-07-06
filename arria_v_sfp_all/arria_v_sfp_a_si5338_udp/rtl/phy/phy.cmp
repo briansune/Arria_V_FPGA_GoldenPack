@@ -1,0 +1,26 @@
+	component phy is
+		port (
+			pll_ref_clk          : in  std_logic                      := 'X';             -- clk
+			xgmii_rx_clk         : out std_logic;                                         -- clk
+			pll_locked           : out std_logic;                                         -- export
+			tx_ready             : out std_logic;                                         -- export
+			xgmii_tx_clk         : in  std_logic                      := 'X';             -- clk
+			rx_ready             : out std_logic;                                         -- export
+			rx_data_ready        : out std_logic_vector(0 downto 0);                      -- export
+			xgmii_rx_dc_0        : out std_logic_vector(71 downto 0);                     -- data
+			rx_serial_data_0     : in  std_logic                      := 'X';             -- export
+			xgmii_tx_dc_0        : in  std_logic_vector(71 downto 0)  := (others => 'X'); -- data
+			tx_serial_data_0     : out std_logic_vector(0 downto 0);                      -- export
+			reconfig_from_xcvr   : out std_logic_vector(91 downto 0);                     -- reconfig_from_xcvr
+			reconfig_to_xcvr     : in  std_logic_vector(139 downto 0) := (others => 'X'); -- reconfig_to_xcvr
+			phy_mgmt_clk         : in  std_logic                      := 'X';             -- clk
+			phy_mgmt_clk_reset   : in  std_logic                      := 'X';             -- reset
+			phy_mgmt_address     : in  std_logic_vector(8 downto 0)   := (others => 'X'); -- address
+			phy_mgmt_read        : in  std_logic                      := 'X';             -- read
+			phy_mgmt_readdata    : out std_logic_vector(31 downto 0);                     -- readdata
+			phy_mgmt_write       : in  std_logic                      := 'X';             -- write
+			phy_mgmt_writedata   : in  std_logic_vector(31 downto 0)  := (others => 'X'); -- writedata
+			phy_mgmt_waitrequest : out std_logic                                          -- waitrequest
+		);
+	end component phy;
+

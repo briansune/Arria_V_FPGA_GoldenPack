@@ -1,0 +1,50 @@
+
+
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_ddr3_all/arria_v_golden_pwr_ddr_1066mhz/ddr3_pwr_side/ddr3_pwr_side.v
+
+Jul 02 10PM:05:46>: MegaWizard Plug-In Manager does not recognize C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_ddr3_all/arria_v_golden_pwr_ddr_1066mhz/ddr3_pwr_side/ddr3_pwr_side.v as a wizard-generated
+custom megafunction variation.
+
+Do you want to use a wizard to overwrite it?
+
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_ddr3_all/arria_v_golden_pwr_ddr_1066mhz/ddr3_pwr_side/ddr3_pwr_side.v
+
+Jul 02 10PM:05:48>: MegaWizard Plug-In Manager does not recognize C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_ddr3_all/arria_v_golden_pwr_ddr_1066mhz/ddr3_pwr_side/ddr3_pwr_side.v as a wizard-generated
+custom megafunction variation.
+
+Do you want to use a wizard to overwrite it?
+
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_ddr3_all/arria_v_golden_pwr_ddr_1066mhz/ddr3_pwr_side/ddr3_pwr_side.v
+
+Jul 02 10PM:05:49>: MegaWizard Plug-In Manager does not recognize C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_ddr3_all/arria_v_golden_pwr_ddr_1066mhz/ddr3_pwr_side/ddr3_pwr_side.v as a wizard-generated
+custom megafunction variation.
+
+Do you want to use a wizard to overwrite it?
+
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_ddr3_all/arria_v_golden_pwr_ddr_1066mhz/ddr3_pwr_side/ddr3_pwr_side.v
+
+Jul 02 10PM:05:49>: MegaWizard Plug-In Manager does not recognize C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_ddr3_all/arria_v_golden_pwr_ddr_1066mhz/ddr3_pwr_side/ddr3_pwr_side.v as a wizard-generated
+custom megafunction variation.
+
+Do you want to use a wizard to overwrite it?
+
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_ddr3_all/arria_v_golden_pwr_ddr_1066mhz/ddr3_pwr_side/ddr3_pwr_side.v
+
+Jul 02 10PM:05:50>: MegaWizard Plug-In Manager does not recognize C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_ddr3_all/arria_v_golden_pwr_ddr_1066mhz/ddr3_pwr_side/ddr3_pwr_side.v as a wizard-generated
+custom megafunction variation.
+
+Do you want to use a wizard to overwrite it?
+
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_ddr3_all/arria_v_golden_pwr_ddr_1066mhz/ddr3_pwr_side/ddr3_pwr_side.v
+
+Jul 02 10PM:05:55>: MegaWizard Plug-In Manager does not recognize C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_ddr3_all/arria_v_golden_pwr_ddr_1066mhz/ddr3_pwr_side/ddr3_pwr_side.v as a wizard-generated
+custom megafunction variation.
+
+Do you want to use a wizard to overwrite it?
+
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_ddr3_all/arria_v_golden_pwr_ddr_1066mhz/ddr3_pwr_side/ddr3_pwr_side.v
+
+Jul 02 10PM:05:55>: MegaWizard Plug-In Manager does not recognize C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_ddr3_all/arria_v_golden_pwr_ddr_1066mhz/ddr3_pwr_side/ddr3_pwr_side.v as a wizard-generated
+custom megafunction variation.
+
+Do you want to use a wizard to overwrite it?

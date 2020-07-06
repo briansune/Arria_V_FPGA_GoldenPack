@@ -1,0 +1,118 @@
+;/*++
+;
+;Module Name:
+;
+;    SLABWinUSB.INF
+;
+;    Copyright 2015, Silicon Laboratories Inc.
+;
+;Abstract:
+;    Installation INF for Silicon Labs USBXpress device WinUSB driver
+;
+;--*/
+
+[Version]
+Signature = "$Windows NT$"
+Class=USB
+ClassGUID={36fc9e60-c465-11cf-8056-444553540000}
+Provider = %Provider%
+DriverVer=04/16/2019,6.7.2.3
+CatalogFile=siusbxp.cat
+
+; ========== Manufacturer/Models sections ===========
+
+[Manufacturer]
+%ManufacturerName% = SiLabsModelsSection,NTx86,NTamd64
+
+[SiLabsModelsSection.NTx86]
+%USB\VID_10C4&PID_8A0C.DeviceDesc% =USB_Install, USB\VID_10C4&PID_8A0C
+%USB\VID_10C4&PID_8999.DeviceDesc% =USB_Install, USB\VID_10C4&PID_8999
+%USB\VID_10C4&PID_8ADA.DeviceDesc% =USB_Install, USB\VID_10C4&PID_8ADA
+%USB\VID_10C4&PID_8B2A.DeviceDesc% =USB_Install, USB\VID_10C4&PID_8B2A
+%USB\VID_10C4&PID_8B63.DeviceDesc% =USB_Install, USB\VID_10C4&PID_8B63
+%USB\VID_10C4&PID_EA61.DeviceDesc% =USB_Install, USB\VID_10C4&PID_EA61
+%USB\VID_10C4&PID_8C6C.DeviceDesc% =USB_Install, USB\VID_10C4&PID_8C6C
+%USB\VID_10C4&PID_8CB1.DeviceDesc% =USB_Install, USB\VID_10C4&PID_8CB1
+
+[SiLabsModelsSection.NTamd64]
+%USB\VID_10C4&PID_8A0C.DeviceDesc% =USB_Install, USB\VID_10C4&PID_8A0C
+%USB\VID_10C4&PID_8999.DeviceDesc% =USB_Install, USB\VID_10C4&PID_8999
+%USB\VID_10C4&PID_8ADA.DeviceDesc% =USB_Install, USB\VID_10C4&PID_8ADA
+%USB\VID_10C4&PID_8B2A.DeviceDesc% =USB_Install, USB\VID_10C4&PID_8B2A
+%USB\VID_10C4&PID_8B63.DeviceDesc% =USB_Install, USB\VID_10C4&PID_8B63
+%USB\VID_10C4&PID_EA61.DeviceDesc% =USB_Install, USB\VID_10C4&PID_EA61
+%USB\VID_10C4&PID_8C6C.DeviceDesc% =USB_Install, USB\VID_10C4&PID_8C6C
+%USB\VID_10C4&PID_8CB1.DeviceDesc% =USB_Install, USB\VID_10C4&PID_8CB1
+
+; =================== Installation ===================
+
+[USB_Install]
+Include=winusb.inf
+Needs=WINUSB.NT
+
+[USB_Install.Services]
+Include=winusb.inf
+AddService=WinUSB,0x00000002,WinUSB_ServiceInstall
+
+[WinUSB_ServiceInstall]
+DisplayName     = %WinUSB_SvcDesc%
+ServiceType     = 1
+StartType       = 3
+ErrorControl    = 1
+ServiceBinary   = %12%\winusb.sys
+
+[USB_Install.Wdf]
+KmdfService=WINUSB, WinUSB_Install
+
+[USB_Install.HW]
+AddReg=Dev_AddReg
+
+[Dev_AddReg]
+HKR,,DeviceInterfaceGUIDs,0x10000,"{3C5E1462-5695-4e18-876B-F3F3D08AAF18}"
+
+[USB_Install.CoInstallers]
+AddReg=CoInstallers_AddReg
+CopyFiles=CoInstallers_CopyFiles
+
+[WinUSB_Install]
+KmdfLibraryVersion=1.9
+
+[CoInstallers_AddReg]
+HKR,,CoInstallers32,0x00010000,"WdfCoInstaller01009.dll,WdfCoInstaller","WinUSBCoInstaller2.dll"
+
+[CoInstallers_CopyFiles]
+WdfCoInstaller01009.dll
+WinUSBCoInstaller2.dll
+
+[DestinationDirs]
+CoInstallers_CopyFiles=11
+
+; ================= Source Media Section =====================
+
+[SourceDisksNames]
+1 = %DISK_NAME%,,,\x86
+2 = %DISK_NAME%,,,\x64
+
+[SourceDisksFiles.x86]
+WinUSBCoInstaller2.dll=1
+WdfCoInstaller01009.dll=1
+
+[SourceDisksFiles.amd64]
+WinUSBCoInstaller2.dll=2
+WdfCoInstaller01009.dll=2
+
+; =================== Strings ===================
+
+[Strings]
+Provider="Silicon Laboratories Inc."
+ManufacturerName="Silicon Labs"
+USB\VID_10C4&PID_8A0C.DeviceDesc="Silicon Labs ClockBuilder Programmer"
+USB\VID_10C4&PID_8999.DeviceDesc="Silicon Labs Si538x/4x EVB"
+USB\VID_10C4&PID_8ADA.DeviceDesc="Silicon Labs Si512xx EVB"
+USB\VID_10C4&PID_8B2A.DeviceDesc="Silicon Labs Si5344 Clock Gen Stick"
+USB\VID_10C4&PID_8B63.DeviceDesc="Silicon Labs Si5332 EVB"
+USB\VID_10C4&PID_EA61.DeviceDesc="Silicon Labs Timing EVB"
+USB\VID_10C4&PID_8C6C.DeviceDesc="Silicon Labs Si55xx EVB"
+USB\VID_10C4&PID_8CB1.DeviceDesc="Silicon Labs Timing Universal EEVB"
+WinUSB_SvcDesc="USBXpress WinUSB Service"
+DISK_NAME="Silicon Labs Timing EVB Driver Installation Disk"

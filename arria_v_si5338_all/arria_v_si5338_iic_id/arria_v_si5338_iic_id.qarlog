@@ -1,0 +1,19 @@
+Quartus Prime Archive log --	C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_iic_id/arria_v_si5338_iic_id.qarlog
+
+Archive:	C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_iic_id/arria_v_si5338_iic_id.qar
+Date:		Sun Jun 28 22:11:38 2020
+Quartus Prime		17.1.0 Build 590 10/25/2017 SJ Standard Edition
+
+	=========== Files Selected: ===========
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_iic_id/arria_v_si5338_iic_id.qpf
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_iic_id/arria_v_si5338_iic_id.qsf
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_iic_id/arria_v_si5338_iic_id.stp
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_iic_id/db/arria_v_si5338_iic_id_auto_stripped.stp
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_iic_id/src/arria_v_si5338_iic_id.sdc
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_iic_id/src/arria_v_si5338_iic_id.v
+C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_iic_id/src/basic_iic.v
+c:/intelfpga/17.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 8 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

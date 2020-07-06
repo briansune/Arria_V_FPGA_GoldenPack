@@ -1,0 +1,74 @@
+
+NAME
+
+    CBProEVBPowerMeasure
+
+SYNOPSIS
+
+    CBProEVBPowerMeasure [ --out-folder pathname ] [ --project pathname ] 
+                         [ --count 1,2,3,... ] [ -tag label ]
+
+    CBProEVBPowerMeasure --help
+
+DESCRIPTION
+
+    Writes a project file -- or the EVB default project if none is specified
+    -- to the EVB. Configures the VDDO regulators to match the project file.
+    Then reads current and voltage for each regulator and saves to a CSV file
+    in either the specified directory or the current directory if none is
+    specified. The output file will be uniquely named based on the project
+    filename / EVB and a timestamp. You can optionally add an identification
+    label to filename using the --tag option.
+
+    If the EVB sample project file is written -- because a project file was
+    not specified using the --project option -- the project file used will
+    also be saved to the output folder.
+
+OPTIONS
+
+    --count 1,2,3,...
+
+        Number of times to perform the measurement. A new CSV file is saved
+        for each measurement. The default is 1 time.
+
+    --delay-before-measure seconds
+
+        Number of seconds to delay after writing the project file to the DUT
+        before the measurement is taken. Normally a small delay is inserted by
+        the tool. If specified, a longer delay can be inserted. When this is
+        the case, two sets of measurements are taken: before the delay and
+        after, with the file marked 'Before-Delay' and 'After-Delay' in the
+        filename.
+
+    --device id
+
+        Select the Evaluation Board or Field Programmer to target. Required if
+        there are 2 or more EVBs/FPs attached to the PC.
+
+    --help 
+
+        Print detailed usage to the console and exit.
+
+    --list-devices 
+
+        List Silicon Labs Timing devices -- Evaluation Boards and Field
+        Programmers -- connected to the PC and exit.
+
+    --out-folder pathname
+
+        Where to save the EVB power data to. Optional. If not specified, the
+        working directory is used.
+
+    --project pathname
+
+        A project file to write to the device. Optional. If not specified, the
+        EVB default project will be used.
+
+    --tag label
+
+        Some identification text to save to the output CSV filename. Optional.
+
+    --version 
+
+        Print this program's version number and exit.
+

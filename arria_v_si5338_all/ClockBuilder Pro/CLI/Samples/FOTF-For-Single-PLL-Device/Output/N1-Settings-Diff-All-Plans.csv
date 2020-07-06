@@ -1,0 +1,11 @@
+# N1 Settings Differences Between All Plans
+#
+# Base Project: Si5345-RevD-Project.slabtimeproj
+# Part: Si5345
+# Design ID: <none>
+# Inputs Vary Between Plans: No
+# Created By: CBProFOTF1 v2.23.5 [2018-05-02]
+# Timestamp: 2018-05-02 10:37:14 GMT-05:00
+Setting,Base,Plan1
+N1_NUM,0xDCFB0B800,0x1075000000
+N1_DEN,0xA2000000,0xC8000000

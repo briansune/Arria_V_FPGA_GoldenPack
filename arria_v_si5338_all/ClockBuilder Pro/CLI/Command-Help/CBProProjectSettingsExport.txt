@@ -1,0 +1,53 @@
+
+NAME
+
+    CBProProjectSettingsExport
+
+SYNOPSIS
+
+    CBProProjectSettingsExport [ opts ] --project myproj.slabtimeproj 
+                               --outfile export.txt
+
+    CBProProjectSettingsExport --help
+
+DESCRIPTION
+
+    This export will contain the named settings (aka bitfields) corresponding
+    to yor device configuration. It is provided for review of configuration.
+    It is similar to the settings dump included in design reports and
+    datasheet addendums.
+
+    For programming in-system, the per-byte register export format should be
+    used for simplicity and speed of programming. The register export file may
+    also contain any programming preamble/postamble required by the device.
+
+    Please refer to your device's Family Reference Manual for information on
+    register addressing and an explanation of the settings.
+
+OPTIONS
+
+    --help 
+
+        Print detailed usage to the console and exit.
+
+    --no-header 
+
+        Normally, a summary header will be included in the export. Each line
+        in the header will be prefixed by the # character. The header will
+        contain some basic information about the design, tool, and a
+        timestamp. Specify this argument to exclude the header. Not applicable
+        in CBProProjectRegistersExport "C" code mode.
+
+    --outfile pathname
+
+        The file to save the export data to. If this file already exists, it
+        will be overwritten. You must specify this.
+
+    --project pathname
+
+        The project file to export. You must specify this.
+
+    --version 
+
+        Print this program's version number and exit.
+

@@ -1,0 +1,1027 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="System" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element alt_xcvr_reconfig_0
+   {
+      datum _sortIndex
+      {
+         value = "5";
+         type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "1";
+         type = "boolean";
+      }
+   }
+   element alt_xcvr_reconfig_0.reconfig_mgmt
+   {
+      datum baseAddress
+      {
+         value = "2048";
+         type = "String";
+      }
+   }
+   element clk_50
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+   element data_pattern_check_SFP_A
+   {
+      datum _sortIndex
+      {
+         value = "10";
+         type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "1";
+         type = "boolean";
+      }
+   }
+   element data_pattern_check_SFP_A.csr_slave
+   {
+      datum baseAddress
+      {
+         value = "2784";
+         type = "String";
+      }
+   }
+   element data_pattern_check_SFP_B
+   {
+      datum _sortIndex
+      {
+         value = "12";
+         type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "1";
+         type = "boolean";
+      }
+   }
+   element data_pattern_check_SFP_B.csr_slave
+   {
+      datum baseAddress
+      {
+         value = "2752";
+         type = "String";
+      }
+   }
+   element data_pattern_gen_SFP_A
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
+   element data_pattern_gen_SFP_A.csr_slave
+   {
+      datum baseAddress
+      {
+         value = "2656";
+         type = "String";
+      }
+   }
+   element data_pattern_gen_SFP_B
+   {
+      datum _sortIndex
+      {
+         value = "8";
+         type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "1";
+         type = "boolean";
+      }
+   }
+   element data_pattern_gen_SFP_B.csr_slave
+   {
+      datum baseAddress
+      {
+         value = "2624";
+         type = "String";
+      }
+   }
+   element master_0
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
+   element pll_0
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+   element ref_clk
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
+   element timing_adapter_SFP_A_rx
+   {
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "1";
+         type = "boolean";
+      }
+   }
+   element timing_adapter_SFP_A_tx
+   {
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+   }
+   element timing_adapter_SFP_B_rx
+   {
+      datum _sortIndex
+      {
+         value = "13";
+         type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "1";
+         type = "boolean";
+      }
+   }
+   element timing_adapter_SFP_B_tx
+   {
+      datum _sortIndex
+      {
+         value = "9";
+         type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "1";
+         type = "boolean";
+      }
+   }
+   element xcvr_custom_phy_0
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+   element xcvr_custom_phy_0.phy_mgmt
+   {
+      datum baseAddress
+      {
+         value = "0";
+         type = "String";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="5AGTFC7H3F35I3" />
+ <parameter name="deviceFamily" value="Arria V" />
+ <parameter name="deviceSpeedGrade" value="3_H3" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="hideFromIPCatalog" value="false" />
+ <parameter name="lockedInterfaceDefinition" value="" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="testBenchDutName" value="" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="false" />
+ <instanceScript></instanceScript>
+ <interface
+   name="alt_xcvr_reconfig_0_reconfig_busy"
+   internal="alt_xcvr_reconfig_0.reconfig_busy"
+   type="conduit"
+   dir="end" />
+ <interface name="clk_50" internal="clk_50.clk_in" type="clock" dir="end" />
+ <interface
+   name="clk_50_reset"
+   internal="clk_50.clk_in_reset"
+   type="reset"
+   dir="end" />
+ <interface name="pll_0_locked" internal="pll_0.locked" type="conduit" dir="end" />
+ <interface name="refclk_in" internal="ref_clk.clk_in" type="clock" dir="end" />
+ <interface
+   name="refclk_reset"
+   internal="ref_clk.clk_in_reset"
+   type="reset"
+   dir="end" />
+ <interface
+   name="xcvr_custom_phy_0_pll_locked"
+   internal="xcvr_custom_phy_0.pll_locked"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="xcvr_custom_phy_0_rx_ready"
+   internal="xcvr_custom_phy_0.rx_ready"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="xcvr_custom_phy_0_rx_serial_data"
+   internal="xcvr_custom_phy_0.rx_serial_data"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="xcvr_custom_phy_0_tx_ready"
+   internal="xcvr_custom_phy_0.tx_ready"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="xcvr_custom_phy_0_tx_serial_data"
+   internal="xcvr_custom_phy_0.tx_serial_data"
+   type="conduit"
+   dir="end" />
+ <module
+   name="alt_xcvr_reconfig_0"
+   kind="alt_xcvr_reconfig"
+   version="17.1"
+   enabled="1">
+  <parameter name="ber_en" value="0" />
+  <parameter name="device_family" value="Arria V" />
+  <parameter name="enable_adce" value="1" />
+  <parameter name="enable_analog" value="1" />
+  <parameter name="enable_dcd" value="1" />
+  <parameter name="enable_dcd_power_up" value="1" />
+  <parameter name="enable_dfe" value="1" />
+  <parameter name="enable_eyemon" value="1" />
+  <parameter name="enable_mif" value="0" />
+  <parameter name="enable_offset" value="1" />
+  <parameter name="gui_cal_status_port" value="false" />
+  <parameter name="gui_enable_pll" value="0" />
+  <parameter name="gui_split_sizes" value="" />
+  <parameter name="number_of_reconfig_interfaces" value="4" />
+ </module>
+ <module name="clk_50" kind="clock_source" version="17.1" enabled="1">
+  <parameter name="clockFrequency" value="50000000" />
+  <parameter name="clockFrequencyKnown" value="true" />
+  <parameter name="inputClockFrequency" value="0" />
+  <parameter name="resetSynchronousEdges" value="NONE" />
+ </module>
+ <module
+   name="data_pattern_check_SFP_A"
+   kind="altera_avalon_data_pattern_checker"
+   version="17.1"
+   enabled="1">
+  <parameter name="AUTO_CSR_CLK_CLOCK_DOMAIN" value="5" />
+  <parameter name="AUTO_CSR_CLK_CLOCK_RATE" value="100000000" />
+  <parameter name="AUTO_CSR_CLK_RESET_DOMAIN" value="5" />
+  <parameter name="AUTO_DEVICE" value="5AGTFC7H3F35I3" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Arria V" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="3_H3" />
+  <parameter name="AVALON_ENABLED" value="true" />
+  <parameter name="BYPASS_ENABLED" value="false" />
+  <parameter name="CROSS_CLK_SYNC_DEPTH" value="2" />
+  <parameter name="FREQ_CNTER_ENABLED" value="false" />
+  <parameter name="NUM_CYCLES_FOR_LOCK" value="40" />
+  <parameter name="ST_DATA_W" value="40" />
+ </module>
+ <module
+   name="data_pattern_check_SFP_B"
+   kind="altera_avalon_data_pattern_checker"
+   version="17.1"
+   enabled="1">
+  <parameter name="AUTO_CSR_CLK_CLOCK_DOMAIN" value="5" />
+  <parameter name="AUTO_CSR_CLK_CLOCK_RATE" value="100000000" />
+  <parameter name="AUTO_CSR_CLK_RESET_DOMAIN" value="5" />
+  <parameter name="AUTO_DEVICE" value="5AGTFC7H3F35I3" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Arria V" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="3_H3" />
+  <parameter name="AVALON_ENABLED" value="true" />
+  <parameter name="BYPASS_ENABLED" value="false" />
+  <parameter name="CROSS_CLK_SYNC_DEPTH" value="2" />
+  <parameter name="FREQ_CNTER_ENABLED" value="false" />
+  <parameter name="NUM_CYCLES_FOR_LOCK" value="40" />
+  <parameter name="ST_DATA_W" value="40" />
+ </module>
+ <module
+   name="data_pattern_gen_SFP_A"
+   kind="altera_avalon_data_pattern_generator"
+   version="17.1"
+   enabled="1">
+  <parameter name="AUTO_CSR_CLK_CLOCK_DOMAIN" value="5" />
+  <parameter name="AUTO_CSR_CLK_CLOCK_RATE" value="100000000" />
+  <parameter name="AUTO_CSR_CLK_RESET_DOMAIN" value="5" />
+  <parameter name="AUTO_DEVICE" value="5AGTFC7H3F35I3" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Arria V" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="3_H3" />
+  <parameter name="AVALON_ENABLED" value="true" />
+  <parameter name="BYPASS_ENABLED" value="false" />
+  <parameter name="CROSS_CLK_SYNC_DEPTH" value="2" />
+  <parameter name="FREQ_CNTER_ENABLED" value="false" />
+  <parameter name="ST_DATA_W" value="40" />
+ </module>
+ <module
+   name="data_pattern_gen_SFP_B"
+   kind="altera_avalon_data_pattern_generator"
+   version="17.1"
+   enabled="1">
+  <parameter name="AUTO_CSR_CLK_CLOCK_DOMAIN" value="5" />
+  <parameter name="AUTO_CSR_CLK_CLOCK_RATE" value="100000000" />
+  <parameter name="AUTO_CSR_CLK_RESET_DOMAIN" value="5" />
+  <parameter name="AUTO_DEVICE" value="5AGTFC7H3F35I3" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Arria V" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="3_H3" />
+  <parameter name="AVALON_ENABLED" value="true" />
+  <parameter name="BYPASS_ENABLED" value="false" />
+  <parameter name="CROSS_CLK_SYNC_DEPTH" value="2" />
+  <parameter name="FREQ_CNTER_ENABLED" value="false" />
+  <parameter name="ST_DATA_W" value="40" />
+ </module>
+ <module
+   name="master_0"
+   kind="altera_jtag_avalon_master"
+   version="17.1"
+   enabled="1">
+  <parameter name="AUTO_DEVICE" value="5AGTFC7H3F35I3" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Arria V" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="3_H3" />
+  <parameter name="COMPONENT_CLOCK" value="0" />
+  <parameter name="FAST_VER" value="0" />
+  <parameter name="FIFO_DEPTHS" value="2" />
+  <parameter name="PLI_PORT" value="50000" />
+  <parameter name="USE_PLI" value="0" />
+ </module>
+ <module name="pll_0" kind="altera_pll" version="17.1" enabled="1">
+  <parameter name="debug_print_output" value="false" />
+  <parameter name="debug_use_rbc_taf_method" value="false" />
+  <parameter name="device" value="5AGTFC7H3F35I3" />
+  <parameter name="device_family" value="Arria V" />
+  <parameter name="gui_active_clk" value="false" />
+  <parameter name="gui_actual_output_clock_frequency0" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency1" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency10" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency11" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency12" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency13" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency14" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency15" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency16" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency17" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency2" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency3" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency4" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency5" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency6" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency7" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency8" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency9" value="0 MHz" />
+  <parameter name="gui_actual_phase_shift0" value="0" />
+  <parameter name="gui_actual_phase_shift1" value="0" />
+  <parameter name="gui_actual_phase_shift10" value="0" />
+  <parameter name="gui_actual_phase_shift11" value="0" />
+  <parameter name="gui_actual_phase_shift12" value="0" />
+  <parameter name="gui_actual_phase_shift13" value="0" />
+  <parameter name="gui_actual_phase_shift14" value="0" />
+  <parameter name="gui_actual_phase_shift15" value="0" />
+  <parameter name="gui_actual_phase_shift16" value="0" />
+  <parameter name="gui_actual_phase_shift17" value="0" />
+  <parameter name="gui_actual_phase_shift2" value="0" />
+  <parameter name="gui_actual_phase_shift3" value="0" />
+  <parameter name="gui_actual_phase_shift4" value="0" />
+  <parameter name="gui_actual_phase_shift5" value="0" />
+  <parameter name="gui_actual_phase_shift6" value="0" />
+  <parameter name="gui_actual_phase_shift7" value="0" />
+  <parameter name="gui_actual_phase_shift8" value="0" />
+  <parameter name="gui_actual_phase_shift9" value="0" />
+  <parameter name="gui_cascade_counter0" value="false" />
+  <parameter name="gui_cascade_counter1" value="false" />
+  <parameter name="gui_cascade_counter10" value="false" />
+  <parameter name="gui_cascade_counter11" value="false" />
+  <parameter name="gui_cascade_counter12" value="false" />
+  <parameter name="gui_cascade_counter13" value="false" />
+  <parameter name="gui_cascade_counter14" value="false" />
+  <parameter name="gui_cascade_counter15" value="false" />
+  <parameter name="gui_cascade_counter16" value="false" />
+  <parameter name="gui_cascade_counter17" value="false" />
+  <parameter name="gui_cascade_counter2" value="false" />
+  <parameter name="gui_cascade_counter3" value="false" />
+  <parameter name="gui_cascade_counter4" value="false" />
+  <parameter name="gui_cascade_counter5" value="false" />
+  <parameter name="gui_cascade_counter6" value="false" />
+  <parameter name="gui_cascade_counter7" value="false" />
+  <parameter name="gui_cascade_counter8" value="false" />
+  <parameter name="gui_cascade_counter9" value="false" />
+  <parameter name="gui_cascade_outclk_index" value="0" />
+  <parameter name="gui_channel_spacing" value="0.0" />
+  <parameter name="gui_clk_bad" value="false" />
+  <parameter name="gui_device_speed_grade" value="1" />
+  <parameter name="gui_divide_factor_c0" value="1" />
+  <parameter name="gui_divide_factor_c1" value="1" />
+  <parameter name="gui_divide_factor_c10" value="1" />
+  <parameter name="gui_divide_factor_c11" value="1" />
+  <parameter name="gui_divide_factor_c12" value="1" />
+  <parameter name="gui_divide_factor_c13" value="1" />
+  <parameter name="gui_divide_factor_c14" value="1" />
+  <parameter name="gui_divide_factor_c15" value="1" />
+  <parameter name="gui_divide_factor_c16" value="1" />
+  <parameter name="gui_divide_factor_c17" value="1" />
+  <parameter name="gui_divide_factor_c2" value="1" />
+  <parameter name="gui_divide_factor_c3" value="1" />
+  <parameter name="gui_divide_factor_c4" value="1" />
+  <parameter name="gui_divide_factor_c5" value="1" />
+  <parameter name="gui_divide_factor_c6" value="1" />
+  <parameter name="gui_divide_factor_c7" value="1" />
+  <parameter name="gui_divide_factor_c8" value="1" />
+  <parameter name="gui_divide_factor_c9" value="1" />
+  <parameter name="gui_divide_factor_n" value="1" />
+  <parameter name="gui_dps_cntr" value="C0" />
+  <parameter name="gui_dps_dir" value="Positive" />
+  <parameter name="gui_dps_num" value="1" />
+  <parameter name="gui_dsm_out_sel" value="1st_order" />
+  <parameter name="gui_duty_cycle0" value="50" />
+  <parameter name="gui_duty_cycle1" value="50" />
+  <parameter name="gui_duty_cycle10" value="50" />
+  <parameter name="gui_duty_cycle11" value="50" />
+  <parameter name="gui_duty_cycle12" value="50" />
+  <parameter name="gui_duty_cycle13" value="50" />
+  <parameter name="gui_duty_cycle14" value="50" />
+  <parameter name="gui_duty_cycle15" value="50" />
+  <parameter name="gui_duty_cycle16" value="50" />
+  <parameter name="gui_duty_cycle17" value="50" />
+  <parameter name="gui_duty_cycle2" value="50" />
+  <parameter name="gui_duty_cycle3" value="50" />
+  <parameter name="gui_duty_cycle4" value="50" />
+  <parameter name="gui_duty_cycle5" value="50" />
+  <parameter name="gui_duty_cycle6" value="50" />
+  <parameter name="gui_duty_cycle7" value="50" />
+  <parameter name="gui_duty_cycle8" value="50" />
+  <parameter name="gui_duty_cycle9" value="50" />
+  <parameter name="gui_en_adv_params" value="false" />
+  <parameter name="gui_en_dps_ports" value="false" />
+  <parameter name="gui_en_phout_ports" value="false" />
+  <parameter name="gui_en_reconf" value="false" />
+  <parameter name="gui_enable_cascade_in" value="false" />
+  <parameter name="gui_enable_cascade_out" value="false" />
+  <parameter name="gui_enable_mif_dps" value="false" />
+  <parameter name="gui_feedback_clock" value="Global Clock" />
+  <parameter name="gui_frac_multiply_factor" value="1" />
+  <parameter name="gui_fractional_cout" value="32" />
+  <parameter name="gui_mif_generate" value="false" />
+  <parameter name="gui_multiply_factor" value="1" />
+  <parameter name="gui_number_of_clocks" value="1" />
+  <parameter name="gui_operation_mode" value="normal" />
+  <parameter name="gui_output_clock_frequency0" value="100.0" />
+  <parameter name="gui_output_clock_frequency1" value="100.0" />
+  <parameter name="gui_output_clock_frequency10" value="100.0" />
+  <parameter name="gui_output_clock_frequency11" value="100.0" />
+  <parameter name="gui_output_clock_frequency12" value="100.0" />
+  <parameter name="gui_output_clock_frequency13" value="100.0" />
+  <parameter name="gui_output_clock_frequency14" value="100.0" />
+  <parameter name="gui_output_clock_frequency15" value="100.0" />
+  <parameter name="gui_output_clock_frequency16" value="100.0" />
+  <parameter name="gui_output_clock_frequency17" value="100.0" />
+  <parameter name="gui_output_clock_frequency2" value="100.0" />
+  <parameter name="gui_output_clock_frequency3" value="100.0" />
+  <parameter name="gui_output_clock_frequency4" value="100.0" />
+  <parameter name="gui_output_clock_frequency5" value="100.0" />
+  <parameter name="gui_output_clock_frequency6" value="100.0" />
+  <parameter name="gui_output_clock_frequency7" value="100.0" />
+  <parameter name="gui_output_clock_frequency8" value="100.0" />
+  <parameter name="gui_output_clock_frequency9" value="100.0" />
+  <parameter name="gui_phase_shift0" value="0" />
+  <parameter name="gui_phase_shift1" value="0" />
+  <parameter name="gui_phase_shift10" value="0" />
+  <parameter name="gui_phase_shift11" value="0" />
+  <parameter name="gui_phase_shift12" value="0" />
+  <parameter name="gui_phase_shift13" value="0" />
+  <parameter name="gui_phase_shift14" value="0" />
+  <parameter name="gui_phase_shift15" value="0" />
+  <parameter name="gui_phase_shift16" value="0" />
+  <parameter name="gui_phase_shift17" value="0" />
+  <parameter name="gui_phase_shift2" value="0" />
+  <parameter name="gui_phase_shift3" value="0" />
+  <parameter name="gui_phase_shift4" value="0" />
+  <parameter name="gui_phase_shift5" value="0" />
+  <parameter name="gui_phase_shift6" value="0" />
+  <parameter name="gui_phase_shift7" value="0" />
+  <parameter name="gui_phase_shift8" value="0" />
+  <parameter name="gui_phase_shift9" value="0" />
+  <parameter name="gui_phase_shift_deg0" value="0.0" />
+  <parameter name="gui_phase_shift_deg1" value="0.0" />
+  <parameter name="gui_phase_shift_deg10" value="0.0" />
+  <parameter name="gui_phase_shift_deg11" value="0.0" />
+  <parameter name="gui_phase_shift_deg12" value="0.0" />
+  <parameter name="gui_phase_shift_deg13" value="0.0" />
+  <parameter name="gui_phase_shift_deg14" value="0.0" />
+  <parameter name="gui_phase_shift_deg15" value="0.0" />
+  <parameter name="gui_phase_shift_deg16" value="0.0" />
+  <parameter name="gui_phase_shift_deg17" value="0.0" />
+  <parameter name="gui_phase_shift_deg2" value="0.0" />
+  <parameter name="gui_phase_shift_deg3" value="0.0" />
+  <parameter name="gui_phase_shift_deg4" value="0.0" />
+  <parameter name="gui_phase_shift_deg5" value="0.0" />
+  <parameter name="gui_phase_shift_deg6" value="0.0" />
+  <parameter name="gui_phase_shift_deg7" value="0.0" />
+  <parameter name="gui_phase_shift_deg8" value="0.0" />
+  <parameter name="gui_phase_shift_deg9" value="0.0" />
+  <parameter name="gui_phout_division" value="1" />
+  <parameter name="gui_pll_auto_reset" value="Off" />
+  <parameter name="gui_pll_bandwidth_preset" value="Auto" />
+  <parameter name="gui_pll_cascading_mode">Create an adjpllin signal to connect with an upstream PLL</parameter>
+  <parameter name="gui_pll_mode" value="Integer-N PLL" />
+  <parameter name="gui_ps_units0" value="ps" />
+  <parameter name="gui_ps_units1" value="ps" />
+  <parameter name="gui_ps_units10" value="ps" />
+  <parameter name="gui_ps_units11" value="ps" />
+  <parameter name="gui_ps_units12" value="ps" />
+  <parameter name="gui_ps_units13" value="ps" />
+  <parameter name="gui_ps_units14" value="ps" />
+  <parameter name="gui_ps_units15" value="ps" />
+  <parameter name="gui_ps_units16" value="ps" />
+  <parameter name="gui_ps_units17" value="ps" />
+  <parameter name="gui_ps_units2" value="ps" />
+  <parameter name="gui_ps_units3" value="ps" />
+  <parameter name="gui_ps_units4" value="ps" />
+  <parameter name="gui_ps_units5" value="ps" />
+  <parameter name="gui_ps_units6" value="ps" />
+  <parameter name="gui_ps_units7" value="ps" />
+  <parameter name="gui_ps_units8" value="ps" />
+  <parameter name="gui_ps_units9" value="ps" />
+  <parameter name="gui_refclk1_frequency" value="100.0" />
+  <parameter name="gui_refclk_switch" value="false" />
+  <parameter name="gui_reference_clock_frequency" value="50.0" />
+  <parameter name="gui_switchover_delay" value="0" />
+  <parameter name="gui_switchover_mode">Automatic Switchover</parameter>
+  <parameter name="gui_use_locked" value="true" />
+ </module>
+ <module name="ref_clk" kind="clock_source" version="17.1" enabled="1">
+  <parameter name="clockFrequency" value="156250000" />
+  <parameter name="clockFrequencyKnown" value="true" />
+  <parameter name="inputClockFrequency" value="0" />
+  <parameter name="resetSynchronousEdges" value="NONE" />
+ </module>
+ <module
+   name="timing_adapter_SFP_A_rx"
+   kind="timing_adapter"
+   version="17.1"
+   enabled="1">
+  <parameter name="inBitsPerSymbol" value="10" />
+  <parameter name="inChannelWidth" value="0" />
+  <parameter name="inErrorDescriptor" value="" />
+  <parameter name="inErrorWidth" value="0" />
+  <parameter name="inMaxChannel" value="0" />
+  <parameter name="inReadyLatency" value="0" />
+  <parameter name="inSymbolsPerBeat" value="4" />
+  <parameter name="inUseEmpty" value="false" />
+  <parameter name="inUseEmptyPort" value="NO" />
+  <parameter name="inUsePackets" value="false" />
+  <parameter name="inUseReady" value="false" />
+  <parameter name="inUseValid" value="false" />
+  <parameter name="outReadyLatency" value="0" />
+  <parameter name="outUseReady" value="true" />
+  <parameter name="outUseValid" value="true" />
+ </module>
+ <module
+   name="timing_adapter_SFP_A_tx"
+   kind="timing_adapter"
+   version="17.1"
+   enabled="1">
+  <parameter name="inBitsPerSymbol" value="10" />
+  <parameter name="inChannelWidth" value="0" />
+  <parameter name="inErrorDescriptor" value="" />
+  <parameter name="inErrorWidth" value="0" />
+  <parameter name="inMaxChannel" value="0" />
+  <parameter name="inReadyLatency" value="0" />
+  <parameter name="inSymbolsPerBeat" value="4" />
+  <parameter name="inUseEmpty" value="false" />
+  <parameter name="inUseEmptyPort" value="NO" />
+  <parameter name="inUsePackets" value="false" />
+  <parameter name="inUseReady" value="true" />
+  <parameter name="inUseValid" value="true" />
+  <parameter name="outReadyLatency" value="0" />
+  <parameter name="outUseReady" value="false" />
+  <parameter name="outUseValid" value="false" />
+ </module>
+ <module
+   name="timing_adapter_SFP_B_rx"
+   kind="timing_adapter"
+   version="17.1"
+   enabled="1">
+  <parameter name="inBitsPerSymbol" value="10" />
+  <parameter name="inChannelWidth" value="0" />
+  <parameter name="inErrorDescriptor" value="" />
+  <parameter name="inErrorWidth" value="0" />
+  <parameter name="inMaxChannel" value="0" />
+  <parameter name="inReadyLatency" value="0" />
+  <parameter name="inSymbolsPerBeat" value="4" />
+  <parameter name="inUseEmpty" value="false" />
+  <parameter name="inUseEmptyPort" value="NO" />
+  <parameter name="inUsePackets" value="false" />
+  <parameter name="inUseReady" value="false" />
+  <parameter name="inUseValid" value="false" />
+  <parameter name="outReadyLatency" value="0" />
+  <parameter name="outUseReady" value="true" />
+  <parameter name="outUseValid" value="true" />
+ </module>
+ <module
+   name="timing_adapter_SFP_B_tx"
+   kind="timing_adapter"
+   version="17.1"
+   enabled="1">
+  <parameter name="inBitsPerSymbol" value="10" />
+  <parameter name="inChannelWidth" value="0" />
+  <parameter name="inErrorDescriptor" value="" />
+  <parameter name="inErrorWidth" value="0" />
+  <parameter name="inMaxChannel" value="0" />
+  <parameter name="inReadyLatency" value="0" />
+  <parameter name="inSymbolsPerBeat" value="4" />
+  <parameter name="inUseEmpty" value="false" />
+  <parameter name="inUseEmptyPort" value="NO" />
+  <parameter name="inUsePackets" value="false" />
+  <parameter name="inUseReady" value="true" />
+  <parameter name="inUseValid" value="true" />
+  <parameter name="outReadyLatency" value="0" />
+  <parameter name="outUseReady" value="false" />
+  <parameter name="outUseValid" value="false" />
+ </module>
+ <module
+   name="xcvr_custom_phy_0"
+   kind="altera_xcvr_custom_phy"
+   version="17.1"
+   enabled="1">
+  <parameter name="byte_order_pad_pattern" value="000000000" />
+  <parameter name="byte_order_pattern" value="111111011" />
+  <parameter name="channel_interface" value="0" />
+  <parameter name="coreclk_0ppm_enable" value="false" />
+  <parameter name="data_rate" value="6250Mbps" />
+  <parameter name="device_family" value="Arria V" />
+  <parameter name="en_synce_support" value="0" />
+  <parameter name="gui_base_data_rate" value="10312.5 Mbps" />
+  <parameter name="gui_bonded_mode" value="xN" />
+  <parameter name="gui_bonding_enable" value="false" />
+  <parameter name="gui_byte_order_pld_ctrl_enable" value="false" />
+  <parameter name="gui_deser_factor" value="40" />
+  <parameter name="gui_embedded_reset" value="1" />
+  <parameter name="gui_enable_run_length" value="false" />
+  <parameter name="gui_mgmt_clk_in_hz" value="250000000" />
+  <parameter name="gui_parameter_rules" value="Custom" />
+  <parameter name="gui_pcs_pma_width" value="PARAM_DEFAULT" />
+  <parameter name="gui_pll_reconfig_cdr_pll_refclk_sel" value="0" />
+  <parameter name="gui_pll_reconfig_enable_pll_reconfig" value="false" />
+  <parameter name="gui_pll_reconfig_main_pll_index" value="0" />
+  <parameter name="gui_pll_reconfig_pll0_clk_network" value="x1" />
+  <parameter name="gui_pll_reconfig_pll0_data_rate" value="0 Mbps" />
+  <parameter name="gui_pll_reconfig_pll0_pll_type" value="CMU" />
+  <parameter name="gui_pll_reconfig_pll0_refclk_freq" value="0 MHz" />
+  <parameter name="gui_pll_reconfig_pll0_refclk_sel" value="0" />
+  <parameter name="gui_pll_reconfig_pll1_clk_network" value="x1" />
+  <parameter name="gui_pll_reconfig_pll1_data_rate" value="0 Mbps" />
+  <parameter name="gui_pll_reconfig_pll1_pll_type" value="CMU" />
+  <parameter name="gui_pll_reconfig_pll1_refclk_freq" value="0 MHz" />
+  <parameter name="gui_pll_reconfig_pll1_refclk_sel" value="0" />
+  <parameter name="gui_pll_reconfig_pll2_clk_network" value="x1" />
+  <parameter name="gui_pll_reconfig_pll2_data_rate" value="0 Mbps" />
+  <parameter name="gui_pll_reconfig_pll2_pll_type" value="CMU" />
+  <parameter name="gui_pll_reconfig_pll2_refclk_freq" value="0 MHz" />
+  <parameter name="gui_pll_reconfig_pll2_refclk_sel" value="0" />
+  <parameter name="gui_pll_reconfig_pll3_clk_network" value="x1" />
+  <parameter name="gui_pll_reconfig_pll3_data_rate" value="0 Mbps" />
+  <parameter name="gui_pll_reconfig_pll3_pll_type" value="CMU" />
+  <parameter name="gui_pll_reconfig_pll3_refclk_freq" value="0 MHz" />
+  <parameter name="gui_pll_reconfig_pll3_refclk_sel" value="0" />
+  <parameter name="gui_pll_reconfig_pll_count" value="1" />
+  <parameter name="gui_pll_reconfig_refclk_count" value="1" />
+  <parameter name="gui_pll_refclk_freq" value="156.25 MHz" />
+  <parameter name="gui_pll_type" value="CMU" />
+  <parameter name="gui_pma_bonding_mode" value="x1" />
+  <parameter name="gui_rx_use_coreclk" value="false" />
+  <parameter name="gui_rx_use_recovered_clk" value="false" />
+  <parameter name="gui_split_interfaces" value="1" />
+  <parameter name="gui_tx_bitslip_enable" value="false" />
+  <parameter name="gui_tx_preemp_pretap_inv" value="false" />
+  <parameter name="gui_tx_preemp_tap_2_inv" value="false" />
+  <parameter name="gui_tx_use_coreclk" value="false" />
+  <parameter name="gui_use_8b10b" value="false" />
+  <parameter name="gui_use_8b10b_manual_control" value="false" />
+  <parameter name="gui_use_8b10b_status" value="false" />
+  <parameter name="gui_use_byte_order_block" value="false" />
+  <parameter name="gui_use_rmfifo_status" value="false" />
+  <parameter name="gui_use_status" value="false" />
+  <parameter name="gui_use_wa_status" value="false" />
+  <parameter name="gxb_analog_power" value="AUTO" />
+  <parameter name="lanes" value="2" />
+  <parameter name="operation_mode" value="Duplex" />
+  <parameter name="pll_external_enable" value="0" />
+  <parameter name="pll_lock_speed" value="AUTO" />
+  <parameter name="rate_match_pattern1">11010000111010000011</parameter>
+  <parameter name="rate_match_pattern2">00101111000101111100</parameter>
+  <parameter name="run_length_violation_checking" value="40" />
+  <parameter name="rx_common_mode" value="0.82V" />
+  <parameter name="rx_eq_ctrl" value="16" />
+  <parameter name="rx_eq_dc_gain" value="1" />
+  <parameter name="rx_pll_lock_speed" value="AUTO" />
+  <parameter name="rx_termination" value="OCT_100_OHMS" />
+  <parameter name="rx_use_external_termination" value="false" />
+  <parameter name="std_rx_pcfifo_mode" value="low_latency" />
+  <parameter name="std_tx_pcfifo_mode" value="low_latency" />
+  <parameter name="tx_analog_power" value="AUTO" />
+  <parameter name="tx_common_mode" value="0.65V" />
+  <parameter name="tx_preemp_pretap" value="0" />
+  <parameter name="tx_preemp_tap_1" value="0" />
+  <parameter name="tx_preemp_tap_2" value="0" />
+  <parameter name="tx_slew_rate" value="OFF" />
+  <parameter name="tx_termination" value="OCT_100_OHMS" />
+  <parameter name="tx_use_external_termination" value="false" />
+  <parameter name="tx_vod_selection" value="2" />
+  <parameter name="use_double_data_mode" value="DEPRECATED" />
+  <parameter name="use_rate_match_fifo" value="0" />
+  <parameter name="word_align_pattern">11111001111111111010</parameter>
+  <parameter name="word_aligner_mode" value="manual" />
+  <parameter name="word_aligner_pattern_length" value="20" />
+  <parameter name="word_aligner_state_machine_datacnt" value="1" />
+  <parameter name="word_aligner_state_machine_errcnt" value="1" />
+  <parameter name="word_aligner_state_machine_patterncnt" value="10" />
+ </module>
+ <connection
+   kind="avalon"
+   version="17.1"
+   start="master_0.master"
+   end="data_pattern_check_SFP_A.csr_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0ae0" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="17.1"
+   start="master_0.master"
+   end="data_pattern_check_SFP_B.csr_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0ac0" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="17.1"
+   start="master_0.master"
+   end="data_pattern_gen_SFP_A.csr_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0a60" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="17.1"
+   start="master_0.master"
+   end="data_pattern_gen_SFP_B.csr_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0a40" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="17.1"
+   start="master_0.master"
+   end="xcvr_custom_phy_0.phy_mgmt">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="17.1"
+   start="master_0.master"
+   end="alt_xcvr_reconfig_0.reconfig_mgmt">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0800" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon_streaming"
+   version="17.1"
+   start="timing_adapter_SFP_A_rx.out"
+   end="data_pattern_check_SFP_A.pattern_in" />
+ <connection
+   kind="avalon_streaming"
+   version="17.1"
+   start="timing_adapter_SFP_B_rx.out"
+   end="data_pattern_check_SFP_B.pattern_in" />
+ <connection
+   kind="avalon_streaming"
+   version="17.1"
+   start="timing_adapter_SFP_A_tx.out"
+   end="xcvr_custom_phy_0.tx_parallel_data0" />
+ <connection
+   kind="avalon_streaming"
+   version="17.1"
+   start="timing_adapter_SFP_B_tx.out"
+   end="xcvr_custom_phy_0.tx_parallel_data1" />
+ <connection
+   kind="avalon_streaming"
+   version="17.1"
+   start="data_pattern_gen_SFP_A.pattern_out"
+   end="timing_adapter_SFP_A_tx.in" />
+ <connection
+   kind="avalon_streaming"
+   version="17.1"
+   start="data_pattern_gen_SFP_B.pattern_out"
+   end="timing_adapter_SFP_B_tx.in" />
+ <connection
+   kind="avalon_streaming"
+   version="17.1"
+   start="xcvr_custom_phy_0.rx_parallel_data0"
+   end="timing_adapter_SFP_A_rx.in" />
+ <connection
+   kind="avalon_streaming"
+   version="17.1"
+   start="xcvr_custom_phy_0.rx_parallel_data1"
+   end="timing_adapter_SFP_B_rx.in" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="ref_clk.clk"
+   end="xcvr_custom_phy_0.pll_ref_clk" />
+ <connection kind="clock" version="17.1" start="clk_50.clk" end="pll_0.refclk" />
+ <connection kind="clock" version="17.1" start="pll_0.outclk0" end="master_0.clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="pll_0.outclk0"
+   end="data_pattern_check_SFP_A.csr_clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="pll_0.outclk0"
+   end="data_pattern_gen_SFP_A.csr_clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="pll_0.outclk0"
+   end="data_pattern_gen_SFP_B.csr_clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="pll_0.outclk0"
+   end="data_pattern_check_SFP_B.csr_clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="pll_0.outclk0"
+   end="alt_xcvr_reconfig_0.mgmt_clk_clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="pll_0.outclk0"
+   end="xcvr_custom_phy_0.phy_mgmt_clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="xcvr_custom_phy_0.rx_clkout0"
+   end="timing_adapter_SFP_A_rx.clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="xcvr_custom_phy_0.rx_clkout0"
+   end="data_pattern_check_SFP_A.pattern_in_clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="xcvr_custom_phy_0.rx_clkout1"
+   end="timing_adapter_SFP_B_rx.clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="xcvr_custom_phy_0.rx_clkout1"
+   end="data_pattern_check_SFP_B.pattern_in_clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="xcvr_custom_phy_0.tx_clkout0"
+   end="timing_adapter_SFP_A_tx.clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="xcvr_custom_phy_0.tx_clkout0"
+   end="data_pattern_gen_SFP_A.pattern_out_clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="xcvr_custom_phy_0.tx_clkout1"
+   end="timing_adapter_SFP_B_tx.clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="xcvr_custom_phy_0.tx_clkout1"
+   end="data_pattern_gen_SFP_B.pattern_out_clk" />
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="xcvr_custom_phy_0.reconfig_from_xcvr"
+   end="alt_xcvr_reconfig_0.reconfig_from_xcvr">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="alt_xcvr_reconfig_0.reconfig_to_xcvr"
+   end="xcvr_custom_phy_0.reconfig_to_xcvr">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="reset"
+   version="17.1"
+   start="clk_50.clk_reset"
+   end="master_0.clk_reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="clk_50.clk_reset"
+   end="alt_xcvr_reconfig_0.mgmt_rst_reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="clk_50.clk_reset"
+   end="xcvr_custom_phy_0.phy_mgmt_clk_reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="clk_50.clk_reset"
+   end="timing_adapter_SFP_A_tx.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="clk_50.clk_reset"
+   end="timing_adapter_SFP_A_rx.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="clk_50.clk_reset"
+   end="data_pattern_gen_SFP_A.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="clk_50.clk_reset"
+   end="data_pattern_check_SFP_A.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="clk_50.clk_reset"
+   end="pll_0.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="clk_50.clk_reset"
+   end="data_pattern_gen_SFP_B.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="clk_50.clk_reset"
+   end="timing_adapter_SFP_B_tx.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="clk_50.clk_reset"
+   end="data_pattern_check_SFP_B.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="clk_50.clk_reset"
+   end="timing_adapter_SFP_B_rx.reset" />
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+</system>

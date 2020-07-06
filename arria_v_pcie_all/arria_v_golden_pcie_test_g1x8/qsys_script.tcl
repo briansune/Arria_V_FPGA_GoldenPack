@@ -1,0 +1,16 @@
+package require -exact qsys 13.0
+load_system top.qsys
+# Setting DUT Parameters
+set_instance_parameter_value DUT force_src 0
+set_instance_parameter_value DUT reserved_debug_hwtcl 0
+set_instance_parameter_value DUT in_cvp_mode_hwtcl 0
+set_instance_parameter_value APPS max_payload_size_hwtcl 128
+set_instance_parameter_value APPS device_family_hwtcl "Arria V"
+set_instance_parameter_value DUT max_payload_size_hwtcl  128
+set_instance_parameter_value DUT use_aer_hwtcl 0
+set_instance_parameter_value DUT ecrc_check_capable_hwtcl 0
+set_instance_parameter_value DUT ecrc_gen_capable_hwtcl 0
+set_instance_parameter_value DUT use_crc_forwarding_hwtcl 0
+set_instance_parameter_value DUT subsystem_vendor_id_0_hwtcl 61585
+set_instance_parameter_value DUT subsystem_device_id_0_hwtcl 4464
+save_system top.qsys

@@ -1,0 +1,614 @@
+Analysis & Synthesis report for arria_v_si5338
+Mon Jun 29 00:59:38 2020
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. State Machine - |arria_v_si5338|si5338_init_core:si5338_init_core_inst|fsm_stage
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for si5338_init_core:si5338_init_core_inst|si5338_init_rom:si5338_init_rom_inst|altsyncram:altsyncram_component|altsyncram_tii1:auto_generated
+ 16. Parameter Settings for User Entity Instance: si5338_init_core:si5338_init_core_inst|basic_iic:basic_iic_inst
+ 17. Parameter Settings for User Entity Instance: si5338_init_core:si5338_init_core_inst|si5338_init_rom:si5338_init_rom_inst|altsyncram:altsyncram_component
+ 18. altsyncram Parameter Settings by Entity Instance
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++---------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon Jun 29 00:59:38 2020           ;
+; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Standard Edition ;
+; Revision Name                   ; arria_v_si5338                                  ;
+; Top-level Entity Name           ; arria_v_si5338                                  ;
+; Family                          ; Arria V                                         ;
+; Logic utilization (in ALMs)     ; N/A                                             ;
+; Total registers                 ; 188                                             ;
+; Total pins                      ; 14                                              ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 6,144                                           ;
+; Total DSP Blocks                ; 0                                               ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 0                                               ;
+; Total DLLs                      ; 0                                               ;
++---------------------------------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5AGTFC7H3F35I3     ;                    ;
+; Top-level entity name                                                           ; arria_v_si5338     ; arria_v_si5338     ;
+; Family name                                                                     ; Arria V            ; Cyclone V          ;
+; Use smart compilation                                                           ; On                 ; Off                ;
+; Maximum processors allowed for parallel compilation                             ; All                ;                    ;
+; VHDL Show LMF Mapping Messages                                                  ; Off                ;                    ;
+; VHDL Version                                                                    ; VHDL_2008          ; VHDL_1993          ;
+; HDL message level                                                               ; Level3             ; Level2             ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 8           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                ;
++------------------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path         ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                                          ; Library ;
++------------------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------------------+---------+
+; src/arria_v_si5338.v                     ; yes             ; User Verilog HDL File                  ; C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/arria_v_si5338.v                     ;         ;
+; src/si5338_controller/si5338_init_rom.v  ; yes             ; User Wizard-Generated File             ; C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/si5338_init_rom.v  ;         ;
+; src/si5338_controller/si5338_init_core.v ; yes             ; User Verilog HDL File                  ; C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/si5338_init_core.v ;         ;
+; src/si5338_controller/basic_iic.v        ; yes             ; User Verilog HDL File                  ; C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v        ;         ;
+; altsyncram.tdf                           ; yes             ; Megafunction                           ; c:/intelfpga/17.1/quartus/libraries/megafunctions/altsyncram.tdf                                                      ;         ;
+; stratix_ram_block.inc                    ; yes             ; Megafunction                           ; c:/intelfpga/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                               ;         ;
+; lpm_mux.inc                              ; yes             ; Megafunction                           ; c:/intelfpga/17.1/quartus/libraries/megafunctions/lpm_mux.inc                                                         ;         ;
+; lpm_decode.inc                           ; yes             ; Megafunction                           ; c:/intelfpga/17.1/quartus/libraries/megafunctions/lpm_decode.inc                                                      ;         ;
+; aglobal171.inc                           ; yes             ; Megafunction                           ; c:/intelfpga/17.1/quartus/libraries/megafunctions/aglobal171.inc                                                      ;         ;
+; a_rdenreg.inc                            ; yes             ; Megafunction                           ; c:/intelfpga/17.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                       ;         ;
+; altrom.inc                               ; yes             ; Megafunction                           ; c:/intelfpga/17.1/quartus/libraries/megafunctions/altrom.inc                                                          ;         ;
+; altram.inc                               ; yes             ; Megafunction                           ; c:/intelfpga/17.1/quartus/libraries/megafunctions/altram.inc                                                          ;         ;
+; altdpram.inc                             ; yes             ; Megafunction                           ; c:/intelfpga/17.1/quartus/libraries/megafunctions/altdpram.inc                                                        ;         ;
+; db/altsyncram_tii1.tdf                   ; yes             ; Auto-Generated Megafunction            ; C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/db/altsyncram_tii1.tdf                   ;         ;
+; ./src/si5338_controller/si5338_rom.mif   ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/si5338_rom.mif     ;         ;
++------------------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                 ;
++---------------------------------------------+---------------+
+; Resource                                    ; Usage         ;
++---------------------------------------------+---------------+
+; Estimate of Logic utilization (ALMs needed) ; 265           ;
+;                                             ;               ;
+; Combinational ALUT usage for logic          ; 432           ;
+;     -- 7 input functions                    ; 8             ;
+;     -- 6 input functions                    ; 86            ;
+;     -- 5 input functions                    ; 75            ;
+;     -- 4 input functions                    ; 48            ;
+;     -- <=3 input functions                  ; 215           ;
+;                                             ;               ;
+; Dedicated logic registers                   ; 188           ;
+;                                             ;               ;
+; I/O pins                                    ; 14            ;
+; Total MLAB memory bits                      ; 0             ;
+; Total block memory bits                     ; 6144          ;
+;                                             ;               ;
+; Total DSP Blocks                            ; 0             ;
+;                                             ;               ;
+; Maximum fan-out node                        ; sys_clk~input ;
+; Maximum fan-out                             ; 146           ;
+; Total fan-out                               ; 2610          ;
+; Average fan-out                             ; 3.88          ;
++---------------------------------------------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                  ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                        ; Entity Name      ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+--------------+
+; |arria_v_si5338                              ; 432 (81)            ; 188 (66)                  ; 6144              ; 0          ; 14   ; 0            ; |arria_v_si5338                                                                                                                                            ; arria_v_si5338   ; work         ;
+;    |si5338_init_core:si5338_init_core_inst|  ; 351 (163)           ; 122 (90)                  ; 6144              ; 0          ; 0    ; 0            ; |arria_v_si5338|si5338_init_core:si5338_init_core_inst                                                                                                     ; si5338_init_core ; work         ;
+;       |basic_iic:basic_iic_inst|             ; 188 (188)           ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |arria_v_si5338|si5338_init_core:si5338_init_core_inst|basic_iic:basic_iic_inst                                                                            ; basic_iic        ; work         ;
+;       |si5338_init_rom:si5338_init_rom_inst| ; 0 (0)               ; 0 (0)                     ; 6144              ; 0          ; 0    ; 0            ; |arria_v_si5338|si5338_init_core:si5338_init_core_inst|si5338_init_rom:si5338_init_rom_inst                                                                ; si5338_init_rom  ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 6144              ; 0          ; 0    ; 0            ; |arria_v_si5338|si5338_init_core:si5338_init_core_inst|si5338_init_rom:si5338_init_rom_inst|altsyncram:altsyncram_component                                ; altsyncram       ; work         ;
+;             |altsyncram_tii1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 6144              ; 0          ; 0    ; 0            ; |arria_v_si5338|si5338_init_core:si5338_init_core_inst|si5338_init_rom:si5338_init_rom_inst|altsyncram:altsyncram_component|altsyncram_tii1:auto_generated ; altsyncram_tii1  ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                                      ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------+------------+------+--------------+--------------+--------------+--------------+------+----------------------------------------+
+; Name                                                                                                                                                  ; Type       ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                                    ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------+------------+------+--------------+--------------+--------------+--------------+------+----------------------------------------+
+; si5338_init_core:si5338_init_core_inst|si5338_init_rom:si5338_init_rom_inst|altsyncram:altsyncram_component|altsyncram_tii1:auto_generated|ALTSYNCRAM ; M10K block ; ROM  ; 256          ; 24           ; --           ; --           ; 6144 ; ./src/si5338_controller/si5338_rom.mif ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------+------------+------+--------------+--------------+--------------+--------------+------+----------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                 ;
++--------+--------------+---------+--------------+--------------+---------------------------------------------------------------------------------------------+-----------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                                             ; IP Include File                         ;
++--------+--------------+---------+--------------+--------------+---------------------------------------------------------------------------------------------+-----------------------------------------+
+; Altera ; ROM: 1-PORT  ; 17.1    ; N/A          ; N/A          ; |arria_v_si5338|si5338_init_core:si5338_init_core_inst|si5338_init_rom:si5338_init_rom_inst ; src/si5338_controller/si5338_init_rom.v ;
++--------+--------------+---------+--------------+--------------+---------------------------------------------------------------------------------------------+-----------------------------------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |arria_v_si5338|si5338_init_core:si5338_init_core_inst|fsm_stage                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
++-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
+; Name            ; fsm_stage.11110 ; fsm_stage.11101 ; fsm_stage.11100 ; fsm_stage.11011 ; fsm_stage.11010 ; fsm_stage.11001 ; fsm_stage.11000 ; fsm_stage.10111 ; fsm_stage.10110 ; fsm_stage.10101 ; fsm_stage.10100 ; fsm_stage.10011 ; fsm_stage.10010 ; fsm_stage.10001 ; fsm_stage.10000 ; fsm_stage.01111 ; fsm_stage.01110 ; fsm_stage.01101 ; fsm_stage.01100 ; fsm_stage.01011 ; fsm_stage.01010 ; fsm_stage.01001 ; fsm_stage.01000 ; fsm_stage.00111 ; fsm_stage.00110 ; fsm_stage.00101 ; fsm_stage.00100 ; fsm_stage.00011 ; fsm_stage.00010 ; fsm_stage.00001 ; fsm_stage.00000 ;
++-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
+; fsm_stage.00000 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ;
+; fsm_stage.00001 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 1               ;
+; fsm_stage.00010 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 1               ;
+; fsm_stage.00011 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 1               ;
+; fsm_stage.00100 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 1               ;
+; fsm_stage.00101 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 1               ;
+; fsm_stage.00110 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
+; fsm_stage.00111 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
+; fsm_stage.01000 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
+; fsm_stage.01001 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
+; fsm_stage.01010 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
+; fsm_stage.01011 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
+; fsm_stage.01100 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
+; fsm_stage.01101 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
+; fsm_stage.01110 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
+; fsm_stage.01111 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
+; fsm_stage.10000 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
+; fsm_stage.10001 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
+; fsm_stage.10010 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
+; fsm_stage.10011 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
+; fsm_stage.10100 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
+; fsm_stage.10101 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
+; fsm_stage.10110 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
+; fsm_stage.10111 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
+; fsm_stage.11000 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
+; fsm_stage.11001 ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
+; fsm_stage.11010 ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
+; fsm_stage.11011 ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
+; fsm_stage.11100 ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
+; fsm_stage.11101 ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
+; fsm_stage.11110 ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
++-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                        ;
++-----------------------------------------------------------------------+-----------------------------------------------------------------------------------+
+; Register name                                                         ; Reason for Removal                                                                ;
++-----------------------------------------------------------------------+-----------------------------------------------------------------------------------+
+; si5338_init_core:si5338_init_core_inst|basic_iic:basic_iic_inst|Go[3] ; Merged with si5338_init_core:si5338_init_core_inst|basic_iic:basic_iic_inst|Go[4] ;
+; si5338_init_core:si5338_init_core_inst|basic_iic:basic_iic_inst|Go[4] ; Stuck at GND due to stuck port data_in                                            ;
+; si5338_init_core:si5338_init_core_inst|fsm_stage~35                   ; Lost fanout                                                                       ;
+; si5338_init_core:si5338_init_core_inst|fsm_stage~36                   ; Lost fanout                                                                       ;
+; si5338_init_core:si5338_init_core_inst|fsm_stage~37                   ; Lost fanout                                                                       ;
+; si5338_init_core:si5338_init_core_inst|fsm_stage~38                   ; Lost fanout                                                                       ;
+; si5338_init_core:si5338_init_core_inst|fsm_stage~39                   ; Lost fanout                                                                       ;
+; Total Number of Removed Registers = 7                                 ;                                                                                   ;
++-----------------------------------------------------------------------+-----------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 188   ;
+; Number of registers using Synchronous Clear  ; 81    ;
+; Number of registers using Synchronous Load   ; 34    ;
+; Number of registers using Asynchronous Clear ; 188   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 32    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                    ;
++-----------------------------------------------------------------------+---------+
+; Inverted Register                                                     ; Fan out ;
++-----------------------------------------------------------------------+---------+
+; si5338_init_core:si5338_init_core_inst|basic_iic:basic_iic_inst|rSCL  ; 14      ;
+; si5338_init_core:si5338_init_core_inst|basic_iic:basic_iic_inst|isAck ; 7       ;
+; si5338_init_core:si5338_init_core_inst|basic_iic:basic_iic_inst|rSDA  ; 11      ;
+; si5338_init_core:si5338_init_core_inst|basic_iic:basic_iic_inst|isOut ; 4       ;
+; Total number of inverted registers = 4                                ;         ;
++-----------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |arria_v_si5338|si5338_init_core:si5338_init_core_inst|iic_data_read[7]               ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; Yes        ; |arria_v_si5338|si5338_init_core:si5338_init_core_inst|iic_addr_reg[6]                ;
+; 16:1               ; 9 bits    ; 90 LEs        ; 0 LEs                ; 90 LEs                 ; Yes        ; |arria_v_si5338|si5338_init_core:si5338_init_core_inst|basic_iic:basic_iic_inst|C1[8] ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |arria_v_si5338|si5338_init_core:si5338_init_core_inst|Selector34                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for si5338_init_core:si5338_init_core_inst|si5338_init_rom:si5338_init_rom_inst|altsyncram:altsyncram_component|altsyncram_tii1:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                                  ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                                   ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: si5338_init_core:si5338_init_core_inst|basic_iic:basic_iic_inst ;
++----------------+-----------+---------------------------------------------------------------------------------+
+; Parameter Name ; Value     ; Type                                                                            ;
++----------------+-----------+---------------------------------------------------------------------------------+
+; slave_addr     ; 1110000   ; Unsigned Binary                                                                 ;
+; F250K          ; 011001000 ; Unsigned Binary                                                                 ;
++----------------+-----------+---------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: si5338_init_core:si5338_init_core_inst|si5338_init_rom:si5338_init_rom_inst|altsyncram:altsyncram_component ;
++------------------------------------+----------------------------------------+----------------------------------------------------------------------------+
+; Parameter Name                     ; Value                                  ; Type                                                                       ;
++------------------------------------+----------------------------------------+----------------------------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                                      ; Untyped                                                                    ;
+; AUTO_CARRY_CHAINS                  ; ON                                     ; AUTO_CARRY                                                                 ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                    ; IGNORE_CARRY                                                               ;
+; AUTO_CASCADE_CHAINS                ; ON                                     ; AUTO_CASCADE                                                               ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                    ; IGNORE_CASCADE                                                             ;
+; WIDTH_BYTEENA                      ; 1                                      ; Untyped                                                                    ;
+; OPERATION_MODE                     ; ROM                                    ; Untyped                                                                    ;
+; WIDTH_A                            ; 24                                     ; Signed Integer                                                             ;
+; WIDTHAD_A                          ; 8                                      ; Signed Integer                                                             ;
+; NUMWORDS_A                         ; 256                                    ; Signed Integer                                                             ;
+; OUTDATA_REG_A                      ; UNREGISTERED                           ; Untyped                                                                    ;
+; ADDRESS_ACLR_A                     ; CLEAR0                                 ; Untyped                                                                    ;
+; OUTDATA_ACLR_A                     ; NONE                                   ; Untyped                                                                    ;
+; WRCONTROL_ACLR_A                   ; NONE                                   ; Untyped                                                                    ;
+; INDATA_ACLR_A                      ; NONE                                   ; Untyped                                                                    ;
+; BYTEENA_ACLR_A                     ; NONE                                   ; Untyped                                                                    ;
+; WIDTH_B                            ; 1                                      ; Untyped                                                                    ;
+; WIDTHAD_B                          ; 1                                      ; Untyped                                                                    ;
+; NUMWORDS_B                         ; 1                                      ; Untyped                                                                    ;
+; INDATA_REG_B                       ; CLOCK1                                 ; Untyped                                                                    ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                 ; Untyped                                                                    ;
+; RDCONTROL_REG_B                    ; CLOCK1                                 ; Untyped                                                                    ;
+; ADDRESS_REG_B                      ; CLOCK1                                 ; Untyped                                                                    ;
+; OUTDATA_REG_B                      ; UNREGISTERED                           ; Untyped                                                                    ;
+; BYTEENA_REG_B                      ; CLOCK1                                 ; Untyped                                                                    ;
+; INDATA_ACLR_B                      ; NONE                                   ; Untyped                                                                    ;
+; WRCONTROL_ACLR_B                   ; NONE                                   ; Untyped                                                                    ;
+; ADDRESS_ACLR_B                     ; NONE                                   ; Untyped                                                                    ;
+; OUTDATA_ACLR_B                     ; NONE                                   ; Untyped                                                                    ;
+; RDCONTROL_ACLR_B                   ; NONE                                   ; Untyped                                                                    ;
+; BYTEENA_ACLR_B                     ; NONE                                   ; Untyped                                                                    ;
+; WIDTH_BYTEENA_A                    ; 1                                      ; Signed Integer                                                             ;
+; WIDTH_BYTEENA_B                    ; 1                                      ; Untyped                                                                    ;
+; RAM_BLOCK_TYPE                     ; M10K                                   ; Untyped                                                                    ;
+; BYTE_SIZE                          ; 8                                      ; Untyped                                                                    ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                              ; Untyped                                                                    ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                   ; Untyped                                                                    ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                   ; Untyped                                                                    ;
+; INIT_FILE                          ; ./src/si5338_controller/si5338_rom.mif ; Untyped                                                                    ;
+; INIT_FILE_LAYOUT                   ; PORT_A                                 ; Untyped                                                                    ;
+; MAXIMUM_DEPTH                      ; 0                                      ; Untyped                                                                    ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS                                 ; Untyped                                                                    ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                                 ; Untyped                                                                    ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                                 ; Untyped                                                                    ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                 ; Untyped                                                                    ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                        ; Untyped                                                                    ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                        ; Untyped                                                                    ;
+; ENABLE_ECC                         ; FALSE                                  ; Untyped                                                                    ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                  ; Untyped                                                                    ;
+; WIDTH_ECCSTATUS                    ; 3                                      ; Untyped                                                                    ;
+; DEVICE_FAMILY                      ; Arria V                                ; Untyped                                                                    ;
+; CBXI_PARAMETER                     ; altsyncram_tii1                        ; Untyped                                                                    ;
++------------------------------------+----------------------------------------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                                                                        ;
++-------------------------------------------+-------------------------------------------------------------------------------------------------------------+
+; Name                                      ; Value                                                                                                       ;
++-------------------------------------------+-------------------------------------------------------------------------------------------------------------+
+; Number of entity instances                ; 1                                                                                                           ;
+; Entity Instance                           ; si5338_init_core:si5338_init_core_inst|si5338_init_rom:si5338_init_rom_inst|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                                                                         ;
+;     -- WIDTH_A                            ; 24                                                                                                          ;
+;     -- NUMWORDS_A                         ; 256                                                                                                         ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                                                ;
+;     -- WIDTH_B                            ; 1                                                                                                           ;
+;     -- NUMWORDS_B                         ; 1                                                                                                           ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                                                      ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                                                ;
+;     -- RAM_BLOCK_TYPE                     ; M10K                                                                                                        ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                                                   ;
++-------------------------------------------+-------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 188                         ;
+;     CLR               ; 58                          ;
+;     CLR SCLR          ; 64                          ;
+;     CLR SLD           ; 34                          ;
+;     ENA CLR           ; 15                          ;
+;     ENA CLR SCLR      ; 17                          ;
+; arriav_io_obuf        ; 1                           ;
+; arriav_lcell_comb     ; 437                         ;
+;     arith             ; 105                         ;
+;         1 data inputs ; 105                         ;
+;     extend            ; 8                           ;
+;         7 data inputs ; 8                           ;
+;     normal            ; 324                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 61                          ;
+;         3 data inputs ; 46                          ;
+;         4 data inputs ; 48                          ;
+;         5 data inputs ; 75                          ;
+;         6 data inputs ; 86                          ;
+; boundary_port         ; 14                          ;
+; stratixv_ram_block    ; 24                          ;
+;                       ;                             ;
+; Max LUT depth         ; 7.00                        ;
+; Average LUT depth     ; 3.18                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+    Info: Processing started: Mon Jun 29 00:59:28 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off arria_v_si5338 -c arria_v_si5338
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file src/arria_v_si5338.v
+    Info (12023): Found entity 1: arria_v_si5338 File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/arria_v_si5338.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file src/si5338_controller/si5338_init_rom.v
+    Info (12023): Found entity 1: si5338_init_rom File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/si5338_init_rom.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file src/si5338_controller/si5338_init_core.v
+    Info (12023): Found entity 1: si5338_init_core File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/si5338_init_core.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file src/si5338_controller/basic_iic.v
+    Info (12023): Found entity 1: basic_iic File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 11
+Info (12127): Elaborating entity "arria_v_si5338" for the top level hierarchy
+Info (10035): Verilog HDL or VHDL information at arria_v_si5338.v(24): object "led_reg" declared but not used File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/arria_v_si5338.v Line: 24
+Warning (10040): Verilog HDL or VHDL arithmetic warning at arria_v_si5338.v(55): loss of carry in addition or borrow in subtraction File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/arria_v_si5338.v Line: 55
+Warning (10040): Verilog HDL or VHDL arithmetic warning at arria_v_si5338.v(73): loss of carry in addition or borrow in subtraction File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/arria_v_si5338.v Line: 73
+Info (12128): Elaborating entity "si5338_init_core" for hierarchy "si5338_init_core:si5338_init_core_inst" File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/arria_v_si5338.v Line: 40
+Warning (10040): Verilog HDL or VHDL arithmetic warning at si5338_init_core.v(150): loss of carry in addition or borrow in subtraction File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/si5338_init_core.v Line: 150
+Warning (10040): Verilog HDL or VHDL arithmetic warning at si5338_init_core.v(229): loss of carry in addition or borrow in subtraction File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/si5338_init_core.v Line: 229
+Info (12128): Elaborating entity "basic_iic" for hierarchy "si5338_init_core:si5338_init_core_inst|basic_iic:basic_iic_inst" File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/si5338_init_core.v Line: 52
+Warning (10271): Verilog HDL Case Statement warning at basic_iic.v(73): size of case item expression (32) exceeds the size of the case expression (5) File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 73
+Info (10662): Verilog HDL Assignment information at basic_iic.v(79): truncated unsized constant literal with size 32 to size 1 with no loss of information File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 79
+Warning (10040): Verilog HDL or VHDL arithmetic warning at basic_iic.v(97): loss of carry in addition or borrow in subtraction File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 97
+Warning (10271): Verilog HDL Case Statement warning at basic_iic.v(102): size of case item expression (32) exceeds the size of the case expression (5) File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 102
+Warning (10271): Verilog HDL Case Statement warning at basic_iic.v(109): size of case item expression (32) exceeds the size of the case expression (5) File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 109
+Warning (10271): Verilog HDL Case Statement warning at basic_iic.v(116): size of case item expression (32) exceeds the size of the case expression (5) File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 116
+Warning (10271): Verilog HDL Case Statement warning at basic_iic.v(123): size of case item expression (32) exceeds the size of the case expression (5) File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 123
+Warning (10040): Verilog HDL or VHDL arithmetic warning at basic_iic.v(142): loss of carry in addition or borrow in subtraction File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 142
+Warning (10271): Verilog HDL Case Statement warning at basic_iic.v(146): size of case item expression (32) exceeds the size of the case expression (5) File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 146
+Warning (10271): Verilog HDL Case Statement warning at basic_iic.v(151): size of case item expression (32) exceeds the size of the case expression (5) File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 151
+Warning (10271): Verilog HDL Case Statement warning at basic_iic.v(158): size of case item expression (32) exceeds the size of the case expression (5) File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 158
+Warning (10040): Verilog HDL or VHDL arithmetic warning at basic_iic.v(173): loss of carry in addition or borrow in subtraction File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 173
+Warning (10040): Verilog HDL or VHDL arithmetic warning at basic_iic.v(175): loss of carry in addition or borrow in subtraction File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 175
+Warning (10271): Verilog HDL Case Statement warning at basic_iic.v(180): size of case item expression (32) exceeds the size of the case expression (5) File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 180
+Warning (10040): Verilog HDL or VHDL arithmetic warning at basic_iic.v(201): loss of carry in addition or borrow in subtraction File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 201
+Warning (10271): Verilog HDL Case Statement warning at basic_iic.v(205): size of case item expression (32) exceeds the size of the case expression (5) File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 205
+Warning (10271): Verilog HDL Case Statement warning at basic_iic.v(220): size of case item expression (32) exceeds the size of the case expression (5) File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 220
+Info (10662): Verilog HDL Assignment information at basic_iic.v(226): truncated unsized constant literal with size 32 to size 1 with no loss of information File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 226
+Warning (10040): Verilog HDL or VHDL arithmetic warning at basic_iic.v(243): loss of carry in addition or borrow in subtraction File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 243
+Warning (10271): Verilog HDL Case Statement warning at basic_iic.v(248): size of case item expression (32) exceeds the size of the case expression (5) File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 248
+Warning (10271): Verilog HDL Case Statement warning at basic_iic.v(255): size of case item expression (32) exceeds the size of the case expression (5) File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 255
+Warning (10271): Verilog HDL Case Statement warning at basic_iic.v(262): size of case item expression (32) exceeds the size of the case expression (5) File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 262
+Warning (10040): Verilog HDL or VHDL arithmetic warning at basic_iic.v(283): loss of carry in addition or borrow in subtraction File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 283
+Warning (10271): Verilog HDL Case Statement warning at basic_iic.v(287): size of case item expression (32) exceeds the size of the case expression (5) File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 287
+Warning (10271): Verilog HDL Case Statement warning at basic_iic.v(294): size of case item expression (32) exceeds the size of the case expression (5) File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 294
+Warning (10271): Verilog HDL Case Statement warning at basic_iic.v(301): size of case item expression (32) exceeds the size of the case expression (5) File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 301
+Warning (10040): Verilog HDL or VHDL arithmetic warning at basic_iic.v(317): loss of carry in addition or borrow in subtraction File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 317
+Warning (10271): Verilog HDL Case Statement warning at basic_iic.v(321): size of case item expression (32) exceeds the size of the case expression (5) File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 321
+Warning (10271): Verilog HDL Case Statement warning at basic_iic.v(326): size of case item expression (32) exceeds the size of the case expression (5) File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 326
+Warning (10271): Verilog HDL Case Statement warning at basic_iic.v(333): size of case item expression (32) exceeds the size of the case expression (5) File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 333
+Warning (10040): Verilog HDL or VHDL arithmetic warning at basic_iic.v(349): loss of carry in addition or borrow in subtraction File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 349
+Warning (10040): Verilog HDL or VHDL arithmetic warning at basic_iic.v(351): loss of carry in addition or borrow in subtraction File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 351
+Warning (10271): Verilog HDL Case Statement warning at basic_iic.v(355): size of case item expression (32) exceeds the size of the case expression (5) File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 355
+Warning (10040): Verilog HDL or VHDL arithmetic warning at basic_iic.v(374): loss of carry in addition or borrow in subtraction File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 374
+Warning (10271): Verilog HDL Case Statement warning at basic_iic.v(377): size of case item expression (32) exceeds the size of the case expression (5) File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 377
+Warning (10271): Verilog HDL Case Statement warning at basic_iic.v(385): size of case item expression (32) exceeds the size of the case expression (5) File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 385
+Warning (10040): Verilog HDL or VHDL arithmetic warning at basic_iic.v(403): loss of carry in addition or borrow in subtraction File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 403
+Warning (10040): Verilog HDL or VHDL arithmetic warning at basic_iic.v(405): loss of carry in addition or borrow in subtraction File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 405
+Warning (10271): Verilog HDL Case Statement warning at basic_iic.v(410): size of case item expression (32) exceeds the size of the case expression (5) File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 410
+Warning (10040): Verilog HDL or VHDL arithmetic warning at basic_iic.v(427): loss of carry in addition or borrow in subtraction File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/basic_iic.v Line: 427
+Info (12128): Elaborating entity "si5338_init_rom" for hierarchy "si5338_init_core:si5338_init_core_inst|si5338_init_rom:si5338_init_rom_inst" File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/si5338_init_core.v Line: 60
+Info (12128): Elaborating entity "altsyncram" for hierarchy "si5338_init_core:si5338_init_core_inst|si5338_init_rom:si5338_init_rom_inst|altsyncram:altsyncram_component" File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/si5338_init_rom.v Line: 84
+Info (12130): Elaborated megafunction instantiation "si5338_init_core:si5338_init_core_inst|si5338_init_rom:si5338_init_rom_inst|altsyncram:altsyncram_component" File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/si5338_init_rom.v Line: 84
+Info (12133): Instantiated megafunction "si5338_init_core:si5338_init_core_inst|si5338_init_rom:si5338_init_rom_inst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/si5338_controller/si5338_init_rom.v Line: 84
+    Info (12134): Parameter "address_aclr_a" = "CLEAR0"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "./src/si5338_controller/si5338_rom.mif"
+    Info (12134): Parameter "intended_device_family" = "Arria V"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "256"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "ram_block_type" = "M10K"
+    Info (12134): Parameter "widthad_a" = "8"
+    Info (12134): Parameter "width_a" = "24"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_tii1.tdf
+    Info (12023): Found entity 1: altsyncram_tii1 File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/db/altsyncram_tii1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_tii1" for hierarchy "si5338_init_core:si5338_init_core_inst|si5338_init_rom:si5338_init_rom_inst|altsyncram:altsyncram_component|altsyncram_tii1:auto_generated" File: c:/intelfpga/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "led[3]" is stuck at VCC File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/arria_v_si5338.v Line: 16
+    Warning (13410): Pin "led[4]" is stuck at VCC File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/arria_v_si5338.v Line: 16
+    Warning (13410): Pin "led[5]" is stuck at VCC File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/arria_v_si5338.v Line: 16
+    Warning (13410): Pin "led[6]" is stuck at VCC File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/arria_v_si5338.v Line: 16
+    Warning (13410): Pin "led[7]" is stuck at VCC File: C:/Users/briansuneZ/Desktop/AirraV_Prj/arria_v_si5338_all/arria_v_si5338_led/src/arria_v_si5338.v Line: 16
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 5 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 486 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 9 output pins
+    Info (21060): Implemented 1 bidirectional pins
+    Info (21061): Implemented 448 logic cells
+    Info (21064): Implemented 24 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 48 warnings
+    Info: Peak virtual memory: 4891 megabytes
+    Info: Processing ended: Mon Jun 29 00:59:38 2020
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:18
+
+
